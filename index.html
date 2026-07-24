@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Yule Store Ec - Calzado Femenino & Accesorios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- El ?v=2 obliga al navegador a cargar el CSS nuevo sin usar memoria vieja -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <span>✨ Visítanos en C.C. El Bosque, Local 27-107, Piso 1, Quito | Envíos a todo el Ecuador</span>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="header-principal">
+        <div class="header-container">
+            <div class="logo-box">
+                <a href="#" class="brand-link">
+                    <img src="logo.png" alt="D'Yule Logo" class="logo">
+                    <span class="brand-name">D´Yule Store Ec</span>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" onclick="filtrarTodo()">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#">Marcas <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'vizzano')">Vizzano</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'divalentini')">Di Valentini</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'usaflex')">Usaflex</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'piccadilly')">Piccadilly</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'modare')">Modare</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'invoice')">Invoice</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'capelli-rossi')">Capelli Rossi</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'cristofoli')">Cristófoli</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'pegada')">Pegada</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('marca', 'verbenas')">Verbenas</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Calzado <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'ejecutivo')">Ejecutivo / Trabajo</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'fiesta')">Fiesta</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'casual')">Casual</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'deportivo')">Deportivo / Urbano</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'senorero')">Señorero</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'botas')">Botas</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'botines')">Botines</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'mocasines')">Mocasines</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('categoria', 'flats')">Flats</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Accesorios <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="aplicarFiltroRapido('accesorio', 'carteras-formales')">Carteras Formales</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('accesorio', 'carteras-casuales')">Carteras Casuales</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('accesorio', 'carteras-fiesta')">Carteras de Fiesta</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('accesorio', 'aretes')">Aretes</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('accesorio', 'brazaletes')">Brazaletes</a></li>
+                            <li><a href="#" onclick="aplicarFiltroRapido('accesorio', 'cabello')">Complementarios Cabello</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="aplicarFiltroRapido('oferta', 'si')" class="nav-oferta">
+                            <i class="fa-solid fa-fire"></i> Ofertas $30
+                        </a>
+                    </li>
+                    <li><a href="#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="#politicas">Políticas</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" id="cart-btn" onclick="toggleCart()">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero-banner">
+        <h2>Tu par perfecto existe. Y está aquí. ✨</h2>
+        <p>Más de 10 años en El Bosque elevando el estilo de las mujeres en Ecuador.</p>
+    </section>
+
+    <!-- Layout Principal -->
+    <div class="main-layout">
+        
+        <!-- Sidebar de Filtros -->
+        <aside class="sidebar-filtros">
+            <h3><i class="fa-solid fa-sliders"></i> Filtrar Catálogo</h3>
+
+            <div class="grupo-filtro">
+                <h4>Promociones</h4>
+                <select id="filtro-oferta" onchange="filtrarProductos()">
+                    <option value="todos">Todos los productos</option>
+                    <option value="si">🔥 Solo Ofertas ($30)</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Tipo</h4>
+                <select id="filtro-tipo" onchange="filtrarProductos()">
+                    <option value="todos">Todos los productos</option>
+                    <option value="calzado">Solo Calzado</option>
+                    <option value="accesorios">Solo Accesorios</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Marca</h4>
+                <select id="filtro-marca" onchange="filtrarProductos()">
+                    <option value="todas">Todas las Marcas</option>
+                    <option value="vizzano">Vizzano</option>
+                    <option value="divalentini">Di Valentini</option>
+                    <option value="usaflex">Usaflex</option>
+                    <option value="piccadilly">Piccadilly</option>
+                    <option value="modare">Modare</option>
+                    <option value="invoice">Invoice</option>
+                    <option value="capelli-rossi">Capelli Rossi</option>
+                    <option value="cristofoli">Cristófoli</option>
+                    <option value="pegada">Pegada</option>
+                    <option value="verbenas">Verbenas</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Estilo Calzado</h4>
+                <select id="filtro-categoria" onchange="filtrarProductos()">
+                    <option value="todas">Todas las Categorías</option>
+                    <option value="ejecutivo">Ejecutivo / Trabajo</option>
+                    <option value="fiesta">Fiesta</option>
+                    <option value="casual">Casual</option>
+                    <option value="deportivo">Deportivo / Urbano</option>
+                    <option value="senorero">Señorero</option>
+                    <option value="botas">Botas</option>
+                    <option value="botines">Botines</option>
+                    <option value="mocasines">Mocasines</option>
+                    <option value="flats">Flats</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Material</h4>
+                <select id="filtro-material" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Materiales</option>
+                    <option value="cuero">100% Cuero</option>
+                    <option value="sintetico">Sintético</option>
+                    <option value="charol">Charol</option>
+                    <option value="gamuza">Gamuza</option>
+                    <option value="satin">Tela Satín</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Altura de Tacón</h4>
+                <select id="filtro-tacon" onchange="filtrarProductos()">
+                    <option value="todos">Todas las Alturas</option>
+                    <option value="flats">Flats / Plano (0-2 cm)</option>
+                    <option value="medio">Tacón Medio (5 cm)</option>
+                    <option value="alto">Tacón Alto (7 cm)</option>
+                    <option value="plataforma">Plataforma / Extremo (9->10 cm)</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Color (Calzado)</h4>
+                <select id="filtro-color" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Colores</option>
+                    <option value="negro">Negro</option>
+                    <option value="beige">Nude / Beige</option>
+                    <option value="cappuchino">Cappuchino</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="dorado">Dorado</option>
+                    <option value="plateado">Plateado</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Categoría Accesorios</h4>
+                <select id="filtro-accesorio" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Accesorios</option>
+                    <option value="carteras-formales">Carteras Formales</option>
+                    <option value="carteras-casuales">Carteras Casuales</option>
+                    <option value="carteras-fiesta">Carteras de Fiesta</option>
+                    <option value="aretes">Aretes</option>
+                    <option value="brazaletes">Brazaletes</option>
+                    <option value="cabello">Complementarios para Cabello</option>
+                </select>
+            </div>
+
+            <button class="btn-reset" onclick="resetFiltros()">Limpiar Filtros</button>
+        </aside>
+
+        <!-- Grilla de Productos -->
+        <main class="catalogo-grid" id="catalogo">
+
+            <!-- PRODUCTO 1: VIZZANO STILETTO CON IMAGEN REAL Y VARIANTES -->
+            <div class="tarjeta-producto" id="prod-vizzano-1" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-color="negro" data-accesorio="ninguno" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img id="img-prod-1" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80" alt="Stiletto Clásico Vizzano">
+                <div class="producto-info">
+                    <h3>Stiletto Clásico Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón 9cm | Charol</p>
+                    <p class="color-seleccionado">Color: <strong id="nombre-color-1">Negro</strong></p>
+                    
+                    <div class="swatches-color">
+                        <span class="swatch color-negro active" title="Negro" onclick="cambiarColorProducto(1, 'Negro', 'negro', 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80')"></span>
+                        <span class="swatch color-beige" title="Beige" onclick="cambiarColorProducto(1, 'Beige', 'beige', 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&auto=format&fit=crop&q=80')"></span>
+                        <span class="swatch color-cappuchino" title="Cappuchino" onclick="cambiarColorProducto(1, 'Cappuchino', 'cappuchino', 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&auto=format&fit=crop&q=80')"></span>
+                        <span class="swatch color-blanco" title="Blanco" onclick="cambiarColorProducto(1, 'Blanco', 'blanco', 'https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=500&auto=format&fit=crop&q=80')"></span>
+                    </div>
+
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarritoConColor(1, 'Stiletto Clásico Vizzano', 95.00)">
+                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2: OFERTA ALWAYS-ON $30 -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="casual" data-material="sintetico" data-tacon="medio" data-color="rojo" data-accesorio="ninguno" data-oferta="si">
+                <div class="badge-marca">Vizzano</div>
+                <span class="badge-oferta">OFERTA $30</span>
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&auto=format&fit=crop&q=80" alt="Calzado en Oferta">
+                <div class="producto-info">
+                    <h3>Calzado Outlet Selección</h3>
+                    <p class="detalles-p">Promoción Especial | Modelos Varios</p>
+                    <p class="precio"><span class="precio-anterior">$65.00</span> $30.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Calzado Outlet Selección (OFERTA)', 30.00)">
+                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- SECCIÓN SOBRE D'YULE -->
+    <section class="seccion-info" id="sobre-nosotros">
+        <div class="container-info">
+            <h2>Sobre D’Yule</h2>
+            <p class="destacado">Tu par perfecto existe. Y está aquí. ✨</p>
+            <p><strong>Más de 10 años en El Bosque</strong> elevando el estilo de las mujeres en Ecuador.</p>
+            <p>En D’Yule no vendemos solo zapatos; te damos la libertad de caminar con total elegancia y comodidad. Reunimos las 10 mejores marcas brasileñas premium para traerte calzado <strong>100% cuero</strong>, diseñado con tecnología ergonómica que cuida tus pies sin perder la tendencia.</p>
+            <p><strong>¿Buscabas variedad? La encontraste.</strong> Miles de estilos, texturas, colores y tendencias reunidos en un solo lugar. Desde el modelo más arriesgado hasta el infaltable de tu clóset.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN POLÍTICAS DE CAMBIOS -->
+    <section class="seccion-info bg-politicas" id="politicas">
+        <div class="container-info">
+            <h2>🔄 Cambios y Devoluciones</h2>
+            <p>Queremos que tu experiencia en D’Yule sea impecable. Si necesitas realizar un cambio por defectos de fábrica, ten en cuenta las siguientes condiciones:</p>
+            <ul class="lista-politicas">
+                <li><strong>Plazo:</strong> Solicitudes válidas hasta 7 días después de tu compra.</li>
+                <li><strong>Estado del producto:</strong> El zapato debe estar sin uso e intacto.</li>
+                <li><strong>Empaque original:</strong> Debe entregarse con su caja, funda protectora y accesorios completos tal como fue recibido.</li>
+                <li><strong>Comprobante:</strong> Es indispensable presentar la factura de compra.</li>
+            </ul>
+            <p class="nota-politica"><small>* Nota: Todos los productos pasan por un estricto control de calidad previo al envío.</small></p>
+        </div>
+    </section>
+
+    <!-- PANEL DEL CARRITO -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Tu Carrito D'Yule</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn-checkout-wa" onclick="enviarPedidoWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> Enviar Pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER COMPLETO -->
+    <footer class="footer-principal" id="contacto">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>D'Yule Store Ec</h3>
+                <p>Las 10 mejores marcas brasileñas en Ecuador.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1BxknxrNnH/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dyule_store/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@dyule_store?_r=1&_t=ZS-98HoC54dGcu" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://wa.me/message/AVV4CU2UXI2FH1" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Visítanos</h4>
+                <p><i class="fa-solid fa-location-dot"></i> C.C. El Bosque, Local 27-107, Piso 1, Quito - Ecuador</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +593 99 671 5122</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#sobre-nosotros">Sobre D'Yule</a></li>
+                    <li><a href="#politicas">Política de Cambios</a></li>
+                    <li><a href="#" onclick="aplicarFiltroRapido('oferta', 'si')">Ofertas $30</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 D'Yule Store Ec. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
