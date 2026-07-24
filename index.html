@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Yule - Catálogo Oficial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Reemplaza "logo.png" por el nombre de la imagen de tu logo -->
+        <img src="logo.png" alt="D'Yule Logo" class="logo-header">
+        <p>Calzado Femenino & Accesorios</p>
+    </header>
+
+    <!-- Filtros de Marcas -->
+    <section class="seccion-filtros">
+        <h3>Marca:</h3>
+        <div class="filtros" id="filtros-marca">
+            <button class="btn-filtro active" data-tipo="marca" data-valor="todas">Todas</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="vizzano">Vizzano</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="divalentini">Di Valentini</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="usaflex">Usaflex</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="piccadilly">Piccadilly</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="modare">Modare</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="invoice">Invoice</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="capelli-rossi">Capelli Rossi</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="cristofoli">Cristófoli</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="pegada">Pegada</button>
+            <button class="btn-filtro" data-tipo="marca" data-valor="verbenas">Verbenas</button>
+        </div>
+    </section>
+
+    <!-- Filtros de Categorías -->
+    <section class="seccion-filtros">
+        <h3>Categoría / Estilo:</h3>
+        <div class="filtros" id="filtros-categoria">
+            <button class="btn-filtro active" data-tipo="categoria" data-valor="todas">Todas</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="ejecutivo">Ejecutivo / Trabajo</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="fiesta">Fiesta</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="casual">Casual</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="deportivo">Deportivo / Urbano</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="senorero">Señorero</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="botas">Botas</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="botines">Botines</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="mocasines">Mocasines</button>
+            <button class="btn-filtro" data-tipo="categoria" data-valor="flats">Flats</button>
+        </div>
+    </section>
+
+    <!-- Galería de Productos -->
+    <main class="catalogo">
+        <div class="tarjeta-producto" data-marca="vizzano" data-categoria="fiesta">
+            <span class="badge-marca">Vizzano</span>
+            <img src="https://via.placeholder.com/300x300?text=Vizzano+Fiesta" alt="Stiletto Elegante">
+            <h3>Stiletto Elegante</h3>
+            <p class="categoria-etiqueta">Categoría: Fiesta</p>
+            <p class="precio">$45.00</p>
+            <a href="https://wa.me/593900000000?text=Hola!%20Me%20interesa%20el%20Stiletto%20Elegante%20Vizzano" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
