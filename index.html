@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=100">
+    <link rel="stylesheet" href="style.css?v=120">
 </head>
 <body>
 
@@ -59,6 +59,16 @@
             <a href="#sobre-nosotros" class="btn-hero-editorial">DESCUBRIR NUESTRO MUNDO</a>
         </div>
     </section>
+
+    <!-- FRANJA DESTACADA: NEW COLLECTION -->
+    <div class="banner-new-collection">
+        <div class="banner-nc-content">
+            <span class="badge-nc">Llegadas Exclusivas</span>
+            <h2>NEW COLLECTION 2026</h2>
+            <p>Descubre las últimas tendencias en calzado brasileño Premium recién llegadas a boutique.</p>
+            <a href="#area-catalogo" class="btn-nc-action">EXPLORAR NOVEDADES</a>
+        </div>
+    </div>
 
     <section class="seccion-editorial-premium" id="sobre-nosotros">
         <div class="container-editorial">
@@ -190,6 +200,16 @@
                 </select>
             </div>
 
+            <!-- FILTRO DE TIPO DE TACÓN -->
+            <div class="grupo-filtro">
+                <h4>Tipo de Tacón</h4>
+                <select id="filtro-tipo-tacon" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Tipos</option>
+                    <option value="ancho">Tacón Ancho / Robusto</option>
+                    <option value="fino">Tacón Fino / Stiletto</option>
+                </select>
+            </div>
+
             <div class="grupo-filtro">
                 <h4>Color (Calzado)</h4>
                 <select id="filtro-color" onchange="filtrarProductos()">
@@ -208,12 +228,13 @@
 
         <main class="catalogo-grid" id="catalogo">
 
-            <div class="tarjeta-producto" id="prod-vizzano-1" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-color="negro" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" id="prod-vizzano-1" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
+                <span class="badge-oferta" style="background-color: var(--negro);">NEW COLLECTION</span>
                 <img id="img-prod-1" src="stiletto-vizzano-negro.jpg" alt="Stiletto Clásico Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <div class="producto-info">
                     <h3>Stiletto Clásico Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón 9cm | Charol</p>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
                     <p class="color-seleccionado">Color: <strong id="nombre-color-1">Negro</strong></p>
                     
                     <div class="swatches-color">
@@ -232,15 +253,15 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="casual" data-material="sintetico" data-tacon="medio" data-color="rojo" data-accesorio="ninguno" data-oferta="si">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="casual" data-material="sintetico" data-tacon="medio" data-tipo-tacon="ancho" data-color="rojo" data-accesorio="ninguno" data-oferta="si">
                 <div class="badge-marca">Vizzano</div>
                 <span class="badge-oferta">OFERTA $30</span>
                 <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&auto=format&fit=crop&q=80" alt="Calzado en Oferta">
                 <div class="producto-info">
-                    <h3>Calzado Outlet Selección</h3>
-                    <p class="detalles-p">Promoción Especial | Modelos Varios</p>
+                    <h3>Sandalia Tacón Ancho Vizzano</h3>
+                    <p class="detalles-p">Promoción Especial | Tacón Ancho 5cm</p>
                     <p class="precio"><span class="precio-anterior">$65.00</span> $30.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Calzado Outlet Selección (OFERTA)', 30.00)">
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Sandalia Tacón Ancho Vizzano (OFERTA)', 30.00)">
                         AGREGAR A LA BOLSA
                     </button>
                 </div>
@@ -316,6 +337,6 @@
         <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
     </a>
 
-    <script src="script.js?v=100"></script>
+    <script src="script.js?v=120"></script>
 </body>
 </html>
