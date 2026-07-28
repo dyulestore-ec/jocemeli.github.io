@@ -62,6 +62,14 @@ body {
 
 .nav-menu a:hover, .nav-highlight { color: var(--rojo-dyule) !important; }
 
+/* Contenedor de Carrito y Menú Móvil (Alineación Horizontal) */
+.header-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
 /* Carrito */
 .cart-btn {
     background: none; border: none; color: var(--negro);
@@ -73,7 +81,7 @@ body {
     border-radius: 50%; position: absolute; top: -6px; right: -9px;
 }
 
-/* 1. PORTADA PRINCIPAL CORREGIDA CON TU IMAGEN DE INICIO */
+/* PORTADA PRINCIPAL */
 .hero-cover {
     height: 70vh;
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('hero-tacones.jpg?v=2') center/cover no-repeat;
@@ -94,7 +102,7 @@ body {
 }
 .btn-hero-editorial:hover { background: var(--blanco); color: var(--negro); }
 
-/* SECCIONES EDITORIALES (SOBRE NOSOTROS & POLÍTICAS) */
+/* SECCIONES EDITORIALES */
 .seccion-editorial-premium, .seccion-politicas-editorial {
     padding: 100px 20px; text-align: center; background: var(--blanco);
 }
@@ -244,11 +252,6 @@ body {
 .social-icons a:hover { background: var(--rojo-dyule); }
 .footer-bottom { text-align: center; border-top: 1px solid #222; margin-top: 40px; padding-top: 20px; font-size: 0.72rem; color: #666; }
 
-@media (max-width: 768px) {
-    .main-layout { grid-template-columns: 1fr; }
-    .nav-menu { display: none; }
-    .hero-title { font-size: 1.9rem; }
-}
 /* Links de contacto en el Footer */
 .link-contacto-wa, .link-contacto-email {
     color: #ccc;
@@ -259,48 +262,7 @@ body {
     color: #25d366;
 }
 
-/* Botón de Asesoría Personalizada */
-.btn-asesoria-wa {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #25d366;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    padding: 10px 18px;
-    margin-top: 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-asesoria-wa:hover {
-    background-color: #1eb954;
-    transform: translateY(-2px);
-}
-
-/* Links de contacto en el Footer */
-.link-contacto-wa, .link-contacto-email {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.link-contacto-wa:hover, .link-contacto-email:hover {
-    color: #25d366;
-}
-/* Links de contacto en el Footer */
-.link-contacto-wa, .link-contacto-email {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.link-contacto-wa:hover, .link-contacto-email:hover {
-    color: #25d366;
-}
-
-/* ÚNICO BOTÓN FLOTANTE EN LA ESQUINA INFERIOR IZQUIERDA */
+/* BOTÓN FLOTANTE EN LA ESQUINA INFERIOR IZQUIERDA */
 .btn-flotante-asesoria-izquierda {
     position: fixed;
     bottom: 25px;
@@ -329,37 +291,43 @@ body {
     background-color: #1eb954;
     transform: translateY(-3px) scale(1.03);
 }
-/* BOTÓN HAMBURGUESA Y ADAPTACIÓN MÓVIL */
+
+/* BOTÓN HAMBURGUESA Y ADAPTACIÓN MÓVIL CORREGIDA */
 .mobile-menu-btn {
-    display: none; /* Oculto en computadoras */
+    display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
     color: #111;
     cursor: pointer;
-    margin-left: 15px;
 }
 
-/* Reglas responsivas para pantallas de menos de 768px (Celulares) */
 @media (max-width: 768px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .hero-title { font-size: 1.9rem; }
+    .header-container { padding: 10px 15px; }
+    .brand-name { font-size: 1rem; }
+
     .mobile-menu-btn {
-        display: block; /* Visible solo en móviles */
+        display: block !important;
+        margin-left: 0;
     }
 
     .nav-menu {
         position: fixed;
         top: 60px;
-        left: -100%; /* Oculto fuera de la pantalla por defecto */
+        left: -100%;
         width: 100%;
         height: calc(100vh - 60px);
         background-color: #ffffff;
         transition: left 0.3s ease;
         z-index: 998;
         padding-top: 30px;
+        display: block !important;
     }
 
     .nav-menu.active {
-        left: 0; /* Aparece al presionar el botón de tres rayitas */
+        left: 0;
     }
 
     .nav-menu ul {
