@@ -303,11 +303,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .main-layout { grid-template-columns: 1fr; }
-    .hero-title { font-size: 1.9rem; }
-    .header-container { padding: 10px 15px; }
-    .brand-name { font-size: 1rem; }
-
     .mobile-menu-btn {
         display: block !important;
         margin-left: 0;
@@ -316,7 +311,7 @@ body {
     .nav-menu {
         position: fixed;
         top: 60px;
-        left: -100%;
+        left: -100%; /* Oculto a la izquierda */
         width: 100%;
         height: calc(100vh - 60px);
         background-color: #ffffff;
@@ -326,8 +321,9 @@ body {
         display: block !important;
     }
 
+    /* ¡ESTA ES LA LÍNEA CLAVE PARA QUE SE DESPLIEGUE! */
     .nav-menu.active {
-        left: 0;
+        left: 0 !important; /* Lo mueve al centro de la pantalla */
     }
 
     .nav-menu ul {
