@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 
     <div class="top-bar">
-        <span>COLECCIONES CÁPSULA LIMITADAS | ENVÍOS PREMIUM A TODO EL ECUADOR</span>
+        <span>COLECCIONES CÁPSULA LIMITADAS | ENVÍOS PREMIUM A TODO EL PAÍS</span>
     </div>
 
     <header class="header-principal">
@@ -31,11 +31,6 @@
                     <li><a href="#sobre-nosotros">NOSOTROS</a></li>
                     <li><a href="#politicas">COMPROMISO VIP</a></li>
                     <li><a href="#area-catalogo" class="nav-highlight">EXPLORAR COLECCIÓN</a></li>
-                    <li>
-                        <a href="#" onclick="aplicarFiltroRapido('oferta', 'si')" class="nav-oferta">
-                            <i class="fa-solid fa-fire"></i> OFERTAS $30
-                        </a>
-                    </li>
                 </ul>
             </nav>
 
@@ -53,28 +48,28 @@
         <div class="hero-content">
             <span class="hero-tag">EDICIÓN EXCLUSIVA</span>
             <h1 class="hero-title">EL MANIFIESTO DE LA ELEGANCIA</h1>
-            <p class="hero-subtitle">Redefinimos el calce perfecto fusionando la sofisticación internacional con los pilares de la ergonomía brasileña premium.</p>
+            <p class="hero-subtitle">Redefinimos el calce perfecto fusionando la sofisticación internacional con los pilares de la ergonomía brasileña Premium.</p>
             <a href="#sobre-nosotros" class="btn-hero-editorial">DESCUBRIR NUESTRO MUNDO</a>
         </div>
     </section>
 
     <section class="seccion-editorial-premium" id="sobre-nosotros">
         <div class="container-editorial">
-            <span class="subtitulo-editorial">MÁS DE 10 AÑOS EN EL BOSQUE</span>
+            <span class="subtitulo-editorial">MÁS DE 10 AÑOS EN EL CENTRO COMERCIAL EL BOSQUE</span>
             <h2 class="titulo-editorial">TU PAR PERFECTO EXISTE. Y ESTÁ AQUÍ.</h2>
             <div class="divisor-elegante"></div>
             <p class="texto-destacado">
-                En D’Yule no vendemos solo zapatos; le otorgamos la libertad de caminar con absoluta distinción, prestancia y comodidad.
+                En D’Yule no vendemos solo zapatos; te otorgamos la libertad de caminar con absoluta distinción, elegancia y comodidad.
             </p>
             <p class="texto-cuerpo">
-                Reunimos las 10 mejores firmas brasileñas de calzado premium para acercarle piezas exclusivas elaboradas en **cuero 100% legítimo**, diseñadas con tecnologías ergonómicas avanzadas que cuidan con delicadeza la salud de sus pies sin comprometer jamás las tendencias de la alta moda. Contamos con miles de estilos, texturas y gamas cromáticas pensadas para la mujer contemporánea de Ecuador.
+                Reunimos las 10 mejores marcas brasileñas de calzado Premium para acercarte piezas exclusivas elaboradas en los mejores materiales, diseñadas con tecnologías ergonómicas avanzadas que cuidan con delicadeza la salud de tus pies sin comprometer jamás las tendencias de la moda. Contamos con miles de estilos, texturas y gamas cromáticas pensadas para la mujer contemporánea de Ecuador.
             </p>
         </div>
     </section>
 
     <section class="seccion-politicas-editorial" id="politicas">
         <div class="container-editorial">
-            <span class="subtitulo-editorial">ESTÁNDARES BOUTIQUE</span>
+            <span class="subtitulo-editorial">ESTÁNDARES DE LA BOUTIQUE</span>
             <h2 class="titulo-editorial">COMPROMISO, CALIDAD Y RESPALDO</h2>
             <div class="divisor-elegante"></div>
             
@@ -82,7 +77,7 @@
                 <div class="bloque-politica">
                     <span class="num-politica">01</span>
                     <h3>PLAZO EXCLUSIVO</h3>
-                    <p>Cualquier solicitud de cambio por defecto estructural es válida hasta 7 días posteriores a su compra.</p>
+                    <p>Cualquier solicitud de cambio por defecto estructural es válida hasta 7 días posteriores a tu compra.</p>
                 </div>
                 <div class="bloque-politica">
                     <span class="num-politica">02</span>
@@ -101,12 +96,12 @@
                 </div>
             </div>
             
-            <p class="nota-politica-premium">* Nota indispensable: Es mandatorio presentar la factura original de compra para validar sus coberturas.</p>
+            <p class="nota-politica-premium">* Nota indispensable: Es mandatorio presentar la factura original de compra para validar tus coberturas.</p>
         </div>
     </section>
 
     <div class="transicion-catalogo" id="area-catalogo">
-        <span>EXPLORAR EL PORTAFOLIO DE PIEZAS</span>
+        <span>EXPLORAR NUESTRO PORTAFOLIO</span>
         <i class="fa-solid fa-chevron-down"></i>
     </div>
 
@@ -193,8 +188,9 @@
                 <select id="filtro-color" onchange="filtrarProductos()">
                     <option value="todos">Todos los Colores</option>
                     <option value="negro">Negro</option>
-                    <option value="beige">Nude / Beige</option>
-                    <option value="cappuchino">Cappuchino</option>
+                    <option value="beige">Beige</option>
+                    <option value="azul">Azul</option>
+                    <option value="cafe">Café</option>
                     <option value="blanco">Blanco</option>
                     <option value="rojo">Rojo</option>
                 </select>
@@ -207,17 +203,19 @@
 
             <div class="tarjeta-producto" id="prod-vizzano-1" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-color="negro" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
-                <img id="img-prod-1" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80" alt="Stiletto Clásico Vizzano">
+                <img id="img-prod-1" src="stiletto-vizzano-negro.jpg" alt="Stiletto Clásico Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <div class="producto-info">
                     <h3>Stiletto Clásico Vizzano</h3>
                     <p class="detalles-p">Ejecutivo | Tacón 9cm | Charol</p>
                     <p class="color-seleccionado">Color: <strong id="nombre-color-1">Negro</strong></p>
                     
                     <div class="swatches-color">
-                        <span class="swatch color-negro active" title="Negro" onclick="cambiarColorProducto(1, 'Negro', 'negro', 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80')"></span>
-                        <span class="swatch color-beige" title="Beige" onclick="cambiarColorProducto(1, 'Beige', 'beige', 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&auto=format&fit=crop&q=80')"></span>
-                        <span class="swatch color-cappuchino" title="Cappuchino" onclick="cambiarColorProducto(1, 'Cappuchino', 'cappuchino', 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&auto=format&fit=crop&q=80')"></span>
-                        <span class="swatch color-blanco" title="Blanco" onclick="cambiarColorProducto(1, 'Blanco', 'blanco', 'https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=500&auto=format&fit=crop&q=80')"></span>
+                        <span class="swatch color-negro active" title="Negro" onclick="cambiarColorProducto(1, 'Negro', 'negro', 'stiletto-vizzano-negro.jpg')"></span>
+                        <span class="swatch color-beige" title="Beige" onclick="cambiarColorProducto(1, 'Beige', 'beige', 'stiletto-vizzano-beige.jpg')"></span>
+                        <span class="swatch color-azul" title="Azul" onclick="cambiarColorProducto(1, 'Azul', 'azul', 'stiletto-vizzano-azul.jpg')"></span>
+                        <span class="swatch color-cafe" title="Café" onclick="cambiarColorProducto(1, 'Café', 'cafe', 'stiletto-vizzano-cafe.jpg')"></span>
+                        <span class="swatch color-blanco" title="Blanco" onclick="cambiarColorProducto(1, 'Blanco', 'blanco', 'stiletto-vizzano-blanco.jpg')"></span>
+                        <span class="swatch color-rojo" title="Rojo" onclick="cambiarColorProducto(1, 'Rojo', 'rojo', 'stiletto-vizzano-rojo.jpg')"></span>
                     </div>
 
                     <p class="precio">$95.00</p>
@@ -295,6 +293,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=15"></script>
+    <script src="script.js?v=30"></script>
 </body>
 </html>
