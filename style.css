@@ -101,7 +101,66 @@ body {
     letter-spacing: 2px; transition: all 0.3s;
 }
 .btn-hero-editorial:hover { background: var(--blanco); color: var(--negro); }
+/* FRANJA BANNER NEW COLLECTION */
+.banner-new-collection {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 35px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--rojo-dyule);
+}
 
+.banner-nc-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-nc {
+    background-color: var(--rojo-dyule);
+    color: var(--blanco);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+}
+
+.banner-nc-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 5px 0;
+}
+
+.banner-nc-content p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #cccccc;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+.btn-nc-action {
+    display: inline-block;
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+}
+
+.btn-nc-action:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
 /* SECCIONES EDITORIALES */
 .seccion-editorial-premium, .seccion-politicas-editorial {
     padding: 100px 20px; text-align: center; background: var(--blanco);
