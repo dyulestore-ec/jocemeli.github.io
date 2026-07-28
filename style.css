@@ -281,28 +281,42 @@ body {
     transform: translateY(-2px);
 }
 
-/* Botón Flotante de WhatsApp en la esquina inferior derecha */
-.btn-float-wa {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25d366;
-    color: #fff;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    z-index: 999;
-    transition: transform 0.3s, background-color 0.3s;
+/* Links de contacto en el Footer */
+.link-contacto-wa, .link-contacto-email {
+    color: #ccc;
     text-decoration: none;
+    transition: color 0.3s;
+}
+.link-contacto-wa:hover, .link-contacto-email:hover {
+    color: #25d366;
 }
 
-.btn-float-wa:hover {
-    transform: scale(1.1);
+/* Botón Flotante Fijo en la Esquina Inferior Izquierda */
+.btn-flotante-asesoria-izquierda {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #25d366;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-flotante-asesoria-izquierda i {
+    font-size: 1.1rem;
+}
+
+.btn-flotante-asesoria-izquierda:hover {
     background-color: #1eb954;
-    color: #fff;
+    transform: translateY(-3px) scale(1.03);
 }
