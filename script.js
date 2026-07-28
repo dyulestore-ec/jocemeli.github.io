@@ -177,3 +177,10 @@ function resetFiltros() {
     filtrarProductos();
 }
 function filtrarTodo() { resetFiltros(); }
+// Función para abrir y cerrar el menú en móviles
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+        navMenu.classList.toggle('active');
+    }
+}
