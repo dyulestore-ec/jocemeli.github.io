@@ -73,10 +73,10 @@ body {
     border-radius: 50%; position: absolute; top: -6px; right: -9px;
 }
 
-/* 1. PORTADA PRINCIPAL (CAMBIA 'hero-tacones.jpg' POR EL NOMBRE DE TU FOTO EN GITHUB) */
+/* 1. PORTADA PRINCIPAL CORREGIDA CON TU IMAGEN DE INICIO */
 .hero-cover {
     height: 70vh;
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('hero-tacones.jpg'), url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-tacones.jpg') center/cover no-repeat;
     display: flex; align-items: center; justify-content: center;
     text-align: center; color: var(--blanco); position: relative;
 }
