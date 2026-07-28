@@ -184,3 +184,10 @@ function toggleMenu() {
         navMenu.classList.toggle('active');
     }
 }
+// Función para abrir y cerrar el menú desplegable en celulares
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+        navMenu.classList.toggle('active');
+    }
+}
