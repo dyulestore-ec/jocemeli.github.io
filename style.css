@@ -360,7 +360,94 @@ body {
     color: #111;
     cursor: pointer;
 }
+/* BANNER NEW COLLECTION EDITORIAL PREMIUM */
+.banner-new-collection {
+    background-color: #0c0c0c !important;
+    color: #ffffff !important;
+    padding: 55px 20px !important;
+    text-align: center !important;
+    border-top: 1px solid #222222 !important;
+    border-bottom: 2px solid #8b0000 !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
 
+.banner-nc-content {
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.badge-nc {
+    background-color: #8b0000 !important;
+    color: #ffffff !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    padding: 6px 16px !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+}
+
+.banner-nc-content h2 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 4px !important;
+    color: #ffffff !important;
+    margin: 0 0 12px 0 !important;
+    text-transform: uppercase !important;
+}
+
+.banner-nc-content p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 300 !important;
+    color: #d1d1d1 !important;
+    margin: 0 0 25px 0 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.6 !important;
+}
+
+.btn-nc-action {
+    display: inline-block !important;
+    border: 1px solid #ffffff !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 2.5px !important;
+    padding: 12px 30px !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-nc-action:hover {
+    background-color: #ffffff !important;
+    color: #0c0c0c !important;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .banner-new-collection {
+        padding: 40px 15px !important;
+    }
+    
+    .banner-nc-content h2 {
+        font-size: 1.5rem !important;
+        letter-spacing: 2px !important;
+    }
+    
+    .banner-nc-content p {
+        font-size: 0.8rem !important;
+    }
+}
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block !important;
