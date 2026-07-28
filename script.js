@@ -186,8 +186,10 @@ function toggleMenu() {
 }
 // Función para abrir y cerrar el menú desplegable en celulares
 function toggleMenu() {
-    const navMenu = document.getElementById('nav-menu');
-    if (navMenu) {
-        navMenu.classList.toggle('active');
+    var nav = document.getElementById('nav-menu');
+    if (nav.style.left === '0px') {
+        nav.style.left = '-100%';
+    } else {
+        nav.style.left = '0px';
     }
 }
