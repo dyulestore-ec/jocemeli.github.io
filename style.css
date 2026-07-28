@@ -290,8 +290,17 @@ body {
 .link-contacto-wa:hover, .link-contacto-email:hover {
     color: #25d366;
 }
+/* Links de contacto en el Footer */
+.link-contacto-wa, .link-contacto-email {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.link-contacto-wa:hover, .link-contacto-email:hover {
+    color: #25d366;
+}
 
-/* Botón Flotante Fijo en la Esquina Inferior Izquierda */
+/* ÚNICO BOTÓN FLOTANTE EN LA ESQUINA INFERIOR IZQUIERDA */
 .btn-flotante-asesoria-izquierda {
     position: fixed;
     bottom: 25px;
