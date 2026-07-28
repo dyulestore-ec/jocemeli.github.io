@@ -25,19 +25,26 @@
                 </a>
             </div>
 
-            <nav class="nav-menu">
+            <!-- Menú de Navegación -->
+            <nav class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="#" onclick="filtrarTodo()">INICIO</a></li>
-                    <li><a href="#sobre-nosotros">NOSOTROS</a></li>
-                    <li><a href="#politicas">COMPROMISO VIP</a></li>
-                    <li><a href="#area-catalogo" class="nav-highlight">EXPLORAR COLECCIÓN</a></li>
+                    <li><a href="#" onclick="filtrarTodo(); toggleMenu();">INICIO</a></li>
+                    <li><a href="#sobre-nosotros" onclick="toggleMenu();">NOSOTROS</a></li>
+                    <li><a href="#politicas" onclick="toggleMenu();">COMPROMISO VIP</a></li>
+                    <li><a href="#area-catalogo" class="nav-highlight" onclick="toggleMenu();">EXPLORAR COLECCIÓN</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
+                <!-- Botón de Carrito -->
                 <button class="cart-btn" onclick="toggleCart()">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <!-- Botón Hamburguesa para Móvil -->
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
