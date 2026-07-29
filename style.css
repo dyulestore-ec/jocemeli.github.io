@@ -535,3 +535,43 @@ body {
         <main class="catalogo-grid" id="catalogo">
             </main>
     </div>
+/* ESTILOS PARA LA SECCIÓN DESPLEGABLE DEL CATÁLOGO */
+.transicion-catalogo {
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    user-select: none;
+}
+
+.transicion-catalogo:hover {
+    background-color: #1a1a1a !important;
+}
+
+/* Estado oculto por defecto */
+.main-layout.oculto {
+    display: none !important;
+}
+
+/* Estado cuando se despliega */
+.main-layout.activo {
+    display: grid !important;
+    grid-template-columns: 280px 1fr !important;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Rotación elegante de la flecha */
+.transicion-catalogo.girada .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* Adaptación responsive para celulares cuando está activo */
+@media (max-width: 768px) {
+    .main-layout.activo {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
