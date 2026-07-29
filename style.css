@@ -522,3 +522,16 @@ body {
         object-fit: cover !important;
     }
 }
+<div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
+        <span>EXPLORAR NUESTRO PORTAFOLIO</span>
+        <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
+    </div>
+
+    <div class="main-layout" id="panel-catalogo" style="display: none;">
+        
+        <aside class="sidebar-filtros">
+            </aside>
+
+        <main class="catalogo-grid" id="catalogo">
+            </main>
+    </div>
