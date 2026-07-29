@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<!-- Actualizacion forzada -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ETIQUETAS ANTI-CACHÉ (Evitan guardar versiones viejas) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
 
     <title>D'Yule Store Ec | Calzado Femenino Premium</title>
-    ...
-    <title>D'Yule Store Ec | Calzado Femenino Premium</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=137">
+    <link rel="stylesheet" href="style.css?v=138">
 </head>
 <body>
 
@@ -37,7 +30,6 @@
                 </a>
             </div>
 
-            <!-- Menú de Navegación -->
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="#" onclick="filtrarTodo(); toggleMenu();">INICIO</a></li>
@@ -48,13 +40,11 @@
             </nav>
 
             <div class="header-actions">
-                <!-- Botón de Carrito -->
                 <button class="cart-btn" onclick="toggleCart()">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
 
-                <!-- Botón Hamburguesa para Móvil -->
                 <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -72,7 +62,6 @@
         </div>
     </section>
 
-    <!-- FRANJA DESTACADA: NEW COLLECTION CON ESTILOS DIRECTOS -->
     <div style="background-color: #0c0c0c !important; color: #ffffff !important; padding: 45px 20px !important; text-align: center !important; border-top: 1px solid #222222 !important; border-bottom: 2px solid #8b0000 !important; width: 100% !important; box-sizing: border-box !important;">
         <div style="max-width: 850px !important; margin: 0 auto !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important;">
             <span style="background-color: #8b0000 !important; color: #ffffff !important; font-size: 0.65rem !important; font-weight: 600 !important; letter-spacing: 3px !important; text-transform: uppercase !important; padding: 6px 16px !important; display: inline-block !important; margin-bottom: 15px !important;">Llegadas Exclusivas</span>
@@ -129,39 +118,12 @@
         </div>
     </section>
 
-   <div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
+    <div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
         <span>EXPLORAR NUESTRO PORTAFOLIO</span>
         <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
     </div>
 
     <div class="main-layout oculto" id="panel-catalogo" style="display: none;">
-        
-        <aside class="sidebar-filtros">
-            </aside>
-
-        <main class="catalogo-grid" id="catalogo">
-            </main>
-    </div>
-
-    <main-layout class="main-layout oculto" id="panel-catalogo">
-        
-        <aside class="sidebar-filtros">
-            </aside>
-
-        <section class="catalogo-grid" id="catalogo">
-            </section>
-    </main-layout>
-
-    <div class="main-layout" id="panel-catalogo" style="display: none;">
-        
-        <aside class="sidebar-filtros">
-            </aside>
-
-        <main class="catalogo-grid" id="catalogo">
-            </main>
-    </div>
-
-    <div class="main-layout">
         
         <aside class="sidebar-filtros">
             <h3>Filtrar Catálogo</h3>
@@ -239,7 +201,6 @@
                 </select>
             </div>
 
-            <!-- FILTRO DE TIPO DE TACÓN -->
             <div class="grupo-filtro">
                 <h4>Tipo de Tacón</h4>
                 <select id="filtro-tipo-tacon" onchange="filtrarProductos()">
@@ -267,7 +228,6 @@
 
         <main class="catalogo-grid" id="catalogo">
 
-            <!-- 1. Negro Charol 9cm Fino -->
             <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-negro-charol-9cm-fino.jpg" alt="Stiletto Negro Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
@@ -281,7 +241,6 @@
                 </div>
             </div>
 
-            <!-- 2. Negro Charol 5cm Fino -->
             <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="negro" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-negro-charol-5cm-fino.jpg" alt="Stiletto Negro Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
@@ -295,7 +254,6 @@
                 </div>
             </div>
 
-            <!-- 3. Beige Charol 9cm Fino -->
             <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="beige" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-beige-charol-9cm-fino.jpg" alt="Stiletto Beige Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
@@ -309,7 +267,6 @@
                 </div>
             </div>
 
-            <!-- 4. Beige Charol 7cm Fino -->
             <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="beige" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-beige-charol-7cm-fino.jpg" alt="Stiletto Beige Charol 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
@@ -323,7 +280,6 @@
                 </div>
             </div>
 
-            <!-- 5. Beige Charol 5cm Fino -->
             <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="beige" data-accesorio="ninguno" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-beige-charol-5cm-fino.jpg" alt="Stiletto Beige Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
@@ -337,146 +293,4 @@
                 </div>
             </div>
 
-            <!-- 6. Azul Charol 7cm Fino -->
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="azul" data-accesorio="ninguno" data-oferta="no">
-                <div class="badge-marca">Vizzano</div>
-                <img src="vizzano-azul-charol-7cm-fino.jpg" alt="Stiletto Azul Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
-                <div class="producto-info">
-                    <h3>Stiletto Charol Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Charol</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Azul 7cm)', 95.00)">
-                        AGREGAR A LA BOLSA
-                    </button>
-                </div>
-            </div>
-
-            <!-- 7. Café Charol 9cm Fino -->
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="cafe" data-accesorio="ninguno" data-oferta="no">
-                <div class="badge-marca">Vizzano</div>
-                <img src="vizzano-cafe-charol-9cm-fino.jpg" alt="Stiletto Café Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
-                <div class="producto-info">
-                    <h3>Stiletto Charol Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Café 9cm)', 95.00)">
-                        AGREGAR A LA BOLSA
-                    </button>
-                </div>
-            </div>
-
-            <!-- 8. Blanco Charol 9cm Fino -->
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="blanco" data-accesorio="ninguno" data-oferta="no">
-                <div class="badge-marca">Vizzano</div>
-                <img src="vizzano-blanco-charol-9cm-fino.jpg" alt="Stiletto Blanco Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
-                <div class="producto-info">
-                    <h3>Stiletto Charol Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Blanco 9cm)', 95.00)">
-                        AGREGAR A LA BOLSA
-                    </button>
-                </div>
-            </div>
-
-            <!-- 9. Rojo Charol 7cm Fino -->
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="rojo" data-accesorio="ninguno" data-oferta="no">
-                <div class="badge-marca">Vizzano</div>
-                <img src="vizzano-rojo-charol-7cm-fino.jpg" alt="Stiletto Rojo Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
-                <div class="producto-info">
-                    <h3>Stiletto Charol Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Charol</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Rojo 7cm)', 95.00)">
-                        AGREGAR A LA BOLSA
-                    </button>
-                </div>
-            </div>
-
-            <!-- 10. Rojo Charol 5cm Fino -->
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="rojo" data-accesorio="ninguno" data-oferta="no">
-                <div class="badge-marca">Vizzano</div>
-                <img src="vizzano-rojo-charol-5cm-fino.jpg" alt="Stiletto Rojo Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
-                <div class="producto-info">
-                    <h3>Stiletto Charol Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Charol</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Rojo 5cm)', 95.00)">
-                        AGREGAR A LA BOLSA
-                    </button>
-                </div>
-            </div>
-
-        </main>
-    </div>
-
-    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>TU BOLSA DE COMPRAS</h3>
-            <button class="close-cart" onclick="toggleCart()">&times;</button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <p class="empty-msg">Tu bolsa está vacía.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="total-box">
-                <span>TOTAL:</span>
-                <span id="cart-total">$0.00</span>
-            </div>
-            <button class="btn-checkout-wa" onclick="enviarPedidoWhatsApp()">
-                <i class="fa-brands fa-whatsapp"></i> COORDINAR PEDIDO
-            </button>
-        </div>
-    </div>
-
-    <footer class="footer-principal" id="contacto">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h3>D'Yule Store Ec</h3>
-                <p>Distribuidores directos de las mejores marcas brasileñas premium en Ecuador.</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1BxknxrNnH/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/dyule_store/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@dyule_store?_r=1&_t=ZS-98HoC54dGcu" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h4>UBICACIÓN Y CONTACTO</h4>
-                <p><i class="fa-solid fa-location-dot"></i> C.C. El Bosque, Local 27-107, Piso 1, Quito - Ecuador</p>
-                
-                <p>
-                    <a href="https://wa.me/593996715122?text=Hola%20D'Yule,%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="link-contacto-wa">
-                        <i class="fa-brands fa-whatsapp"></i> +593 99 671 5122
-                    </a>
-                </p>
-                
-                <p>
-                    <a href="mailto:veroyura@gmail.com" class="link-contacto-email">
-                        <i class="fa-solid fa-envelope"></i> veroyura@gmail.com
-                    </a>
-                </p>
-            </div>
-
-            <div class="footer-col">
-                <h4>ENLACES VIP</h4>
-                <ul>
-                    <li><a href="#sobre-nosotros">Nuestra Historia</a></li>
-                    <li><a href="#politicas">Garantía y Respaldos</a></li>
-                    <li><a href="#area-catalogo">Catálogo Completo</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 D'Yule Store Ec. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/593996715122?text=Hola%20D'Yule,%20deseo%20asesor%C3%ADa%20personalizada%20para%20elegir%20mi%20calzado." class="btn-flotante-asesoria-izquierda" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
-    </a>
-
-    <script src="script.js?v=137"></script>
-</body>
-</html>
+            <div
