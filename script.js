@@ -142,12 +142,20 @@ function toggleCatalogo() {
     const panel = document.getElementById('panel-catalogo');
     const franja = document.getElementById('area-catalogo');
     
-    panel.classList.toggle('oculto');
-    panel.classList.toggle('activo');
-    franja.classList.toggle('girada');
+    if (!panel) return;
 
-    // Si se acaba de abrir, hace un desplazamiento suave hacia el catálogo
-    if (!panel.classList.contains('oculto')) {
+    // Si está oculto o no tiene la clase activo, lo mostramos
+    if (panel.classList.contains('oculto') || panel.style.display === 'none') {
+        panel.classList.remove('oculto');
+        panel.classList.add('activo');
+        panel.style.display = 'grid'; // Fuerza la visualización
+        franja.classList.add('girada');
         panel.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // Si está abierto, lo ocultamos
+        panel.classList.add('oculto');
+        panel.classList.remove('activo');
+        panel.style.display = 'none'; // Fuerza el ocultamiento
+        franja.classList.remove('girada');
     }
 }
