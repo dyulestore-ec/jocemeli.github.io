@@ -142,13 +142,12 @@ function toggleCatalogo() {
     const panel = document.getElementById('panel-catalogo');
     const franja = document.getElementById('area-catalogo');
     
-    if (panel.style.display === 'none' || panel.style.display === '') {
-        panel.style.display = 'grid'; // O 'flex' según prefieras, la regla general del layout
-        franja.classList.add('activo');
-        // Hace un pequeño desplazamiento automático hacia abajo para mostrar el catálogo
+    panel.classList.toggle('oculto');
+    panel.classList.toggle('activo');
+    franja.classList.toggle('girada');
+
+    // Si se acaba de abrir, hace un desplazamiento suave hacia el catálogo
+    if (!panel.classList.contains('oculto')) {
         panel.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        panel.style.display = 'none';
-        franja.classList.remove('activo');
     }
 }
