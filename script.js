@@ -6,6 +6,28 @@ function toggleMenu() {
     }
 }
 
+// --- FUNCIÓN PARA DESPLEGAR / OCULTAR EL CATÁLOGO ---
+function toggleCatalogo() {
+    const panel = document.getElementById('panel-catalogo');
+    const franja = document.getElementById('area-catalogo');
+    
+    if (!panel) return;
+
+    // Alternamos entre mostrar y ocultar usando style.display y las clases
+    if (panel.style.display === 'none' || panel.style.display === '') {
+        panel.style.display = 'grid';
+        panel.classList.remove('oculto');
+        panel.classList.add('activo');
+        if (franja) franja.classList.add('girada');
+        panel.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        panel.style.display = 'none';
+        panel.classList.add('oculto');
+        panel.classList.remove('activo');
+        if (franja) franja.classList.remove('girada');
+    }
+}
+
 // --- CARRITO DE COMPRAS ---
 let carrito = [];
 
@@ -104,7 +126,7 @@ function filtrarProductos() {
 
         if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
         if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
-        if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
+        if (filtroMarca !== 'todas' && marca !== filtromarca) coincide = false;
         if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
         if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
         if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
@@ -121,7 +143,7 @@ function filtrarProductos() {
 
 function filtrarTodo() {
     document.querySelectorAll('.sidebar-filtros select').forEach(select => {
-        select.value = 'todos' || 'todas';
+        select.value = 'todos';
     });
     filtrarProductos();
 }
@@ -136,26 +158,4 @@ function resetFiltros() {
     document.getElementById('filtro-tipo-tacon').value = 'todos';
     document.getElementById('filtro-color').value = 'todos';
     filtrarProductos();
-}
-// --- FUNCIÓN PARA DESPLEGAR / OCULTAR EL CATÁLOGO ---
-function toggleCatalogo() {
-    const panel = document.getElementById('panel-catalogo');
-    const franja = document.getElementById('area-catalogo');
-    
-    if (!panel) return;
-
-    // Si está oculto o no tiene la clase activo, lo mostramos
-    if (panel.classList.contains('oculto') || panel.style.display === 'none') {
-        panel.classList.remove('oculto');
-        panel.classList.add('activo');
-        panel.style.display = 'grid'; // Fuerza la visualización
-        franja.classList.add('girada');
-        panel.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        // Si está abierto, lo ocultamos
-        panel.classList.add('oculto');
-        panel.classList.remove('activo');
-        panel.style.display = 'none'; // Fuerza el ocultamiento
-        franja.classList.remove('girada');
-    }
 }
