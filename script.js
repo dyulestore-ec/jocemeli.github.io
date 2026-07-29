@@ -137,3 +137,18 @@ function resetFiltros() {
     document.getElementById('filtro-color').value = 'todos';
     filtrarProductos();
 }
+// --- FUNCIÓN PARA DESPLEGAR / OCULTAR EL CATÁLOGO ---
+function toggleCatalogo() {
+    const panel = document.getElementById('panel-catalogo');
+    const franja = document.getElementById('area-catalogo');
+    
+    if (panel.style.display === 'none' || panel.style.display === '') {
+        panel.style.display = 'grid'; // O 'flex' según prefieras, la regla general del layout
+        franja.classList.add('activo');
+        // Hace un pequeño desplazamiento automático hacia abajo para mostrar el catálogo
+        panel.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        panel.style.display = 'none';
+        franja.classList.remove('activo');
+    }
+}
