@@ -484,3 +484,41 @@ body {
         color: #111;
     }
 }
+/* CORRECCIÓN DE DISEÑO RESPONSIVO PARA MÓVILES */
+@media (max-width: 768px) {
+    /* Hace que el diseño general del catálogo pase a una sola columna ordenada */
+    .main-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    /* Ajusta la barra de filtros para que ocupe todo el ancho y sea cómoda en celular */
+    .sidebar-filtros {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Asegura que el grid de productos muestre las tarjetas bien centradas y sin comprimirse */
+    .catalogo-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas elegantes en celular */
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    /* Estilo limpio para cada tarjeta en pantallas pequeñas */
+    .tarjeta-producto {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    .tarjeta-producto img {
+        width: 100% !important;
+        height: 160px !important;
+        object-fit: cover !important;
+    }
+}
