@@ -586,3 +586,18 @@ body {
         flex-direction: column !important;
     }
 }
+/* AQUÍ VA LA REGLA CON LA PALABRA 'oculto' */
+.main-layout.oculto {
+    display: none !important;
+}
+
+/* Regla cuando se despliega */
+.main-layout.activo {
+    display: grid !important;
+    grid-template-columns: 280px 1fr !important;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
