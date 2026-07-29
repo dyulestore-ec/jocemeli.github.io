@@ -542,8 +542,19 @@ body {
     user-select: none;
 }
 
+/* Color elegante al pasar el cursor (gris claro distinguido) */
+.transicion-catalogo {
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    user-select: none;
+    background-color: #f7f7f7 !important; /* Fondo sutil por defecto */
+    padding: 25px 20px;
+    text-align: center;
+}
+
 .transicion-catalogo:hover {
-    background-color: #1a1a1a !important;
+    background-color: #e5e5e5 !important; /* Gris claro suave al pasar el mouse */
+    color: #0c0c0c !important;
 }
 
 /* Estado oculto por defecto */
