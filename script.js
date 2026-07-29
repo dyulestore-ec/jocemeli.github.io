@@ -1,42 +1,50 @@
+// --- FUNCIONES DE NAVEGACIÓN Y MENÚ MÓVIL ---
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+        navMenu.classList.toggle('active');
+    }
+}
+
+// --- CARRITO DE COMPRAS ---
 let carrito = [];
-const NUMERO_WHATSAPP = "593996715122"; // Número oficial D'Yule
 
-// CAMBIAR COLOR EN PRODUCTO CON SWATCHES
-const estadoColorProductos = {
-    1: { colorTexto: 'Negro', colorData: 'negro' }
-};
-
-function cambiarColorProducto(idProducto, nombreColor, dataColor, urlImagen) {
-    // Cambiar imagen
-    document.getElementById(`img-prod-${idProducto}`).src = urlImagen;
-    
-    // Cambiar texto
-    document.getElementById(`nombre-color-${idProducto}`).innerText = nombreColor;
-
-    // Actualizar estado interno
-    estadoColorProductos[idProducto] = { colorTexto: nombreColor, colorData: dataColor };
-
-    // Actualizar atributo data-color para el filtro
-    const tarjeta = document.getElementById(`prod-vizzano-${idProducto}`);
-    tarjeta.setAttribute('data-color', dataColor);
-
-    // Resaltar el swatch seleccionado
-    const swatches = tarjeta.querySelectorAll('.swatch');
-    swatches.forEach(s => s.classList.remove('active'));
-    event.target.classList.add('active');
-}
-
-function agregarAlCarritoConColor(idProducto, nombreBase, precio) {
-    const infoColor = estadoColorProductos[idProducto] ? estadoColorProductos[idProducto].colorTexto : '';
-    const nombreCompleto = `${nombreBase} (${infoColor})`;
-    agregarAlCarrito(nombreCompleto, precio);
-}
-
-// FUNCIONES DEL CARRITO
 function agregarAlCarrito(nombre, precio) {
     carrito.push({ nombre, precio });
     actualizarCarrito();
-    toggleCart(true);
+    toggleCart();
+}
+
+function actualizarCarrito() {
+    const cartCount = document.getElementById('cart-count');
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    if (cartCount) cartCount.innerText = carrito.length;
+
+    if (cartItems) {
+        if (carrito.length === 0) {
+            cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
+        } else {
+            cartItems.innerHTML = '';
+            carrito.forEach((prod, index) => {
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <div>
+                            <h4>${prod.nombre}</h4>
+                            <p>$${prod.precio.toFixed(2)}</p>
+                        </div>
+                        <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                `;
+            });
+        }
+    }
+
+    if (cartTotal) {
+        const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+        cartTotal.innerText = `$${total.toFixed(2)}`;
+    }
 }
 
 function eliminarDelCarrito(index) {
@@ -44,152 +52,88 @@ function eliminarDelCarrito(index) {
     actualizarCarrito();
 }
 
-function actualizarCarrito() {
-    const container = document.getElementById('cart-items');
-    const countElement = document.getElementById('cart-count');
-    const totalElement = document.getElementById('cart-total');
-
-    countElement.innerText = carrito.length;
-
-    if (carrito.length === 0) {
-        container.innerHTML = '<p class="empty-msg">Tu carrito está vacío.</p>';
-        totalElement.innerText = '$0.00';
-        return;
-    }
-
-    container.innerHTML = '';
-    let total = 0;
-
-    carrito.forEach((item, index) => {
-        total += item.precio;
-        container.innerHTML += `
-            <div class="cart-item">
-                <div>
-                    <div class="cart-item-title">${item.nombre}</div>
-                    <div class="cart-item-price">$${item.precio.toFixed(2)}</div>
-                </div>
-                <i class="fa-solid fa-trash remove-item" onclick="eliminarDelCarrito(${index})"></i>
-            </div>
-        `;
-    });
-
-    totalElement.innerText = `$${total.toFixed(2)}`;
-}
-
-function toggleCart(forceOpen = false) {
+function toggleCart() {
     const drawer = document.getElementById('cart-drawer');
     const overlay = document.getElementById('cart-overlay');
-
-    if (forceOpen) {
-        drawer.classList.add('active');
-        overlay.classList.add('active');
-    } else {
-        drawer.classList.toggle('active');
-        overlay.classList.toggle('active');
-    }
+    if (drawer) drawer.classList.toggle('active');
+    if (overlay) overlay.classList.toggle('active');
 }
 
 function enviarPedidoWhatsApp() {
     if (carrito.length === 0) {
-        alert('Tu carrito está vacío.');
+        alert("Tu bolsa está vacía.");
         return;
     }
-
-    let mensaje = "¡Hola D'Yule Store! 👋 Quisiera realizar un pedido con los siguientes productos:\n\n";
+    let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
     let total = 0;
-
-    carrito.forEach((item, i) => {
-        mensaje += `${i + 1}. *${item.nombre}* - $${item.precio.toFixed(2)}\n`;
+    carrito.forEach(item => {
+        mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
         total += item.precio;
     });
-
     mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
-    mensaje += "\n\n¿Me ayudan indicándome la disponibilidad para coordinar la entrega?";
-
-    const url = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+    
+    const numeroWhatsApp = "593996715122";
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
 }
 
-// FILTRADO COMPLETO
+// --- SISTEMA DE FILTROS DEL CATÁLOGO ---
 function filtrarProductos() {
-    const tipo = document.getElementById('filtro-tipo').value;
-    const marca = document.getElementById('filtro-marca').value;
-    const categoria = document.getElementById('filtro-categoria').value;
-    const material = document.getElementById('filtro-material').value;
-    const tacon = document.getElementById('filtro-tacon').value;
-    const color = document.getElementById('filtro-color').value;
-    const accesorio = document.getElementById('filtro-accesorio').value;
-    const oferta = document.getElementById('filtro-oferta').value;
+    const filtroOferta = document.getElementById('filtro-oferta').value;
+    const filtroTipo = document.getElementById('filtro-tipo').value;
+    const filtroMarca = document.getElementById('filtro-marca').value;
+    const filtroCategoria = document.getElementById('filtro-categoria').value;
+    const filtroMaterial = document.getElementById('filtro-material').value;
+    const filtroTacon = document.getElementById('filtro-tacon').value;
+    const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
+    const filtroColor = document.getElementById('filtro-color').value;
 
-    const productos = document.querySelectorAll('.tarjeta-producto');
+    const tarjetas = document.querySelectorAll('.tarjeta-producto');
 
-    productos.forEach(prod => {
-        const pTipo = prod.getAttribute('data-tipo');
-        const pMarca = prod.getAttribute('data-marca');
-        const pCategoria = prod.getAttribute('data-categoria');
-        const pMaterial = prod.getAttribute('data-material');
-        const pTacon = prod.getAttribute('data-tacon');
-        const pColor = prod.getAttribute('data-color');
-        const pAccesorio = prod.getAttribute('data-accesorio');
-        const pOferta = prod.getAttribute('data-oferta') || 'no';
+    tarjetas.forEach(tarjeta => {
+        const oferta = tarjeta.getAttribute('data-oferta');
+        const tipo = tarjeta.getAttribute('data-tipo');
+        const marca = tarjeta.getAttribute('data-marca');
+        const categoria = tarjeta.getAttribute('data-categoria');
+        const material = tarjeta.getAttribute('data-material');
+        const tacon = tarjeta.getAttribute('data-tacon');
+        const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
+        const color = tarjeta.getAttribute('data-color');
 
-        const coincideTipo = (tipo === 'todos' || pTipo === tipo);
-        const coincideMarca = (marca === 'todas' || pMarca === marca);
-        const coincideCategoria = (categoria === 'todas' || pCategoria === categoria);
-        const coincideMaterial = (material === 'todos' || pMaterial === material);
-        const coincideTacon = (tacon === 'todos' || pTacon === tacon);
-        const coincideColor = (color === 'todos' || pColor === color);
-        const coincideAccesorio = (accesorio === 'todos' || pAccesorio === accesorio);
-        const coincideOferta = (oferta === 'todos' || pOferta === oferta);
+        let coincide = true;
 
-        if (coincideTipo && coincideMarca && coincideCategoria && coincideMaterial && coincideTacon && coincideColor && coincideAccesorio && coincideOferta) {
-            prod.style.display = 'flex';
+        if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
+        if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
+        if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
+        if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
+        if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
+        if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
+        if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
+        if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
+
+        if (coincide) {
+            tarjeta.style.display = 'block';
         } else {
-            prod.style.display = 'none';
+            tarjeta.style.display = 'none';
         }
     });
 }
 
-function aplicarFiltroRapido(tipoFiltro, valor) {
-    resetFiltros();
-    if (tipoFiltro === 'marca') document.getElementById('filtro-marca').value = valor;
-    if (tipoFiltro === 'categoria') {
-        document.getElementById('filtro-tipo').value = 'calzado';
-        document.getElementById('filtro-categoria').value = valor;
-    }
-    if (tipoFiltro === 'accesorio') {
-        document.getElementById('filtro-tipo').value = 'accesorios';
-        document.getElementById('filtro-accesorio').value = valor;
-    }
-    if (tipoFiltro === 'oferta') document.getElementById('filtro-oferta').value = valor;
+function filtrarTodo() {
+    document.querySelectorAll('.sidebar-filtros select').forEach(select => {
+        select.value = 'todos' || 'todas';
+    });
     filtrarProductos();
 }
 
 function resetFiltros() {
+    document.getElementById('filtro-oferta').value = 'todos';
     document.getElementById('filtro-tipo').value = 'todos';
     document.getElementById('filtro-marca').value = 'todas';
     document.getElementById('filtro-categoria').value = 'todas';
     document.getElementById('filtro-material').value = 'todos';
     document.getElementById('filtro-tacon').value = 'todos';
+    document.getElementById('filtro-tipo-tacon').value = 'todos';
     document.getElementById('filtro-color').value = 'todos';
-    document.getElementById('filtro-accesorio').value = 'todos';
-    document.getElementById('filtro-oferta').value = 'todos';
     filtrarProductos();
-}
-function filtrarTodo() { resetFiltros(); }
-// Función para abrir y cerrar el menú en móviles
-function toggleMenu() {
-    const navMenu = document.getElementById('nav-menu');
-    if (navMenu) {
-        navMenu.classList.toggle('active');
-    }
-}
-// Función para abrir y cerrar el menú desplegable en celulares
-function toggleMenu() {
-    var nav = document.getElementById('nav-menu');
-    if (nav.style.left === '0px') {
-        nav.style.left = '-100%';
-    } else {
-        nav.style.left = '0px';
-    }
 }
