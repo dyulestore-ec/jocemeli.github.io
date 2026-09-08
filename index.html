@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=148">
+    <link rel="stylesheet" href="style.css?v=151">
 </head>
 <body>
 
@@ -118,12 +118,14 @@
         </div>
     </section>
 
+    <!-- FRANJA DESPLEGABLE DIRECTA -->
     <div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
         <span>EXPLORAR NUESTRO PORTAFOLIO</span>
         <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
     </div>
 
-    <div class="main-layout oculto" id="panel-catalogo" style="display: none;">
+    <!-- PANEL DEL CATÁLOGO -->
+    <div class="main-layout" id="panel-catalogo">
         
         <aside class="sidebar-filtros">
             <h3>Filtrar Catálogo</h3>
@@ -212,7 +214,7 @@
 
             <div class="grupo-filtro">
                 <h4>Color (Calzado)</h4>
-                <select id="filtro-color" onchange="filtrarProductos()" style="display:none;">
+                <select id="filtro-color" onchange="filtrarProductos()">
                     <option value="todos">Todos los Colores</option>
                     <option value="negro">Negro</option>
                     <option value="beige">Beige</option>
@@ -238,7 +240,7 @@
 
         <main class="catalogo-grid" id="catalogo">
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-negro-charol-9cm-fino.jpg" alt="Stiletto Negro Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Negro 9cm)', 95.00, 'DY-V101', 'vizzano-negro-charol-9cm-fino.jpg')">Vista Previa</button>
@@ -250,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="negro" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-negro-charol-5cm-fino.jpg" alt="Stiletto Negro Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Negro 5cm)', 95.00, 'DY-V102', 'vizzano-negro-charol-5cm-fino.jpg')">Vista Previa</button>
@@ -262,7 +264,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="beige" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-beige-charol-9cm-fino.jpg" alt="Stiletto Beige Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Beige 9cm)', 95.00, 'DY-V103', 'vizzano-beige-charol-9cm-fino.jpg')">Vista Previa</button>
@@ -274,7 +276,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="beige" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-beige-charol-7cm-fino.jpg" alt="Stiletto Beige Charol 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Beige 7cm)', 95.00, 'DY-V104', 'vizzano-beige-charol-7cm-fino.jpg')">Vista Previa</button>
@@ -286,7 +288,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="beige" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-beige-charol-5cm-fino.jpg" alt="Stiletto Beige Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Beige 5cm)', 95.00, 'DY-V105', 'vizzano-beige-charol-5cm-fino.jpg')">Vista Previa</button>
@@ -298,7 +300,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="azul" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="azul" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-azul-charol-7cm-fino.jpg" alt="Stiletto Azul Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Azul 7cm)', 95.00, 'DY-V106', 'vizzano-azul-charol-7cm-fino.jpg')">Vista Previa</button>
@@ -310,7 +312,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="cafe" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="cafe" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-cafe-charol-9cm-fino.jpg" alt="Stiletto Café Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Café 9cm)', 95.00, 'DY-V107', 'vizzano-cafe-charol-9cm-fino.jpg')">Vista Previa</button>
@@ -322,7 +324,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="blanco" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="blanco" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-blanco-charol-9cm-fino.jpg" alt="Stiletto Blanco Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Blanco 9cm)', 95.00, 'DY-V108', 'vizzano-blanco-charol-9cm-fino.jpg')">Vista Previa</button>
@@ -334,7 +336,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="rojo" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-rojo-charol-7cm-fino.jpg" alt="Stiletto Rojo Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Rojo 7cm)', 95.00, 'DY-V109', 'vizzano-rojo-charol-7cm-fino.jpg')">Vista Previa</button>
@@ -346,7 +348,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="rojo" data-accesorio="ninguno" data-oferta="no">
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
                 <div class="badge-marca">Vizzano</div>
                 <img src="vizzano-rojo-charol-5cm-fino.jpg" alt="Stiletto Rojo Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
                 <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Rojo 5cm)', 95.00, 'DY-V110', 'vizzano-rojo-charol-5cm-fino.jpg')">Vista Previa</button>
@@ -361,6 +363,7 @@
         </main>
     </div>
 
+    <!-- VENTANA MODAL FLOTANTE (VISTA RÁPIDA) -->
     <div class="modal-overlay" id="modal-rapido" onclick="cerrarModalFuera(event)">
         <div class="modal-contenido">
             <button class="modal-cerrar" onclick="cerrarModal()">&times;</button>
@@ -462,6 +465,7 @@
         <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
     </a>
 
+    <!-- SCRIPT CENTRALIZADO Y BLINDADO -->
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('nav-menu');
@@ -476,17 +480,13 @@
             
             if (!panel) return;
 
-            if (panel.style.display === 'none' || panel.style.display === '' || panel.classList.contains('oculto')) {
-                panel.style.display = 'grid';
-                panel.classList.remove('oculto');
+            if (panel.classList.contains('activo')) {
+                panel.classList.remove('activo');
+                if (franja) franja.classList.remove('girada');
+            } else {
                 panel.classList.add('activo');
                 if (franja) franja.classList.add('girada');
                 panel.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                panel.style.display = 'none';
-                panel.classList.add('oculto');
-                panel.classList.remove('activo');
-                if (franja) franja.classList.remove('girada');
             }
         }
 
@@ -596,463 +596,7 @@
                 if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
 
                 if (coincide) {
-                    tarjeta.style.display = 'block';
-                } else {
-                    tarjeta.style.display = 'none';
-                }
-            });
-        }
-
-        function filtrarTodo() {
-            document.querySelectorAll('.sidebar-filtros select').forEach(select => {
-                select.value = 'todos';
-            });
-            filtrarProductos();
-        }
-
-        function resetFiltros() {
-            document.getElementById('filtro-oferta').value = 'todos';
-            document.getElementById('filtro-tipo').value = 'todos';
-            document.getElementById('filtro-marca').value = 'todas';
-            document.getElementById('filtro-categoria').value = 'todas';
-            document.getElementById('filtro-material').value = 'todos';
-            document.getElementById('filtro-tacon').value = 'todos';
-            document.getElementById('filtro-tipo-tacon').value = 'todos';
-            document.getElementById('filtro-color').value = 'todos';
-            filtrarProductos();
-        }
-
-        function seleccionarColor(valorColor, elementoVisual) {
-            const selectOculto = document.getElementById('filtro-color');
-            if (selectOculto) {
-                selectOculto.value = valorColor;
-                if (typeof filtrarProductos === 'function') {
-                    filtrarProductos();
-                }
-            }
-
-            const circulos = document.querySelectorAll('.circulo-color');
-            circulos.forEach(c => c.classList.remove('activo'));
-            if (elementoVisual) {
-                elementoVisual.classList.add('activo');
-            }
-        }
-
-        // Lógica del Modal de Vista Rápida
-        let productoActual = { nombre: '', precio: 0, ref: '' };
-
-        function abrirVistaRapida(nombre, precio, referencia, imagenSrc) {
-            productoActual = { nombre, precio, ref: referencia };
-            
-            document.getElementById('modal-titulo').innerText = nombre;
-            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
-            document.getElementById('modal-ref').innerText = referencia;
-            document.getElementById('modal-img').src = imagenSrc;
-            document.getElementById('modal-talla').value = "";
-
-            document.getElementById('modal-rapido').classList.add('activo');
-        }
-
-        function cerrarModal() {
-            document.getElementById('modal-rapido').classList.remove('activo');
-        }
-
-        function cerrarModalFuera(event) {
-            if (event.target.id === 'modal-rapido') {
-                cerrarModal();
-            }
-        }
-
-        function validarTallaYEnviar(tipo) {
-            const tallaSelect = document.getElementById('modal-talla').value;
-            if (!tallaSelect) {
-                alert("Por favor, selecciona una talla antes de continuar.");
-                return false;
-            }
-
-            const numeroWhatsApp = "593996715122";
-            let mensaje = "";
-
-            if (tipo === 'domicilio') {
-                mensaje = `Hola D'Yule, deseo solicitar un *Envío a Domicilio*:\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, indíquenme los pasos para el pago y envío.`;
-            } else {
-                mensaje = `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque):\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, avísenme cuándo puedo pasar retirando.`;
-            }
-
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-            cerrarModal();
-            return false;
-        }
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const franja = document.getElementById('area-catalogo');
-            const panel = document.getElementById('panel-catalogo');
-
-            if (franja && panel) {
-                franja.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Verificamos si está abierto o cerrado
-                    const estaAbierto = panel.classList.contains('activo');
-
-                    if (estaAbierto) {
-                        panel.classList.remove('activo');
-                        panel.style.display = 'none';
-                        franja.classList.remove('girada');
-                    } else {
-                        panel.classList.add('activo');
-                        panel.style.display = 'grid';
-                        franja.classList.add('girada');
-                        panel.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            }
-        });
-
-        function toggleMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            if (navMenu) {
-                navMenu.classList.toggle('active');
-            }
-        }
-
-        // Carrito de compras
-        let carrito = [];
-
-        function agregarAlCarrito(nombre, precio) {
-            carrito.push({ nombre, precio });
-            actualizarCarrito();
-            toggleCart();
-        }
-
-        function actualizarCarrito() {
-            const cartCount = document.getElementById('cart-count');
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-
-            if (cartCount) cartCount.innerText = carrito.length;
-
-            if (cartItems) {
-                if (carrito.length === 0) {
-                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
-                } else {
-                    cartItems.innerHTML = '';
-                    carrito.forEach((prod, index) => {
-                        cartItems.innerHTML += `
-                            <div class="cart-item">
-                                <div>
-                                    <h4>${prod.nombre}</h4>
-                                    <p>$${prod.precio.toFixed(2)}</p>
-                                </div>
-                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-                        `;
-                    });
-                }
-            }
-
-            if (cartTotal) {
-                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
-                cartTotal.innerText = `$${total.toFixed(2)}`;
-            }
-        }
-
-        function eliminarDelCarrito(index) {
-            carrito.splice(index, 1);
-            actualizarCarrito();
-        }
-
-        function toggleCart() {
-            const drawer = document.getElementById('cart-drawer');
-            const overlay = document.getElementById('cart-overlay');
-            if (drawer) drawer.classList.toggle('active');
-            if (overlay) overlay.classList.toggle('active');
-        }
-
-        function enviarPedidoWhatsApp() {
-            if (carrito.length === 0) {
-                alert("Tu bolsa está vacía.");
-                return;
-            }
-            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
-            let total = 0;
-            carrito.forEach(item => {
-                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
-                total += item.precio;
-            });
-            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
-            
-            const numeroWhatsApp = "593996715122";
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }
-
-        // Filtros del catálogo
-        function filtrarProductos() {
-            const filtroOferta = document.getElementById('filtro-oferta').value;
-            const filtroTipo = document.getElementById('filtro-tipo').value;
-            const filtroMarca = document.getElementById('filtro-marca').value;
-            const filtroCategoria = document.getElementById('filtro-categoria').value;
-            const filtroMaterial = document.getElementById('filtro-material').value;
-            const filtroTacon = document.getElementById('filtro-tacon').value;
-            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
-            const filtroColor = document.getElementById('filtro-color').value;
-
-            const tarjetas = document.querySelectorAll('.tarjeta-producto');
-
-            tarjetas.forEach(tarjeta => {
-                const oferta = tarjeta.getAttribute('data-oferta');
-                const tipo = tarjeta.getAttribute('data-tipo');
-                const marca = tarjeta.getAttribute('data-marca');
-                const categoria = tarjeta.getAttribute('data-categoria');
-                const material = tarjeta.getAttribute('data-material');
-                const tacon = tarjeta.getAttribute('data-tacon');
-                const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
-                const color = tarjeta.getAttribute('data-color');
-
-                let coincide = true;
-
-                if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
-                if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
-                if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
-                if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
-                if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
-                if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
-                if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
-                if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
-
-                if (coincide) {
-                    tarjeta.style.display = 'block';
-                } else {
-                    tarjeta.style.display = 'none';
-                }
-            });
-        }
-
-        function filtrarTodo() {
-            document.querySelectorAll('.sidebar-filtros select').forEach(select => {
-                select.value = 'todos';
-            });
-            filtrarProductos();
-        }
-
-        function resetFiltros() {
-            document.getElementById('filtro-oferta').value = 'todos';
-            document.getElementById('filtro-tipo').value = 'todos';
-            document.getElementById('filtro-marca').value = 'todas';
-            document.getElementById('filtro-categoria').value = 'todas';
-            document.getElementById('filtro-material').value = 'todos';
-            document.getElementById('filtro-tacon').value = 'todos';
-            document.getElementById('filtro-tipo-tacon').value = 'todos';
-            document.getElementById('filtro-color').value = 'todos';
-            filtrarProductos();
-        }
-
-        function seleccionarColor(valorColor, elementoVisual) {
-            const selectOculto = document.getElementById('filtro-color');
-            if (selectOculto) {
-                selectOculto.value = valorColor;
-                if (typeof filtrarProductos === 'function') {
-                    filtrarProductos();
-                }
-            }
-
-            const circulos = document.querySelectorAll('.circulo-color');
-            circulos.forEach(c => c.classList.remove('activo'));
-            if (elementoVisual) {
-                elementoVisual.classList.add('activo');
-            }
-        }
-
-        // Lógica del Modal de Vista Rápida
-        let productoActual = { nombre: '', precio: 0, ref: '' };
-
-        function abrirVistaRapida(nombre, precio, referencia, imagenSrc) {
-            productoActual = { nombre, precio, ref: referencia };
-            
-            document.getElementById('modal-titulo').innerText = nombre;
-            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
-            document.getElementById('modal-ref').innerText = referencia;
-            document.getElementById('modal-img').src = imagenSrc;
-            document.getElementById('modal-talla').value = "";
-
-            document.getElementById('modal-rapido').classList.add('activo');
-        }
-
-        function cerrarModal() {
-            document.getElementById('modal-rapido').classList.remove('activo');
-        }
-
-        function cerrarModalFuera(event) {
-            if (event.target.id === 'modal-rapido') {
-                cerrarModal();
-            }
-        }
-
-        function validarTallaYEnviar(tipo) {
-            const tallaSelect = document.getElementById('modal-talla').value;
-            if (!tallaSelect) {
-                alert("Por favor, selecciona una talla antes de continuar.");
-                return false;
-            }
-
-            const numeroWhatsApp = "593996715122";
-            let mensaje = "";
-
-            if (tipo === 'domicilio') {
-                mensaje = `Hola D'Yule, deseo solicitar un *Envío a Domicilio*:\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, indíquenme los pasos para el pago y envío.`;
-            } else {
-                mensaje = `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque):\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, avísenme cuándo puedo pasar retirando.`;
-            }
-
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-            cerrarModal();
-            return false;
-        }
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const franja = document.getElementById('area-catalogo');
-            const panel = document.getElementById('panel-catalogo');
-
-            if (franja && panel) {
-                franja.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Verificamos si está abierto o cerrado
-                    const estaAbierto = panel.classList.contains('activo');
-
-                    if (estaAbierto) {
-                        panel.classList.remove('activo');
-                        panel.style.display = 'none';
-                        franja.classList.remove('girada');
-                    } else {
-                        panel.classList.add('activo');
-                        panel.style.display = 'grid';
-                        franja.classList.add('girada');
-                        panel.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            }
-        });
-
-        function toggleMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            if (navMenu) {
-                navMenu.classList.toggle('active');
-            }
-        }
-
-        // Carrito de compras
-        let carrito = [];
-
-        function agregarAlCarrito(nombre, precio) {
-            carrito.push({ nombre, precio });
-            actualizarCarrito();
-            toggleCart();
-        }
-
-        function actualizarCarrito() {
-            const cartCount = document.getElementById('cart-count');
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-
-            if (cartCount) cartCount.innerText = carrito.length;
-
-            if (cartItems) {
-                if (carrito.length === 0) {
-                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
-                } else {
-                    cartItems.innerHTML = '';
-                    carrito.forEach((prod, index) => {
-                        cartItems.innerHTML += `
-                            <div class="cart-item">
-                                <div>
-                                    <h4>${prod.nombre}</h4>
-                                    <p>$${prod.precio.toFixed(2)}</p>
-                                </div>
-                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-                        `;
-                    });
-                }
-            }
-
-            if (cartTotal) {
-                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
-                cartTotal.innerText = `$${total.toFixed(2)}`;
-            }
-        }
-
-        function eliminarDelCarrito(index) {
-            carrito.splice(index, 1);
-            actualizarCarrito();
-        }
-
-        function toggleCart() {
-            const drawer = document.getElementById('cart-drawer');
-            const overlay = document.getElementById('cart-overlay');
-            if (drawer) drawer.classList.toggle('active');
-            if (overlay) overlay.classList.toggle('active');
-        }
-
-        function enviarPedidoWhatsApp() {
-            if (carrito.length === 0) {
-                alert("Tu bolsa está vacía.");
-                return;
-            }
-            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
-            let total = 0;
-            carrito.forEach(item => {
-                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
-                total += item.precio;
-            });
-            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
-            
-            const numeroWhatsApp = "593996715122";
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }
-
-        // Filtros del catálogo
-        function filtrarProductos() {
-            const filtroOferta = document.getElementById('filtro-oferta').value;
-            const filtroTipo = document.getElementById('filtro-tipo').value;
-            const filtroMarca = document.getElementById('filtro-marca').value;
-            const filtroCategoria = document.getElementById('filtro-categoria').value;
-            const filtroMaterial = document.getElementById('filtro-material').value;
-            const filtroTacon = document.getElementById('filtro-tacon').value;
-            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
-            const filtroColor = document.getElementById('filtro-color').value;
-
-            const tarjetas = document.querySelectorAll('.tarjeta-producto');
-
-            tarjetas.forEach(tarjeta => {
-                const oferta = tarjeta.getAttribute('data-oferta');
-                const tipo = tarjeta.getAttribute('data-tipo');
-                const marca = tarjeta.getAttribute('data-marca');
-                const categoria = tarjeta.getAttribute('data-categoria');
-                const material = tarjeta.getAttribute('data-material');
-                const tacon = tarjeta.getAttribute('data-tacon');
-                const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
-                const color = tarjeta.getAttribute('data-color');
-
-                let coincide = true;
-
-                if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
-                if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
-                if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
-                if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
-                if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
-                if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
-                if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
-                if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
-
-                if (coincide) {
-                    tarjeta.style.display = 'block';
+                    tarjeta.style.display = 'flex';
                 } else {
                     tarjeta.style.display = 'none';
                 }
