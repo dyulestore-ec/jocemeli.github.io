@@ -381,3 +381,35 @@ body {
     background-color: #ffffff;
     color: #0c0c0c;
 }
+/* ========================================================== */
+/* BOTÓN FLOTANTE DE ASESORÍA PERSONALIZADA (WHATSAPP) */
+/* ========================================================== */
+.btn-flotante-asesoria-izquierda {
+    position: fixed !important;
+    bottom: 25px !important;
+    left: 25px !important;
+    background-color: #25d366 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    padding: 12px 20px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    z-index: 9999 !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.btn-flotante-asesoria-izquierda i {
+    font-size: 1.1rem !important;
+}
+
+.btn-flotante-asesoria-izquierda:hover {
+    background-color: #1eb954 !important;
+    transform: translateY(-3px) scale(1.03) !important;
+}
