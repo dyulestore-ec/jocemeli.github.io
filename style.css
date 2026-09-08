@@ -1,3 +1,7 @@
+/* ========================================================== */
+/* D'YULE STORE EC - ARCHIVO CSS MAESTRO UNIFICADO */
+/* ========================================================== */
+
 :root {
     --rojo-dyule: #8b0000;
     --negro: #0c0c0c;
@@ -62,7 +66,6 @@ body {
 
 .nav-menu a:hover, .nav-highlight { color: var(--rojo-dyule) !important; }
 
-/* Contenedor de Carrito y Menú Móvil (Alineación Horizontal) */
 .header-actions {
     display: flex;
     flex-direction: row;
@@ -70,7 +73,6 @@ body {
     gap: 15px;
 }
 
-/* Carrito */
 .cart-btn {
     background: none; border: none; color: var(--negro);
     font-size: 1.15rem; cursor: pointer; position: relative;
@@ -101,66 +103,7 @@ body {
     letter-spacing: 2px; transition: all 0.3s;
 }
 .btn-hero-editorial:hover { background: var(--blanco); color: var(--negro); }
-/* FRANJA BANNER NEW COLLECTION */
-.banner-new-collection {
-    background-color: var(--negro);
-    color: var(--blanco);
-    padding: 35px 20px;
-    text-align: center;
-    border-bottom: 2px solid var(--rojo-dyule);
-}
 
-.banner-nc-content {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.badge-nc {
-    background-color: var(--rojo-dyule);
-    color: var(--blanco);
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-}
-
-.banner-nc-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin: 5px 0;
-}
-
-.banner-nc-content p {
-    font-size: 0.85rem;
-    font-weight: 300;
-    color: #cccccc;
-    margin: 0 0 10px 0;
-    letter-spacing: 0.5px;
-}
-
-.btn-nc-action {
-    display: inline-block;
-    border: 1px solid var(--blanco);
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    padding: 10px 24px;
-    transition: all 0.3s ease;
-}
-
-.btn-nc-action:hover {
-    background-color: var(--blanco);
-    color: var(--negro);
-}
 /* SECCIONES EDITORIALES */
 .seccion-editorial-premium, .seccion-politicas-editorial {
     padding: 100px 20px; text-align: center; background: var(--blanco);
@@ -187,7 +130,6 @@ body {
     font-size: 0.95rem; font-weight: 300; line-height: 2; color: var(--texto-suave); text-align: justify;
 }
 
-/* Grid Editorial de Políticas */
 .grid-editorial-politicas {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px; margin-top: 50px; text-align: left;
@@ -209,487 +151,7 @@ body {
 }
 .nota-politica-premium { font-size: 0.78rem; color: #888; margin-top: 40px; font-style: italic; }
 
-/* Transición al Catálogo */
-.transicion-catalogo {
-    padding: 40px 20px; text-align: center; background: var(--blanco);
-    border-top: 1px solid var(--gris-borde); border-bottom: 1px solid var(--gris-borde);
-}
-.transicion-catalogo span { font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; color: var(--negro); display: block; margin-bottom: 8px; }
-.transicion-catalogo i { color: var(--rojo-dyule); animation: bounce 2s infinite; }
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-6px); }
-    60% { transform: translateY(-3px); }
-}
-
-/* CATÁLOGO Y FILTROS */
-.main-layout {
-    max-width: 1300px; margin: 50px auto;
-    display: grid; grid-template-columns: 260px 1fr; gap: 30px; padding: 0 20px;
-}
-
-.sidebar-filtros {
-    background: var(--blanco); padding-right: 20px; border-right: 1px solid var(--gris-borde);
-}
-.sidebar-filtros h3 {
-    font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400;
-    letter-spacing: 1px; margin: 0 0 25px 0; padding-bottom: 10px; border-bottom: 1px solid var(--negro);
-}
-.grupo-filtro { margin-bottom: 20px; }
-.grupo-filtro h4 { margin: 0 0 8px 0; font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; color: #888; }
-.grupo-filtro select {
-    width: 100%; padding: 10px; border-radius: 0; border: 1px solid #ccc; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;
-}
-.btn-reset {
-    width: 100%; background: var(--negro); color: var(--blanco); border: none;
-    padding: 12px; border-radius: 0; cursor: pointer; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
-}
-.btn-reset:hover { background: var(--rojo-dyule); }
-
-.catalogo-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px;
-}
-.tarjeta-producto {
-    background: var(--blanco); border: 1px solid var(--gris-borde); border-radius: 0;
-    overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s; position: relative;
-}
-.tarjeta-producto:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-.tarjeta-producto img { width: 100%; height: 320px; object-fit: cover; }
-.badge-marca { position: absolute; top: 12px; left: 12px; background: var(--negro); color: white; font-size: 0.6rem; padding: 4px 8px; letter-spacing: 1px; font-weight: 600; z-index: 10; }
-.badge-oferta { position: absolute; top: 12px; right: 12px; background: var(--rojo-dyule); color: white; font-size: 0.6rem; padding: 4px 8px; letter-spacing: 1px; font-weight: 600; z-index: 10; }
-
-.producto-info { padding: 20px 15px; text-align: center; }
-.tarjeta-producto h3 { font-size: 0.95rem; margin: 0 0 8px 0; }
-.detalles-p { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
-.color-seleccionado { font-size: 0.75rem; margin-bottom: 10px; }
-
-.swatches-color { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
-.swatch { width: 16px; height: 16px; border-radius: 0; cursor: pointer; border: 1px solid #bbb; transition: all 0.2s; }
-.swatch.active, .swatch:hover { border: 2px solid var(--negro); transform: scale(1.15); }
-.color-negro { background-color: #111; }
-.color-beige { background-color: #f5f5dc; }
-.color-azul { background-color: #1a365d; }
-.color-cafe { background-color: #5c4033; }
-.color-blanco { background-color: #ffffff; }
-.color-rojo { background-color: #cc0000; }
-
-.precio { font-size: 1.05rem; font-weight: 600; color: var(--negro); margin-bottom: 15px; }
-.precio-anterior { text-decoration: line-through; color: #aaa; margin-right: 6px; font-size: 0.85rem; font-weight: 400; }
-
-.btn-add-cart {
-    width: 100%; background: var(--negro); color: var(--blanco); border: none;
-    padding: 12px; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; cursor: pointer;
-}
-.btn-add-cart:hover { background: var(--rojo-dyule); }
-
-/* Carrito Drawer */
-.cart-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; }
-.cart-drawer { position: fixed; top: 0; right: -400px; width: 360px; height: 100%; background: var(--blanco); z-index: 201; transition: right 0.3s; display: flex; flex-direction: column; }
-.cart-drawer.active { right: 0; }
-.cart-overlay.active { display: block; }
-.cart-header { padding: 20px; background: var(--negro); color: var(--blanco); display: flex; justify-content: space-between; align-items: center; }
-.cart-header h3 { margin: 0; font-size: 0.8rem; letter-spacing: 2px; }
-.close-cart { background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
-.cart-items { flex: 1; padding: 20px; overflow-y: auto; }
-.cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gris-borde); padding: 12px 0; font-size: 0.82rem; }
-.remove-item { color: #cc0000; cursor: pointer; }
-.cart-footer { padding: 20px; background: var(--gris-fondo); border-top: 1px solid var(--gris-borde); }
-.total-box { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 15px; }
-.btn-checkout-wa { width: 100%; background: #25d366; color: white; border: none; padding: 12px; font-weight: 600; font-size: 0.75rem; letter-spacing: 1px; cursor: pointer; }
-
-/* Footer Boutique */
-.footer-principal { background: var(--negro); color: #ccc; padding: 60px 20px 20px 20px; font-size: 0.82rem; }
-.footer-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
-.footer-col h3, .footer-col h4 { color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 0 0 20px 0; font-weight: 400; }
-.footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col ul a { color: #aaa; text-decoration: none; }
-.footer-col ul a:hover { color: var(--blanco); }
-.social-icons { display: flex; gap: 12px; margin-top: 15px; }
-.social-icons a { width: 32px; height: 32px; background: #222; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; }
-.social-icons a:hover { background: var(--rojo-dyule); }
-.footer-bottom { text-align: center; border-top: 1px solid #222; margin-top: 40px; padding-top: 20px; font-size: 0.72rem; color: #666; }
-
-/* Links de contacto en el Footer */
-.link-contacto-wa, .link-contacto-email {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.link-contacto-wa:hover, .link-contacto-email:hover {
-    color: #25d366;
-}
-
-/* BOTÓN FLOTANTE EN LA ESQUINA INFERIOR IZQUIERDA */
-.btn-flotante-asesoria-izquierda {
-    position: fixed;
-    bottom: 25px;
-    left: 25px;
-    background-color: #25d366;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    padding: 12px 20px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 9999;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btn-flotante-asesoria-izquierda i {
-    font-size: 1.1rem;
-}
-
-.btn-flotante-asesoria-izquierda:hover {
-    background-color: #1eb954;
-    transform: translateY(-3px) scale(1.03);
-}
-
-/* BOTÓN HAMBURGUESA Y ADAPTACIÓN MÓVIL CORREGIDA */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #111;
-    cursor: pointer;
-}
-/* BANNER NEW COLLECTION EDITORIAL PREMIUM */
-.banner-new-collection {
-    background-color: #0c0c0c !important;
-    color: #ffffff !important;
-    padding: 55px 20px !important;
-    text-align: center !important;
-    border-top: 1px solid #222222 !important;
-    border-bottom: 2px solid #8b0000 !important;
-    position: relative !important;
-    z-index: 10 !important;
-}
-
-.banner-nc-content {
-    max-width: 850px !important;
-    margin: 0 auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.badge-nc {
-    background-color: #8b0000 !important;
-    color: #ffffff !important;
-    font-size: 0.65rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    padding: 6px 16px !important;
-    display: inline-block !important;
-    margin-bottom: 15px !important;
-}
-
-.banner-nc-content h2 {
-    font-family: 'Playfair Display', Georgia, serif !important;
-    font-size: 2.2rem !important;
-    font-weight: 400 !important;
-    letter-spacing: 4px !important;
-    color: #ffffff !important;
-    margin: 0 0 12px 0 !important;
-    text-transform: uppercase !important;
-}
-
-.banner-nc-content p {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.88rem !important;
-    font-weight: 300 !important;
-    color: #d1d1d1 !important;
-    margin: 0 0 25px 0 !important;
-    letter-spacing: 1px !important;
-    line-height: 1.6 !important;
-}
-
-.btn-nc-action {
-    display: inline-block !important;
-    border: 1px solid #ffffff !important;
-    background-color: transparent !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.72rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 2.5px !important;
-    padding: 12px 30px !important;
-    text-transform: uppercase !important;
-    transition: all 0.3s ease !important;
-}
-
-.btn-nc-action:hover {
-    background-color: #ffffff !important;
-    color: #0c0c0c !important;
-}
-
-/* Ajuste móvil */
-@media (max-width: 768px) {
-    .banner-new-collection {
-        padding: 40px 15px !important;
-    }
-    
-    .banner-nc-content h2 {
-        font-size: 1.5rem !important;
-        letter-spacing: 2px !important;
-    }
-    
-    .banner-nc-content p {
-        font-size: 0.8rem !important;
-    }
-}
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block !important;
-        margin-left: 0;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 60px;
-        left: -100%; /* Oculto a la izquierda */
-        width: 100%;
-        height: calc(100vh - 60px);
-        background-color: #ffffff;
-        transition: left 0.3s ease;
-        z-index: 998;
-        padding-top: 30px;
-        display: block !important;
-    }
-
-    /* ¡ESTA ES LA LÍNEA CLAVE PARA QUE SE DESPLIEGUE! */
-    .nav-menu.active {
-        left: 0 !important; /* Lo mueve al centro de la pantalla */
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .nav-menu ul li a {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #111;
-    }
-}
-/* CORRECCIÓN DE DISEÑO RESPONSIVO PARA MÓVILES */
-@media (max-width: 768px) {
-    /* Hace que el diseño general del catálogo pase a una sola columna ordenada */
-    .main-layout {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 10px !important;
-    }
-
-    /* Ajusta la barra de filtros para que ocupe todo el ancho y sea cómoda en celular */
-    .sidebar-filtros {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin-bottom: 15px !important;
-    }
-
-    /* Asegura que el grid de productos muestre las tarjetas bien centradas y sin comprimirse */
-    .catalogo-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas elegantes en celular */
-        gap: 12px !important;
-        width: 100% !important;
-    }
-
-    /* Estilo limpio para cada tarjeta en pantallas pequeñas */
-    .tarjeta-producto {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-    }
-
-    .tarjeta-producto img {
-        width: 100% !important;
-        height: 160px !important;
-        object-fit: cover !important;
-    }
-}
-<div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
-        <span>EXPLORAR NUESTRO PORTAFOLIO</span>
-        <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
-    </div>
-
-    <div class="main-layout" id="panel-catalogo" style="display: none;">
-        
-        <aside class="sidebar-filtros">
-            </aside>
-
-        <main class="catalogo-grid" id="catalogo">
-            </main>
-    </div>
-/* ESTILOS PARA LA SECCIÓN DESPLEGABLE DEL CATÁLOGO */
-.transicion-catalogo {
-    cursor: pointer !important;
-    transition: background-color 0.3s ease !important;
-    user-select: none;
-}
-
-/* Color elegante al pasar el cursor (gris claro distinguido) */
-.transicion-catalogo {
-    cursor: pointer !important;
-    transition: background-color 0.3s ease !important;
-    user-select: none;
-    background-color: #f7f7f7 !important; /* Fondo sutil por defecto */
-    padding: 25px 20px;
-    text-align: center;
-}
-
-.transicion-catalogo:hover {
-    background-color: #e5e5e5 !important; /* Gris claro suave al pasar el mouse */
-    color: #0c0c0c !important;
-}
-
-/* Estado oculto por defecto */
-.main-layout.oculto {
-    display: none !important;
-}
-
-/* Estado cuando se despliega */
-.main-layout.activo {
-    display: grid !important;
-    grid-template-columns: 280px 1fr !important;
-    gap: 30px;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Rotación elegante de la flecha */
-.transicion-catalogo.girada .fa-chevron-down {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-}
-
-/* Adaptación responsive para celulares cuando está activo */
-@media (max-width: 768px) {
-    .main-layout.activo {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-}
-/* AQUÍ VA LA REGLA CON LA PALABRA 'oculto' */
-.main-layout.oculto {
-    display: none !important;
-}
-
-/* Regla cuando se despliega */
-.main-layout.activo {
-    display: grid !important;
-    grid-template-columns: 280px 1fr !important;
-    gap: 30px;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-/* ========================================================== */
-/* ESTILOS PARA LA FRANJA DESPLEGABLE Y EL PANEL DEL CATÁLOGO */
-/* ========================================================== */
-
-/* 1. Franja interactiva con gris clarito y transición suave */
-.transicion-catalogo {
-    cursor: pointer !important;
-    transition: background-color 0.3s ease !important;
-    user-select: none;
-    background-color: #f7f7f7 !important; /* Gris clarito elegante */
-    color: #111111 !important;
-    padding: 25px 20px;
-    text-align: center;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.transicion-catalogo:hover {
-    background-color: #e5e5e5 !important; /* Gris un poco más visible al pasar el mouse */
-}
-
-/* 2. Rotación de la flecha cuando está abierto */
-.transicion-catalogo.girada .fa-chevron-down {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-}
-
-/* 3. Estado oculto por defecto */
-.main-layout.oculto {
-    display: none !important;
-}
-
-/* 4. Estado cuando se despliega (cuadrícula ordenada) */
-.main-layout.activo {
-    display: grid !important;
-    grid-template-columns: 280px 1fr !important;
-    gap: 30px;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* 5. Adaptación responsive perfecta para celulares */
-@media (max-width: 768px) {
-    .main-layout.activo {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 10px !important;
-    }
-
-    .sidebar-filtros {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin-bottom: 15px !important;
-    }
-
-    .catalogo-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-        width: 100% !important;
-    }
-
-    .tarjeta-producto {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-    }
-
-    .tarjeta-producto img {
-        width: 100% !important;
-        height: 160px !important;
-        object-fit: cover !important;
-    }
-}
-/* ========================================================== */
-/* FRANJA DESPLEGABLE Y EFECTO ZOOM DE ALTA GAMA PARA FOTOS */
-/* ========================================================== */
-
-/* Franja interactiva del portafolio */
+/* FRANJA DESPLEGABLE DEL PORTAFOLIO */
 .transicion-catalogo {
     cursor: pointer !important;
     transition: background-color 0.3s ease !important;
@@ -718,119 +180,102 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Control del panel desplegable */
-.main-layout.oculto {
-    display: none !important;
+/* CATÁLOGO Y FILTROS (CON VISIBILIDAD CORREGIDA) */
+.main-layout {
+    max-width: 1300px; margin: 50px auto;
+    display: none; /* Oculto por defecto hasta hacer clic */
+    grid-template-columns: 260px 1fr; gap: 30px; padding: 0 20px;
 }
 
 .main-layout.activo {
-    display: grid !important;
-    grid-template-columns: 280px 1fr !important;
-    gap: 30px;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+    display: grid !important; /* Se despliega al hacer clic */
 }
 
-/* --- EFECTO ZOOM SUAVE EN LAS TARJETAS Y FOTOS --- */
+.sidebar-filtros {
+    background: var(--blanco); padding-right: 20px; border-right: 1px solid var(--gris-borde);
+}
+.sidebar-filtros h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400;
+    letter-spacing: 1px; margin: 0 0 25px 0; padding-bottom: 10px; border-bottom: 1px solid var(--negro);
+}
+.grupo-filtro { margin-bottom: 20px; }
+.grupo-filtro h4 { margin: 0 0 8px 0; font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; color: #888; }
+.grupo-filtro select {
+    width: 100%; padding: 10px; border-radius: 0; border: 1px solid #ccc; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;
+}
+.btn-reset {
+    width: 100%; background: var(--negro); color: var(--blanco); border: none;
+    padding: 12px; border-radius: 0; cursor: pointer; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+}
+.btn-reset:hover { background: var(--rojo-dyule); }
+
+.catalogo-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px;
+}
+
+/* TARJETAS CON ZOOM DE ALTA GAMA Y VISTA PREVIA */
 .tarjeta-producto {
-    overflow: hidden !important; /* Mantiene el zoom dentro de la tarjeta */
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
+    background: var(--blanco); border: 1px solid var(--gris-borde); border-radius: 0;
+    overflow: hidden !important; display: flex; flex-direction: column; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important; position: relative;
 }
-
-.tarjeta-producto img {
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Zoom fluido y sedoso */
+.tarjeta-producto:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
+.tarjeta-producto img { 
+    width: 100%; height: 220px; object-fit: cover; 
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
-
-/* Al pasar el cursor, la foto se agranda con elegancia */
 .tarjeta-producto:hover img {
-    transform: scale(1.12) !important; 
+    transform: scale(1.12) !important;
 }
 
-.tarjeta-producto:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
-}
+.badge-marca { position: absolute; top: 12px; left: 12px; background: var(--negro); color: white; font-size: 0.6rem; padding: 4px 8px; letter-spacing: 1px; font-weight: 600; z-index: 10; }
 
-/* Adaptación responsive para celulares */
-@media (max-width: 768px) {
-    .main-layout.activo {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 10px !important;
-    }
-
-    .sidebar-filtros {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin-bottom: 15px !important;
-    }
-
-    .catalogo-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-        width: 100% !important;
-    }
-
-    .tarjeta-producto {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-    }
-
-    .tarjeta-producto img {
-        width: 100% !important;
-        height: 160px !important;
-        object-fit: cover !important;
-    }
-}
-/* ========================================================== */
-/* PALETA DE BOLITAS DE COLORES PARA LOS FILTROS */
-/* ========================================================== */
-
-/* Ocultamos el selector feo tradicional y creamos un contenedor de círculos */
-#filtro-color {
-    display: none !important; /* Oculta el select antiguo */
-}
-
-.paleta-colores-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.circulo-color {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+/* Botón Vista Previa */
+.btn-vista-previa {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     cursor: pointer;
-    border: 2px solid #ddd;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    display: inline-block;
-    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+    z-index: 5;
+    text-transform: uppercase;
+}
+.tarjeta-producto:hover .btn-vista-previa {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-.circulo-color:hover {
-    transform: scale(1.15);
-    border-color: #111;
-}
+.producto-info { padding: 20px 15px; text-align: center; }
+.tarjeta-producto h3 { font-size: 0.95rem; margin: 0 0 8px 0; }
+.detalles-p { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
+.precio { font-size: 1.05rem; font-weight: 600; color: var(--negro); margin-bottom: 15px; }
 
-/* Estado cuando la bolita de color está seleccionada */
-.circulo-color.activo {
-    border-color: #8b0000 !important; /* Color vino/marca de D'Yule */
-    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.3);
-    transform: scale(1.1);
+.btn-add-cart {
+    width: 100%; background: var(--negro); color: var(--blanco); border: none;
+    padding: 12px; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; cursor: pointer;
 }
+.btn-add-cart:hover { background: var(--rojo-dyule); }
 
-/* Colores específicos para cada bolita */
+/* PALETA DE BOLITAS DE COLORES */
+#filtro-color { display: none !important; }
+.paleta-colores-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.circulo-color {
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid #ddd;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: inline-block;
+}
+.circulo-color:hover { transform: scale(1.15); border-color: #111; }
+.circulo-color.activo { border-color: #8b0000 !important; box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.3); transform: scale(1.1); }
 .color-todos { background: linear-gradient(135deg, #eee 50%, #333 50%); }
 .color-negro { background-color: #111111; }
 .color-beige { background-color: #e3d2be; }
@@ -838,368 +283,27 @@ body {
 .color-cafe { background-color: #5c3a21; }
 .color-blanco { background-color: #ffffff; border: 1px solid #ccc; }
 .color-rojo { background-color: #b91c1c; }
-/* ========================================================== */
-/* ESTILOS PARA LA VENTANA MODAL DE VISTA RÁPIDA Y TALLAS */
-/* ========================================================== */
 
-/* Botón flotante "Vista Previa" sobre la tarjeta */
-.tarjeta-producto {
-    position: relative;
-}
-
-.btn-vista-previa {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #ffffff;
-    border: none;
-    padding: 10px 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    border-radius: 4px;
-    z-index: 5;
-    text-transform: uppercase;
-}
-
-.tarjeta-producto:hover .btn-vista-previa {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-/* Fondo oscuro detrás de la ventana flotante */
+/* VENTANA MODAL DE VISTA RÁPIDA (TALLAS Y WHATSAPP) */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(3px);
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); display: none; justify-content: center; align-items: center;
+    z-index: 1000; backdrop-filter: blur(3px);
 }
-
-.modal-overlay.activo {
-    display: flex;
-}
-
-/* Caja principal de la ventana modal estilo Deprati */
+.modal-overlay.activo { display: flex; }
 .modal-contenido {
-    background: #ffffff;
-    width: 90%;
-    max-width: 650px;
-    padding: 30px;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
+    background: #ffffff; width: 90%; max-width: 650px; padding: 30px;
+    border-radius: 8px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    display: flex; gap: 30px; align-items: center; font-family: 'Montserrat', sans-serif; box-sizing: border-box;
 }
-
-.modal-cerrar {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-}
-
-.modal-imagen img {
-    width: 220px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #eaeaea;
-}
-
-.modal-info h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: #111;
-    margin: 0 0 5px 0;
-}
-
-.modal-info .codigo {
-    font-size: 0.75rem;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.modal-info .precio {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #111;
-    margin-bottom: 15px;
-}
-
-.modal-info label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.modal-info select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 20px;
-    background-color: #fff;
-}
-
-/* Botones de Envío a Domicilio y Retiro en Tienda */
-.modal-botones-wa {
-    display: flex;
-    gap: 10px;
-}
-
+.modal-cerrar { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #333; }
+.modal-imagen img { width: 220px; height: 250px; object-fit: cover; border-radius: 4px; border: 1px solid #eaeaea; }
+.modal-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #111; margin: 0 0 5px 0; }
+.modal-info .codigo { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
+.modal-info .precio { font-size: 1.25rem; font-weight: 600; color: #111; margin-bottom: 15px; }
+.modal-info label { font-size: 0.8rem; font-weight: 600; color: #333; display: block; margin-bottom: 5px; }
+.modal-info select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Montserrat', sans-serif; margin-bottom: 20px; background-color: #fff; }
+.modal-botones-wa { display: flex; gap: 10px; }
 .btn-modal-domicilio, .btn-modal-tienda {
-    flex: 1;
-    padding: 12px 10px;
-    border: 1px solid #111;
-    border-radius: 4px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-modal-domicilio {
-    background-color: #ffffff;
-    color: #111111;
-}
-
-.btn-modal-domicilio:hover {
-    background-color: #f0f0f0;
-}
-
-.btn-modal-tienda {
-    background-color: #111111;
-    color: #ffffff;
-}
-
-.btn-modal-tienda:hover {
-    background-color: #333333;
-}
-
-/* Adaptabilidad para celulares */
-@media (max-width: 768px) {
-    .modal-contenido {
-        flex-direction: column;
-        padding: 20px;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    .modal-imagen img {
-        width: 100%;
-        height: 180px;
-    }
-    .modal-botones-wa {
-        flex-direction: column;
-    }
-}
-/* ========================================================== */
-/* ESTILOS VISTA RÁPIDA Y BOTONES DE WHATSAPP */
-/* ========================================================== */
-.tarjeta-producto {
-    position: relative;
-    overflow: hidden !important;
-}
-
-.btn-vista-previa {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #ffffff;
-    border: none;
-    padding: 10px 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    border-radius: 4px;
-    z-index: 5;
-    text-transform: uppercase;
-}
-
-.tarjeta-producto:hover .btn-vista-previa {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(3px);
-}
-
-.modal-overlay.activo {
-    display: flex;
-}
-
-.modal-contenido {
-    background: #ffffff;
-    width: 90%;
-    max-width: 650px;
-    padding: 30px;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-}
-
-.modal-cerrar {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-}
-
-.modal-imagen img {
-    width: 220px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #eaeaea;
-}
-
-.modal-info h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: #111;
-    margin: 0 0 5px 0;
-}
-
-.modal-info .codigo {
-    font-size: 0.75rem;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.modal-info .precio {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #111;
-    margin-bottom: 15px;
-}
-
-.modal-info label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.modal-info select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 20px;
-    background-color: #fff;
-}
-
-.modal-botones-wa {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-modal-domicilio, .btn-modal-tienda {
-    flex: 1;
-    padding: 12px 10px;
-    border: 1px solid #111;
-    border-radius: 4px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-modal-domicilio {
-    background-color: #ffffff;
-    color: #111111;
-}
-
-.btn-modal-domicilio:hover {
-    background-color: #f0f0f0;
-}
-
-.btn-modal-tienda {
-    background-color: #111111;
-    color: #ffffff;
-}
-
-.btn-modal-tienda:hover {
-    background-color: #333333;
-}
-
-@media (max-width: 768px) {
-    .modal-contenido {
-        flex-direction: column;
-        padding: 20px;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    .modal-imagen img {
-        width: 100%;
-        height: 180px;
-    }
-    .modal-botones-wa {
-        flex-direction: column;
-    }
-}
+    flex: 1; padding: 12px 10px; border: 1px solid #111; border-radius: 4px;
+    font
