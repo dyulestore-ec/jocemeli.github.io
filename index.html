@@ -212,7 +212,7 @@
 
             <div class="grupo-filtro">
                 <h4>Color (Calzado)</h4>
-                <select id="filtro-color" onchange="filtrarProductos()">
+                <select id="filtro-color" onchange="filtrarProductos()" style="display:none;">
                     <option value="todos">Todos los Colores</option>
                     <option value="negro">Negro</option>
                     <option value="beige">Beige</option>
@@ -221,6 +221,16 @@
                     <option value="blanco">Blanco</option>
                     <option value="rojo">Rojo</option>
                 </select>
+
+                <div class="paleta-colores-container" id="paleta-colores">
+                    <span class="circulo-color color-todos activo" title="Todos" onclick="seleccionarColor('todos', this)"></span>
+                    <span class="circulo-color color-negro" title="Negro" onclick="seleccionarColor('negro', this)"></span>
+                    <span class="circulo-color color-beige" title="Beige" onclick="seleccionarColor('beige', this)"></span>
+                    <span class="circulo-color color-azul" title="Azul" onclick="seleccionarColor('azul', this)"></span>
+                    <span class="circulo-color color-cafe" title="Café" onclick="seleccionarColor('cafe', this)"></span>
+                    <span class="circulo-color color-blanco" title="Blanco" onclick="seleccionarColor('blanco', this)"></span>
+                    <span class="circulo-color color-rojo" title="Rojo" onclick="seleccionarColor('rojo', this)"></span>
+                </div>
             </div>
 
             <button class="btn-reset" onclick="resetFiltros()">Limpiar Filtros</button>
