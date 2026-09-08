@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=147">
+    <link rel="stylesheet" href="style.css?v=148">
 </head>
 <body>
 
@@ -118,13 +118,11 @@
         </div>
     </section>
 
-    <!-- FRANJA DESPLEGABLE CORRECTAMENTE UBICADA -->
     <div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
         <span>EXPLORAR NUESTRO PORTAFOLIO</span>
         <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
     </div>
 
-    <!-- PANEL DEL CATÁLOGO QUE SE ABRE Y CIERRA -->
     <div class="main-layout oculto" id="panel-catalogo" style="display: none;">
         
         <aside class="sidebar-filtros">
@@ -363,7 +361,6 @@
         </main>
     </div>
 
-    <!-- VENTANA MODAL FLOTANTE (VISTA RÁPIDA) -->
     <div class="modal-overlay" id="modal-rapido" onclick="cerrarModalFuera(event)">
         <div class="modal-contenido">
             <button class="modal-cerrar" onclick="cerrarModal()">&times;</button>
@@ -465,16 +462,20 @@
         <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
     </a>
 
-    <!-- SCRIPTS DE FUNCIONALIDAD -->
     <script>
-        // Función principal de despliegue con doble seguridad
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
+        }
+
         function toggleCatalogo() {
             const panel = document.getElementById('panel-catalogo');
             const franja = document.getElementById('area-catalogo');
             
             if (!panel) return;
 
-            // Si está oculto o display es none, lo mostramos
             if (panel.style.display === 'none' || panel.style.display === '' || panel.classList.contains('oculto')) {
                 panel.style.display = 'grid';
                 panel.classList.remove('oculto');
@@ -489,13 +490,137 @@
             }
         }
 
-        // Refuerzo automático por si acaso el navegador ignora el onclick del HTML
-        document.addEventListener("DOMContentLoaded", function() {
-            const franja = document.getElementById('area-catalogo');
-            if (franja) {
-                franja.addEventListener('click', toggleCatalogo);
+        // Carrito de compras
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+            toggleCart();
+        }
+
+        function actualizarCarrito() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            if (cartCount) cartCount.innerText = carrito.length;
+
+            if (cartItems) {
+                if (carrito.length === 0) {
+                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
+                } else {
+                    cartItems.innerHTML = '';
+                    carrito.forEach((prod, index) => {
+                        cartItems.innerHTML += `
+                            <div class="cart-item">
+                                <div>
+                                    <h4>${prod.nombre}</h4>
+                                    <p>$${prod.precio.toFixed(2)}</p>
+                                </div>
+                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        `;
+                    });
+                }
             }
-        });
+
+            if (cartTotal) {
+                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+                cartTotal.innerText = `$${total.toFixed(2)}`;
+            }
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            if (drawer) drawer.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+        }
+
+        function enviarPedidoWhatsApp() {
+            if (carrito.length === 0) {
+                alert("Tu bolsa está vacía.");
+                return;
+            }
+            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
+            let total = 0;
+            carrito.forEach(item => {
+                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
+                total += item.precio;
+            });
+            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
+            
+            const numeroWhatsApp = "593996715122";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // Filtros del catálogo
+        function filtrarProductos() {
+            const filtroOferta = document.getElementById('filtro-oferta').value;
+            const filtroTipo = document.getElementById('filtro-tipo').value;
+            const filtroMarca = document.getElementById('filtro-marca').value;
+            const filtroCategoria = document.getElementById('filtro-categoria').value;
+            const filtroMaterial = document.getElementById('filtro-material').value;
+            const filtroTacon = document.getElementById('filtro-tacon').value;
+            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
+            const filtroColor = document.getElementById('filtro-color').value;
+
+            const tarjetas = document.querySelectorAll('.tarjeta-producto');
+
+            tarjetas.forEach(tarjeta => {
+                const oferta = tarjeta.getAttribute('data-oferta');
+                const tipo = tarjeta.getAttribute('data-tipo');
+                const marca = tarjeta.getAttribute('data-marca');
+                const categoria = tarjeta.getAttribute('data-categoria');
+                const material = tarjeta.getAttribute('data-material');
+                const tacon = tarjeta.getAttribute('data-tacon');
+                const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
+                const color = tarjeta.getAttribute('data-color');
+
+                let coincide = true;
+
+                if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
+                if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
+                if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
+                if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
+                if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
+                if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
+                if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
+                if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
+
+                if (coincide) {
+                    tarjeta.style.display = 'block';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
+        }
+
+        function filtrarTodo() {
+            document.querySelectorAll('.sidebar-filtros select').forEach(select => {
+                select.value = 'todos';
+            });
+            filtrarProductos();
+        }
+
+        function resetFiltros() {
+            document.getElementById('filtro-oferta').value = 'todos';
+            document.getElementById('filtro-tipo').value = 'todos';
+            document.getElementById('filtro-marca').value = 'todas';
+            document.getElementById('filtro-categoria').value = 'todas';
+            document.getElementById('filtro-material').value = 'todos';
+            document.getElementById('filtro-tacon').value = 'todos';
+            document.getElementById('filtro-tipo-tacon').value = 'todos';
+            document.getElementById('filtro-color').value = 'todos';
+            filtrarProductos();
+        }
 
         function seleccionarColor(valorColor, elementoVisual) {
             const selectOculto = document.getElementById('filtro-color');
