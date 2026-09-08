@@ -685,5 +685,461 @@
             return false;
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const franja = document.getElementById('area-catalogo');
+            const panel = document.getElementById('panel-catalogo');
+
+            if (franja && panel) {
+                franja.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Verificamos si está abierto o cerrado
+                    const estaAbierto = panel.classList.contains('activo');
+
+                    if (estaAbierto) {
+                        panel.classList.remove('activo');
+                        panel.style.display = 'none';
+                        franja.classList.remove('girada');
+                    } else {
+                        panel.classList.add('activo');
+                        panel.style.display = 'grid';
+                        franja.classList.add('girada');
+                        panel.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
+        }
+
+        // Carrito de compras
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+            toggleCart();
+        }
+
+        function actualizarCarrito() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            if (cartCount) cartCount.innerText = carrito.length;
+
+            if (cartItems) {
+                if (carrito.length === 0) {
+                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
+                } else {
+                    cartItems.innerHTML = '';
+                    carrito.forEach((prod, index) => {
+                        cartItems.innerHTML += `
+                            <div class="cart-item">
+                                <div>
+                                    <h4>${prod.nombre}</h4>
+                                    <p>$${prod.precio.toFixed(2)}</p>
+                                </div>
+                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        `;
+                    });
+                }
+            }
+
+            if (cartTotal) {
+                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+                cartTotal.innerText = `$${total.toFixed(2)}`;
+            }
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            if (drawer) drawer.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+        }
+
+        function enviarPedidoWhatsApp() {
+            if (carrito.length === 0) {
+                alert("Tu bolsa está vacía.");
+                return;
+            }
+            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
+            let total = 0;
+            carrito.forEach(item => {
+                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
+                total += item.precio;
+            });
+            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
+            
+            const numeroWhatsApp = "593996715122";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // Filtros del catálogo
+        function filtrarProductos() {
+            const filtroOferta = document.getElementById('filtro-oferta').value;
+            const filtroTipo = document.getElementById('filtro-tipo').value;
+            const filtroMarca = document.getElementById('filtro-marca').value;
+            const filtroCategoria = document.getElementById('filtro-categoria').value;
+            const filtroMaterial = document.getElementById('filtro-material').value;
+            const filtroTacon = document.getElementById('filtro-tacon').value;
+            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
+            const filtroColor = document.getElementById('filtro-color').value;
+
+            const tarjetas = document.querySelectorAll('.tarjeta-producto');
+
+            tarjetas.forEach(tarjeta => {
+                const oferta = tarjeta.getAttribute('data-oferta');
+                const tipo = tarjeta.getAttribute('data-tipo');
+                const marca = tarjeta.getAttribute('data-marca');
+                const categoria = tarjeta.getAttribute('data-categoria');
+                const material = tarjeta.getAttribute('data-material');
+                const tacon = tarjeta.getAttribute('data-tacon');
+                const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
+                const color = tarjeta.getAttribute('data-color');
+
+                let coincide = true;
+
+                if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
+                if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
+                if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
+                if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
+                if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
+                if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
+                if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
+                if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
+
+                if (coincide) {
+                    tarjeta.style.display = 'block';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
+        }
+
+        function filtrarTodo() {
+            document.querySelectorAll('.sidebar-filtros select').forEach(select => {
+                select.value = 'todos';
+            });
+            filtrarProductos();
+        }
+
+        function resetFiltros() {
+            document.getElementById('filtro-oferta').value = 'todos';
+            document.getElementById('filtro-tipo').value = 'todos';
+            document.getElementById('filtro-marca').value = 'todas';
+            document.getElementById('filtro-categoria').value = 'todas';
+            document.getElementById('filtro-material').value = 'todos';
+            document.getElementById('filtro-tacon').value = 'todos';
+            document.getElementById('filtro-tipo-tacon').value = 'todos';
+            document.getElementById('filtro-color').value = 'todos';
+            filtrarProductos();
+        }
+
+        function seleccionarColor(valorColor, elementoVisual) {
+            const selectOculto = document.getElementById('filtro-color');
+            if (selectOculto) {
+                selectOculto.value = valorColor;
+                if (typeof filtrarProductos === 'function') {
+                    filtrarProductos();
+                }
+            }
+
+            const circulos = document.querySelectorAll('.circulo-color');
+            circulos.forEach(c => c.classList.remove('activo'));
+            if (elementoVisual) {
+                elementoVisual.classList.add('activo');
+            }
+        }
+
+        // Lógica del Modal de Vista Rápida
+        let productoActual = { nombre: '', precio: 0, ref: '' };
+
+        function abrirVistaRapida(nombre, precio, referencia, imagenSrc) {
+            productoActual = { nombre, precio, ref: referencia };
+            
+            document.getElementById('modal-titulo').innerText = nombre;
+            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
+            document.getElementById('modal-ref').innerText = referencia;
+            document.getElementById('modal-img').src = imagenSrc;
+            document.getElementById('modal-talla').value = "";
+
+            document.getElementById('modal-rapido').classList.add('activo');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal-rapido').classList.remove('activo');
+        }
+
+        function cerrarModalFuera(event) {
+            if (event.target.id === 'modal-rapido') {
+                cerrarModal();
+            }
+        }
+
+        function validarTallaYEnviar(tipo) {
+            const tallaSelect = document.getElementById('modal-talla').value;
+            if (!tallaSelect) {
+                alert("Por favor, selecciona una talla antes de continuar.");
+                return false;
+            }
+
+            const numeroWhatsApp = "593996715122";
+            let mensaje = "";
+
+            if (tipo === 'domicilio') {
+                mensaje = `Hola D'Yule, deseo solicitar un *Envío a Domicilio*:\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, indíquenme los pasos para el pago y envío.`;
+            } else {
+                mensaje = `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque):\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, avísenme cuándo puedo pasar retirando.`;
+            }
+
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+            cerrarModal();
+            return false;
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const franja = document.getElementById('area-catalogo');
+            const panel = document.getElementById('panel-catalogo');
+
+            if (franja && panel) {
+                franja.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Verificamos si está abierto o cerrado
+                    const estaAbierto = panel.classList.contains('activo');
+
+                    if (estaAbierto) {
+                        panel.classList.remove('activo');
+                        panel.style.display = 'none';
+                        franja.classList.remove('girada');
+                    } else {
+                        panel.classList.add('activo');
+                        panel.style.display = 'grid';
+                        franja.classList.add('girada');
+                        panel.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
+        }
+
+        // Carrito de compras
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+            toggleCart();
+        }
+
+        function actualizarCarrito() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            if (cartCount) cartCount.innerText = carrito.length;
+
+            if (cartItems) {
+                if (carrito.length === 0) {
+                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
+                } else {
+                    cartItems.innerHTML = '';
+                    carrito.forEach((prod, index) => {
+                        cartItems.innerHTML += `
+                            <div class="cart-item">
+                                <div>
+                                    <h4>${prod.nombre}</h4>
+                                    <p>$${prod.precio.toFixed(2)}</p>
+                                </div>
+                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        `;
+                    });
+                }
+            }
+
+            if (cartTotal) {
+                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+                cartTotal.innerText = `$${total.toFixed(2)}`;
+            }
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            if (drawer) drawer.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+        }
+
+        function enviarPedidoWhatsApp() {
+            if (carrito.length === 0) {
+                alert("Tu bolsa está vacía.");
+                return;
+            }
+            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
+            let total = 0;
+            carrito.forEach(item => {
+                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
+                total += item.precio;
+            });
+            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
+            
+            const numeroWhatsApp = "593996715122";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // Filtros del catálogo
+        function filtrarProductos() {
+            const filtroOferta = document.getElementById('filtro-oferta').value;
+            const filtroTipo = document.getElementById('filtro-tipo').value;
+            const filtroMarca = document.getElementById('filtro-marca').value;
+            const filtroCategoria = document.getElementById('filtro-categoria').value;
+            const filtroMaterial = document.getElementById('filtro-material').value;
+            const filtroTacon = document.getElementById('filtro-tacon').value;
+            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
+            const filtroColor = document.getElementById('filtro-color').value;
+
+            const tarjetas = document.querySelectorAll('.tarjeta-producto');
+
+            tarjetas.forEach(tarjeta => {
+                const oferta = tarjeta.getAttribute('data-oferta');
+                const tipo = tarjeta.getAttribute('data-tipo');
+                const marca = tarjeta.getAttribute('data-marca');
+                const categoria = tarjeta.getAttribute('data-categoria');
+                const material = tarjeta.getAttribute('data-material');
+                const tacon = tarjeta.getAttribute('data-tacon');
+                const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
+                const color = tarjeta.getAttribute('data-color');
+
+                let coincide = true;
+
+                if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
+                if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
+                if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
+                if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
+                if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
+                if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
+                if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
+                if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
+
+                if (coincide) {
+                    tarjeta.style.display = 'block';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
+        }
+
+        function filtrarTodo() {
+            document.querySelectorAll('.sidebar-filtros select').forEach(select => {
+                select.value = 'todos';
+            });
+            filtrarProductos();
+        }
+
+        function resetFiltros() {
+            document.getElementById('filtro-oferta').value = 'todos';
+            document.getElementById('filtro-tipo').value = 'todos';
+            document.getElementById('filtro-marca').value = 'todas';
+            document.getElementById('filtro-categoria').value = 'todas';
+            document.getElementById('filtro-material').value = 'todos';
+            document.getElementById('filtro-tacon').value = 'todos';
+            document.getElementById('filtro-tipo-tacon').value = 'todos';
+            document.getElementById('filtro-color').value = 'todos';
+            filtrarProductos();
+        }
+
+        function seleccionarColor(valorColor, elementoVisual) {
+            const selectOculto = document.getElementById('filtro-color');
+            if (selectOculto) {
+                selectOculto.value = valorColor;
+                if (typeof filtrarProductos === 'function') {
+                    filtrarProductos();
+                }
+            }
+
+            const circulos = document.querySelectorAll('.circulo-color');
+            circulos.forEach(c => c.classList.remove('activo'));
+            if (elementoVisual) {
+                elementoVisual.classList.add('activo');
+            }
+        }
+
+        // Lógica del Modal de Vista Rápida
+        let productoActual = { nombre: '', precio: 0, ref: '' };
+
+        function abrirVistaRapida(nombre, precio, referencia, imagenSrc) {
+            productoActual = { nombre, precio, ref: referencia };
+            
+            document.getElementById('modal-titulo').innerText = nombre;
+            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
+            document.getElementById('modal-ref').innerText = referencia;
+            document.getElementById('modal-img').src = imagenSrc;
+            document.getElementById('modal-talla').value = "";
+
+            document.getElementById('modal-rapido').classList.add('activo');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal-rapido').classList.remove('activo');
+        }
+
+        function cerrarModalFuera(event) {
+            if (event.target.id === 'modal-rapido') {
+                cerrarModal();
+            }
+        }
+
+        function validarTallaYEnviar(tipo) {
+            const tallaSelect = document.getElementById('modal-talla').value;
+            if (!tallaSelect) {
+                alert("Por favor, selecciona una talla antes de continuar.");
+                return false;
+            }
+
+            const numeroWhatsApp = "593996715122";
+            let mensaje = "";
+
+            if (tipo === 'domicilio') {
+                mensaje = `Hola D'Yule, deseo solicitar un *Envío a Domicilio*:\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, indíquenme los pasos para el pago y envío.`;
+            } else {
+                mensaje = `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque):\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, avísenme cuándo puedo pasar retirando.`;
+            }
+
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+            cerrarModal();
+            return false;
+        }
+    </script>
 </body>
 </html>
