@@ -791,3 +791,50 @@ body {
         object-fit: cover !important;
     }
 }
+/* ========================================================== */
+/* PALETA DE BOLITAS DE COLORES PARA LOS FILTROS */
+/* ========================================================== */
+
+/* Ocultamos el selector feo tradicional y creamos un contenedor de círculos */
+#filtro-color {
+    display: none !important; /* Oculta el select antiguo */
+}
+
+.paleta-colores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.circulo-color {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.circulo-color:hover {
+    transform: scale(1.15);
+    border-color: #111;
+}
+
+/* Estado cuando la bolita de color está seleccionada */
+.circulo-color.activo {
+    border-color: #8b0000 !important; /* Color vino/marca de D'Yule */
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Colores específicos para cada bolita */
+.color-todos { background: linear-gradient(135deg, #eee 50%, #333 50%); }
+.color-negro { background-color: #111111; }
+.color-beige { background-color: #e3d2be; }
+.color-azul { background-color: #1a365d; }
+.color-cafe { background-color: #5c3a21; }
+.color-blanco { background-color: #ffffff; border: 1px solid #ccc; }
+.color-rojo { background-color: #b91c1c; }
