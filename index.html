@@ -463,3 +463,23 @@
     <script src="script.js?v=140"></script>
 </body>
 </html>
+<script>
+        function seleccionarColor(valorColor, elementoVisual) {
+            // Actualiza el valor del select oculto
+            const selectOculto = document.getElementById('filtro-color');
+            if (selectOculto) {
+                selectOculto.value = valorColor;
+                // Dispara la función de filtrado que ya tienes en tu sistema
+                if (typeof filtrarProductos === 'function') {
+                    filtrarProductos();
+                }
+            }
+
+            // Cambia el estilo visual de selección (borde activo) en las bolitas
+            const circulos = document.querySelectorAll('.circulo-color');
+            circulos.forEach(c => c.classList.remove('activo'));
+            if (elementoVisual) {
+                elementoVisual.classList.add('activo');
+            }
+        }
+    </script>
