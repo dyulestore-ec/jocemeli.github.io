@@ -467,13 +467,15 @@
 
     <!-- SCRIPTS DE FUNCIONALIDAD -->
     <script>
+        // Función principal de despliegue con doble seguridad
         function toggleCatalogo() {
             const panel = document.getElementById('panel-catalogo');
             const franja = document.getElementById('area-catalogo');
             
             if (!panel) return;
 
-            if (panel.style.display === 'none' || panel.style.display === '') {
+            // Si está oculto o display es none, lo mostramos
+            if (panel.style.display === 'none' || panel.style.display === '' || panel.classList.contains('oculto')) {
                 panel.style.display = 'grid';
                 panel.classList.remove('oculto');
                 panel.classList.add('activo');
@@ -486,6 +488,14 @@
                 if (franja) franja.classList.remove('girada');
             }
         }
+
+        // Refuerzo automático por si acaso el navegador ignora el onclick del HTML
+        document.addEventListener("DOMContentLoaded", function() {
+            const franja = document.getElementById('area-catalogo');
+            if (franja) {
+                franja.addEventListener('click', toggleCatalogo);
+            }
+        });
 
         function seleccionarColor(valorColor, elementoVisual) {
             const selectOculto = document.getElementById('filtro-color');
@@ -550,7 +560,5 @@
             return false;
         }
     </script>
-
-    <script src="script.js?v=146"></script>
 </body>
 </html>
