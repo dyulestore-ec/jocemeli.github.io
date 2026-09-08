@@ -685,3 +685,109 @@ body {
         object-fit: cover !important;
     }
 }
+/* ========================================================== */
+/* FRANJA DESPLEGABLE Y EFECTO ZOOM DE ALTA GAMA PARA FOTOS */
+/* ========================================================== */
+
+/* Franja interactiva del portafolio */
+.transicion-catalogo {
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    user-select: none;
+    background-color: #f7f7f7 !important;
+    color: #111111 !important;
+    padding: 25px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.transicion-catalogo:hover {
+    background-color: #e5e5e5 !important;
+}
+
+.transicion-catalogo.girada .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* Control del panel desplegable */
+.main-layout.oculto {
+    display: none !important;
+}
+
+.main-layout.activo {
+    display: grid !important;
+    grid-template-columns: 280px 1fr !important;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* --- EFECTO ZOOM SUAVE EN LAS TARJETAS Y FOTOS --- */
+.tarjeta-producto {
+    overflow: hidden !important; /* Mantiene el zoom dentro de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+.tarjeta-producto img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Zoom fluido y sedoso */
+}
+
+/* Al pasar el cursor, la foto se agranda con elegancia */
+.tarjeta-producto:hover img {
+    transform: scale(1.12) !important; 
+}
+
+.tarjeta-producto:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Adaptación responsive para celulares */
+@media (max-width: 768px) {
+    .main-layout.activo {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    .sidebar-filtros {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 15px !important;
+    }
+
+    .catalogo-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .tarjeta-producto {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    .tarjeta-producto img {
+        width: 100% !important;
+        height: 160px !important;
+        object-fit: cover !important;
+    }
+}
