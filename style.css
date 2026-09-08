@@ -1,5 +1,5 @@
 /* ========================================================== */
-/* D'YULE STORE EC - ARCHIVO CSS MAESTRO UNIFICADO */
+/* D'YULE STORE EC - ESTILOS MAESTROS DEFINITIVOS */
 /* ========================================================== */
 
 :root {
@@ -180,15 +180,15 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* CATÁLOGO Y FILTROS (CON VISIBILIDAD CORREGIDA) */
+/* CATÁLOGO Y FILTROS */
 .main-layout {
     max-width: 1300px; margin: 50px auto;
-    display: none; /* Oculto por defecto hasta hacer clic */
+    display: none; 
     grid-template-columns: 260px 1fr; gap: 30px; padding: 0 20px;
 }
 
 .main-layout.activo {
-    display: grid !important; /* Se despliega al hacer clic */
+    display: grid !important;
 }
 
 .sidebar-filtros {
@@ -230,7 +230,6 @@ body {
 
 .badge-marca { position: absolute; top: 12px; left: 12px; background: var(--negro); color: white; font-size: 0.6rem; padding: 4px 8px; letter-spacing: 1px; font-weight: 600; z-index: 10; }
 
-/* Botón Vista Previa */
 .btn-vista-previa {
     position: absolute;
     top: 40%;
@@ -284,7 +283,7 @@ body {
 .color-blanco { background-color: #ffffff; border: 1px solid #ccc; }
 .color-rojo { background-color: #b91c1c; }
 
-/* VENTANA MODAL DE VISTA RÁPIDA (TALLAS Y WHATSAPP) */
+/* VENTANA MODAL DE VISTA RÁPIDA */
 .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.6); display: none; justify-content: center; align-items: center;
@@ -306,84 +305,45 @@ body {
 .modal-botones-wa { display: flex; gap: 10px; }
 .btn-modal-domicilio, .btn-modal-tienda {
     flex: 1; padding: 12px 10px; border: 1px solid #111; border-radius: 4px;
-    font
-/* ==========================================================
-   ESTILOS PARA LA SECCIÓN DE LLEGADAS EXCLUSIVAS (NEW COLLECTION)
-   ========================================================== */
-.seccion-llegadas-exclusivas {
-    background-color: #0c0c0c;
-    color: #ffffff;
-    padding: 45px 20px;
-    text-align: center;
-    border-top: 1px solid #222222;
-    border-bottom: 2px solid #8b0000;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 1px; cursor: pointer; text-transform: uppercase;
+    display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; transition: all 0.3s ease;
 }
+.btn-modal-domicilio { background-color: #ffffff; color: #111111; }
+.btn-modal-domicilio:hover { background-color: #f0f0f0; }
+.btn-modal-tienda { background-color: #111111; color: #ffffff; }
+.btn-modal-tienda:hover { background-color: #333333; }
 
-.container-llegadas {
-    max-width: 850px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+/* Carrito Drawer */
+.cart-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; }
+.cart-drawer { position: fixed; top: 0; right: -400px; width: 360px; height: 100%; background: var(--blanco); z-index: 201; transition: right 0.3s; display: flex; flex-direction: column; }
+.cart-drawer.active { right: 0; }
+.cart-overlay.active { display: block; }
+.cart-header { padding: 20px; background: var(--negro); color: var(--blanco); display: flex; justify-content: space-between; align-items: center; }
+.cart-header h3 { margin: 0; font-size: 0.8rem; letter-spacing: 2px; }
+.close-cart { background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
+.cart-items { flex: 1; padding: 20px; overflow-y: auto; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gris-borde); padding: 12px 0; font-size: 0.82rem; }
+.cart-footer { padding: 20px; background: var(--gris-fondo); border-top: 1px solid var(--gris-borde); }
+.total-box { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 15px; }
+.btn-checkout-wa { width: 100%; background: #25d366; color: white; border: none; padding: 12px; font-weight: 600; font-size: 0.75rem; letter-spacing: 1px; cursor: pointer; }
 
-.badge-llegadas {
-    background-color: #8b0000;
-    color: #ffffff;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    display: inline-block;
-    margin-bottom: 15px;
-}
+/* Footer Boutique */
+.footer-principal { background: var(--negro); color: #ccc; padding: 60px 20px 20px 20px; font-size: 0.82rem; }
+.footer-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
+.footer-col h3, .footer-col h4 { color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 0 0 20px 0; font-weight: 400; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul a { color: #aaa; text-decoration: none; }
+.footer-col ul a:hover { color: var(--blanco); }
+.social-icons { display: flex; gap: 12px; margin-top: 15px; }
+.social-icons a { width: 32px; height: 32px; background: #222; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.social-icons a:hover { background: var(--rojo-dyule); }
+.footer-bottom { text-align: center; border-top: 1px solid #222; margin-top: 40px; padding-top: 20px; font-size: 0.72rem; color: #666; }
 
-.titulo-llegadas {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-    color: #ffffff;
-    margin: 0 0 12px 0;
-    text-transform: uppercase;
-}
+.link-contacto-wa, .link-contacto-email { color: #ccc; text-decoration: none; transition: color 0.3s; }
+.link-contacto-wa:hover, .link-contacto-email:hover { color: #25d366; }
 
-.texto-llegadas {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 300;
-    color: #d1d1d1;
-    margin: 0 0 25px 0;
-    letter-spacing: 1px;
-    line-height: 1.6;
-}
-
-.btn-llegadas {
-    display: inline-block;
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    padding: 12px 30px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-}
-
-.btn-llegadas:hover {
-    background-color: #ffffff;
-    color: #0c0c0c;
-}
-/* ========================================================== */
-/* BOTÓN FLOTANTE DE ASESORÍA PERSONALIZADA (WHATSAPP) */
-/* ========================================================== */
+/* BOTÓN FLOTANTE VERDE DE WHATSAPP */
 .btn-flotante-asesoria-izquierda {
     position: fixed !important;
     bottom: 25px !important;
@@ -404,12 +364,30 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease !important;
     font-family: 'Montserrat', sans-serif !important;
 }
+.btn-flotante-asesoria-izquierda i { font-size: 1.1rem !important; }
+.btn-flotante-asesoria-izquierda:hover { background-color: #1eb954 !important; transform: translateY(-3px) scale(1.03) !important; }
 
-.btn-flotante-asesoria-izquierda i {
-    font-size: 1.1rem !important;
-}
+/* Menú Móvil */
+.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: #111; cursor: pointer; }
 
-.btn-flotante-asesoria-izquierda:hover {
-    background-color: #1eb954 !important;
-    transform: translateY(-3px) scale(1.03) !important;
+@media (max-width: 768px) {
+    .mobile-menu-btn { display: block !important; }
+    .nav-menu {
+        position: fixed; top: 60px; left: -100%; width: 100%; height: calc(100vh - 60px);
+        background-color: #ffffff; transition: left 0.3s ease; z-index: 998; padding-top: 30px; display: block !important;
+    }
+    .nav-menu.active { left: 0 !important; }
+    .nav-menu ul { flex-direction: column; align-items: center; gap: 25px; }
+    .nav-menu ul li a { font-size: 1.1rem; font-weight: 500; color: #111; }
+    
+    .main-layout.activo {
+        display: flex !important; flex-direction: column !important; gap: 20px !important; padding: 10px !important;
+    }
+    .sidebar-filtros { width: 100% !important; box-sizing: border-box !important; margin-bottom: 15px !important; }
+    .catalogo-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; width: 100% !important; }
+    .tarjeta-producto { width: 100% !important; box-sizing: border-box !important; margin: 0 !important; }
+    .tarjeta-producto img { width: 100% !important; height: 160px !important; object-fit: cover !important; }
+    .modal-contenido { flex-direction: column; padding: 20px; max-height: 90vh; overflow-y: auto; }
+    .modal-imagen img { width: 100%; height: 180px; }
+    .modal-botones-wa { flex-direction: column; }
 }
