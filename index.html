@@ -1,1072 +1,1804 @@
-<!DOCTYPE html>
+dame mi codigo html corregido: <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
-    <title>D'Yule Store Ec | Calzado Femenino Premium</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --rojo-dyule: #8b0000;
-            --negro: #0c0c0c;
-            --blanco: #ffffff;
-            --gris-fondo: #fcfcfc;
-            --gris-borde: #e8e8e8;
-            --texto: #222222;
-            --texto-suave: #666666;
-        }
+    <title>D'Yule Store Ec | Calzado Femenino Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --rojo-dyule: #8b0000;
+            --negro: #0c0c0c;
+            --blanco: #ffffff;
+            --gris-fondo: #fcfcfc;
+            --gris-borde: #e8e8e8;
+            --texto: #222222;
+            --texto-suave: #666666;
+        }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0; padding: 0;
-            background-color: var(--blanco);
-            color: var(--texto);
-            letter-spacing: 0.4px;
-        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--blanco);
+            color: var(--texto);
+            letter-spacing: 0.4px;
+        }
 
-        .top-bar {
-            background-color: var(--negro);
-            color: var(--blanco);
-            text-align: center;
-            padding: 12px 10px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
+        .top-bar {
+            background-color: var(--negro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 12px 10px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
 
-        .header-principal {
-            background: var(--blanco);
-            border-bottom: 1px solid var(--gris-borde);
-            position: sticky; top: 0; z-index: 100;
-        }
+        .header-principal {
+            background: var(--blanco);
+            border-bottom: 1px solid var(--gris-borde);
+            position: sticky; top: 0; z-index: 100;
+        }
 
-        .header-container {
-            max-width: 1300px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 30px;
-        }
+        .header-container {
+            max-width: 1300px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 30px;
+        }
 
-        .brand-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo { max-height: 48px; display: block; }
-        .brand-name {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.25rem; font-weight: 400;
-            color: var(--negro); letter-spacing: 1.5px;
-        }
+        .brand-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo { max-height: 48px; display: block; }
+        .brand-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem; font-weight: 400;
+            color: var(--negro); letter-spacing: 1.5px;
+        }
 
-        .nav-menu ul {
-            list-style: none; margin: 0; padding: 0;
-            display: flex; gap: 24px; align-items: center;
-        }
+        .nav-menu ul {
+            list-style: none; margin: 0; padding: 0;
+            display: flex; gap: 24px; align-items: center;
+        }
 
-        .nav-menu a {
-            text-decoration: none; color: var(--negro);
-            font-weight: 600; font-size: 0.74rem;
-            letter-spacing: 2px; text-transform: uppercase;
-            padding: 8px 4px; transition: color 0.2s;
-        }
+        .nav-menu a {
+            text-decoration: none; color: var(--negro);
+            font-weight: 600; font-size: 0.74rem;
+            letter-spacing: 2px; text-transform: uppercase;
+            padding: 8px 4px; transition: color 0.2s;
+        }
 
-        .nav-menu a:hover, .nav-highlight { color: var(--rojo-dyule) !important; }
+        .nav-menu a:hover, .nav-highlight { color: var(--rojo-dyule) !important; }
 
-        .header-actions {
-            display: flex; flex-direction: row; align-items: center; gap: 15px;
-        }
+        .header-actions {
+            display: flex; flex-direction: row; align-items: center; gap: 15px;
+        }
 
-        .cart-btn {
-            background: none; border: none; color: var(--negro);
-            font-size: 1.15rem; cursor: pointer; position: relative;
-        }
-        .cart-count {
-            background: var(--rojo-dyule); color: var(--blanco);
-            font-size: 0.65rem; font-weight: bold; padding: 2px 6px;
-            border-radius: 50%; position: absolute; top: -6px; right: -9px;
-        }
+        .cart-btn {
+            background: none; border: none; color: var(--negro);
+            font-size: 1.15rem; cursor: pointer; position: relative;
+        }
+        .cart-count {
+            background: var(--rojo-dyule); color: var(--blanco);
+            font-size: 0.65rem; font-weight: bold; padding: 2px 6px;
+            border-radius: 50%; position: absolute; top: -6px; right: -9px;
+        }
 
-        .hero-cover {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
-            display: flex; align-items: center; justify-content: center;
-            text-align: center; color: var(--blanco); position: relative;
-        }
-        .hero-content { max-width: 800px; padding: 0 20px; }
-        .hero-tag { font-size: 0.72rem; letter-spacing: 4px; font-weight: 600; color: #e0e0e0; display: block; margin-bottom: 15px; }
-        .hero-title {
-            font-family: 'Playfair Display', serif; font-size: 3rem;
-            font-weight: 400; letter-spacing: 4px; margin: 0 0 20px 0; color: var(--blanco);
-        }
-        .hero-subtitle { font-size: 0.95rem; font-weight: 300; line-height: 1.9; color: #f0f0f0; margin-bottom: 35px; letter-spacing: 0.5px; }
-        .btn-hero-editorial {
-            display: inline-block; padding: 13px 32px; border: 1px solid var(--blanco);
-            color: var(--blanco); text-decoration: none; font-size: 0.75rem; font-weight: 600;
-            letter-spacing: 2px; transition: all 0.3s;
-        }
-        .btn-hero-editorial:hover { background: var(--blanco); color: var(--negro); }
+        .hero-cover {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('hero-tacones.jpg?v=2') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: var(--blanco); position: relative;
+        }
+        .hero-content { max-width: 800px; padding: 0 20px; }
+        .hero-tag { font-size: 0.72rem; letter-spacing: 4px; font-weight: 600; color: #e0e0e0; display: block; margin-bottom: 15px; }
+        .hero-title {
+            font-family: 'Playfair Display', serif; font-size: 3rem;
+            font-weight: 400; letter-spacing: 4px; margin: 0 0 20px 0; color: var(--blanco);
+        }
+        .hero-subtitle { font-size: 0.95rem; font-weight: 300; line-height: 1.9; color: #f0f0f0; margin-bottom: 35px; letter-spacing: 0.5px; }
+        .btn-hero-editorial {
+            display: inline-block; padding: 13px 32px; border: 1px solid var(--blanco);
+            color: var(--blanco); text-decoration: none; font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 2px; transition: all 0.3s;
+        }
+        .btn-hero-editorial:hover { background: var(--blanco); color: var(--negro); }
 
-        .seccion-editorial-premium, .seccion-politicas-editorial {
-            padding: 100px 20px; text-align: center; background: var(--blanco);
-        }
-        .seccion-politicas-editorial { background: var(--gris-fondo); border-top: 1px solid var(--gris-borde); }
+        .seccion-editorial-premium, .seccion-politicas-editorial {
+            padding: 100px 20px; text-align: center; background: var(--blanco);
+        }
+        .seccion-politicas-editorial { background: var(--gris-fondo); border-top: 1px solid var(--gris-borde); }
 
-        .container-editorial { max-width: 900px; margin: 0 auto; }
-        .subtitulo-editorial {
-            font-size: 0.72rem; font-weight: 600; letter-spacing: 3px;
-            color: var(--texto-suave); display: block; margin-bottom: 12px;
-        }
-        .titulo-editorial {
-            font-family: 'Playfair Display', serif; font-size: 2rem;
-            font-weight: 400; letter-spacing: 3px; color: var(--negro); margin: 0 0 20px 0;
-        }
-        .divisor-elegante {
-            width: 60px; height: 1px; background: var(--rojo-dyule); margin: 0 auto 35px auto;
-        }
-        .texto-destacado {
-            font-size: 1.2rem; font-weight: 400; line-height: 1.8;
-            color: #222222; margin-bottom: 25px; font-style: italic;
-        }
-        .texto-cuerpo {
-            font-size: 0.95rem; font-weight: 300; line-height: 2; color: var(--texto-suave); text-align: justify;
-        }
+        .container-editorial { max-width: 900px; margin: 0 auto; }
+        .subtitulo-editorial {
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 3px;
+            color: var(--texto-suave); display: block; margin-bottom: 12px;
+        }
+        .titulo-editorial {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            font-weight: 400; letter-spacing: 3px; color: var(--negro); margin: 0 0 20px 0;
+        }
+        .divisor-elegante {
+            width: 60px; height: 1px; background: var(--rojo-dyule); margin: 0 auto 35px auto;
+        }
+        .texto-destacado {
+            font-size: 1.2rem; font-weight: 400; line-height: 1.8;
+            color: #222222; margin-bottom: 25px; font-style: italic;
+        }
+        .texto-cuerpo {
+            font-size: 0.95rem; font-weight: 300; line-height: 2; color: var(--texto-suave); text-align: justify;
+        }
 
-        .grid-editorial-politicas {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px; margin-top: 50px; text-align: left;
-        }
-        .bloque-politica {
-            background: var(--blanco); padding: 30px 25px;
-            border: 1px solid var(--gris-borde); transition: all 0.3s;
-        }
-        .bloque-politica:hover { transform: translateY(-3px); border-color: var(--negro); }
-        .num-politica {
-            font-family: 'Playfair Display', serif; font-size: 1.8rem;
-            color: var(--rojo-dyule); display: block; margin-bottom: 15px; font-weight: 300;
-        }
-        .bloque-politica h3 {
-            font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; margin: 0 0 12px 0; color: var(--negro);
-        }
-        .bloque-politica p {
-            font-size: 0.82rem; font-weight: 300; line-height: 1.6; color: var(--texto-suave); margin: 0;
-        }
-        .nota-politica-premium { font-size: 0.78rem; color: #888; margin-top: 40px; font-style: italic; }
+        .grid-editorial-politicas {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px; margin-top: 50px; text-align: left;
+        }
+        .bloque-politica {
+            background: var(--blanco); padding: 30px 25px;
+            border: 1px solid var(--gris-borde); transition: all 0.3s;
+        }
+        .bloque-politica:hover { transform: translateY(-3px); border-color: var(--negro); }
+        .num-politica {
+            font-family: 'Playfair Display', serif; font-size: 1.8rem;
+            color: var(--rojo-dyule); display: block; margin-bottom: 15px; font-weight: 300;
+        }
+        .bloque-politica h3 {
+            font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; margin: 0 0 12px 0; color: var(--negro);
+        }
+        .bloque-politica p {
+            font-size: 0.82rem; font-weight: 300; line-height: 1.6; color: var(--texto-suave); margin: 0;
+        }
+        .nota-politica-premium { font-size: 0.78rem; color: #888; margin-top: 40px; font-style: italic; }
 
-        .transicion-catalogo {
-            cursor: pointer !important;
-            transition: background-color 0.3s ease !important;
-            user-select: none;
-            background-color: #f7f7f7 !important;
-            color: #111111 !important;
-            padding: 25px 20px;
-            text-align: center;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
+        .transicion-catalogo {
+            cursor: pointer !important;
+            transition: background-color 0.3s ease !important;
+            user-select: none;
+            background-color: #f7f7f7 !important;
+            color: #111111 !important;
+            padding: 25px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-        .transicion-catalogo:hover { background-color: #e5e5e5 !important; }
-        .transicion-catalogo.girada .fa-chevron-down {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
-        }
+        .transicion-catalogo:hover { background-color: #e5e5e5 !important; }
+        .transicion-catalogo.girada .fa-chevron-down {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
 
-        .main-layout {
-            max-width: 1300px; margin: 50px auto;
-            display: none; 
-            grid-template-columns: 260px 1fr; gap: 30px; padding: 0 20px;
-        }
+        .main-layout {
+            max-width: 1300px; margin: 50px auto;
+            display: none; 
+            grid-template-columns: 260px 1fr; gap: 30px; padding: 0 20px;
+        }
 
-        .main-layout.activo { display: grid !important; }
+        .main-layout.activo { display: grid !important; }
 
-        .sidebar-filtros {
-            background: var(--blanco); padding-right: 20px; border-right: 1px solid var(--gris-borde);
-        }
-        .sidebar-filtros h3 {
-            font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400;
-            letter-spacing: 1px; margin: 0 0 25px 0; padding-bottom: 10px; border-bottom: 1px solid var(--negro);
-        }
-        .grupo-filtro { margin-bottom: 20px; }
-        .grupo-filtro h4 { margin: 0 0 8px 0; font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; color: #888; }
-        .grupo-filtro select {
-            width: 100%; padding: 10px; border-radius: 0; border: 1px solid #ccc; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;
-        }
-        .btn-reset {
-            width: 100%; background: var(--negro); color: var(--blanco); border: none;
-            padding: 12px; border-radius: 0; cursor: pointer; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
-        }
-        .btn-reset:hover { background: var(--rojo-dyule); }
+        .sidebar-filtros {
+            background: var(--blanco); padding-right: 20px; border-right: 1px solid var(--gris-borde);
+        }
+        .sidebar-filtros h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400;
+            letter-spacing: 1px; margin: 0 0 25px 0; padding-bottom: 10px; border-bottom: 1px solid var(--negro);
+        }
+        .grupo-filtro { margin-bottom: 20px; }
+        .grupo-filtro h4 { margin: 0 0 8px 0; font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; color: #888; }
+        .grupo-filtro select {
+            width: 100%; padding: 10px; border-radius: 0; border: 1px solid #ccc; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;
+        }
+        .btn-reset {
+            width: 100%; background: var(--negro); color: var(--blanco); border: none;
+            padding: 12px; border-radius: 0; cursor: pointer; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+        }
+        .btn-reset:hover { background: var(--rojo-dyule); }
 
-        .catalogo-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px;
-        }
+        .catalogo-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px;
+        }
 
-        .tarjeta-producto {
-            background: var(--blanco); border: 1px solid var(--gris-borde); border-radius: 0;
-            overflow: hidden !important; display: flex; flex-direction: column; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease !important; position: relative;
-        }
-        .tarjeta-producto:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
-        .tarjeta-producto img { 
-            width: 100%; height: 220px; object-fit: cover; 
-            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-        }
-        .tarjeta-producto:hover img { transform: scale(1.12) !important; }
+        .tarjeta-producto {
+            background: var(--blanco); border: 1px solid var(--gris-borde); border-radius: 0;
+            overflow: hidden !important; display: flex; flex-direction: column; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important; position: relative;
+        }
+        .tarjeta-producto:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
+        .tarjeta-producto img { 
+            width: 100%; height: 220px; object-fit: cover; 
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+        }
+        .tarjeta-producto:hover img { transform: scale(1.12) !important; }
 
-        .badge-marca { position: absolute; top: 12px; left: 12px; background: var(--negro); color: white; font-size: 0.6rem; padding: 4px 8px; letter-spacing: 1px; font-weight: 600; z-index: 10; }
+        .badge-marca { position: absolute; top: 12px; left: 12px; background: var(--negro); color: white; font-size: 0.6rem; padding: 4px 8px; letter-spacing: 1px; font-weight: 600; z-index: 10; }
 
-        .btn-vista-previa {
-            position: absolute; top: 40%; left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            background-color: rgba(0, 0, 0, 0.85); color: #ffffff; border: none;
-            padding: 10px 18px; font-family: 'Montserrat', sans-serif; font-size: 0.75rem;
-            font-weight: 600; letter-spacing: 1.5px; cursor: pointer; opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease; border-radius: 4px; z-index: 5; text-transform: uppercase;
-        }
-        .tarjeta-producto:hover .btn-vista-previa {
-            opacity: 1; transform: translate(-50%, -50%) scale(1);
-        }
+        .btn-vista-previa {
+            position: absolute; top: 40%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background-color: rgba(0, 0, 0, 0.85); color: #ffffff; border: none;
+            padding: 10px 18px; font-family: 'Montserrat', sans-serif; font-size: 0.75rem;
+            font-weight: 600; letter-spacing: 1.5px; cursor: pointer; opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease; border-radius: 4px; z-index: 5; text-transform: uppercase;
+        }
+        .tarjeta-producto:hover .btn-vista-previa {
+            opacity: 1; transform: translate(-50%, -50%) scale(1);
+        }
 
-        .producto-info { padding: 20px 15px; text-align: center; }
-        .tarjeta-producto h3 { font-size: 0.95rem; margin: 0 0 8px 0; }
-        .detalles-p { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
-        .precio { font-size: 1.05rem; font-weight: 600; color: var(--negro); margin-bottom: 15px; }
+        .producto-info { padding: 20px 15px; text-align: center; }
+        .tarjeta-producto h3 { font-size: 0.95rem; margin: 0 0 8px 0; }
+        .detalles-p { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
+        .precio { font-size: 1.05rem; font-weight: 600; color: var(--negro); margin-bottom: 15px; }
 
-        .btn-add-cart {
-            width: 100%; background: var(--negro); color: var(--blanco); border: none;
-            padding: 12px; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; cursor: pointer;
-        }
-        .btn-add-cart:hover { background: var(--rojo-dyule); }
+        .btn-add-cart {
+            width: 100%; background: var(--negro); color: var(--blanco); border: none;
+            padding: 12px; font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; cursor: pointer;
+        }
+        .btn-add-cart:hover { background: var(--rojo-dyule); }
 
-        #filtro-color { display: none !important; }
-        .paleta-colores-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-        .circulo-color {
-            width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid #ddd;
-            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: inline-block;
-        }
-        .circulo-color:hover { transform: scale(1.15); border-color: #111; }
-        .circulo-color.activo { border-color: #8b0000 !important; box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.3); transform: scale(1.1); }
-        .color-todos { background: linear-gradient(135deg, #eee 50%, #333 50%); }
-        .color-negro { background-color: #111111; }
-        .color-beige { background-color: #e3d2be; }
-        .color-azul { background-color: #1a365d; }
-        .color-cafe { background-color: #5c3a21; }
-        .color-blanco { background-color: #ffffff; border: 1px solid #ccc; }
-        .color-rojo { background-color: #b91c1c; }
+        #filtro-color { display: none !important; }
+        .paleta-colores-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .circulo-color {
+            width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid #ddd;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: inline-block;
+        }
+        .circulo-color:hover { transform: scale(1.15); border-color: #111; }
+        .circulo-color.activo { border-color: #8b0000 !important; box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.3); transform: scale(1.1); }
+        .color-todos { background: linear-gradient(135deg, #eee 50%, #333 50%); }
+        .color-negro { background-color: #111111; }
+        .color-beige { background-color: #e3d2be; }
+        .color-azul { background-color: #1a365d; }
+        .color-cafe { background-color: #5c3a21; }
+        .color-blanco { background-color: #ffffff; border: 1px solid #ccc; }
+        .color-rojo { background-color: #b91c1c; }
 
-        .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); display: none; justify-content: center; align-items: center;
-            z-index: 1000; backdrop-filter: blur(3px);
-        }
-        .modal-overlay.activo { display: flex; }
-        .modal-contenido {
-            background: #ffffff; width: 90%; max-width: 650px; padding: 30px;
-            border-radius: 8px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            display: flex; gap: 30px; align-items: center; font-family: 'Montserrat', sans-serif; box-sizing: border-box;
-        }
-        .modal-cerrar { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #333; }
-        .modal-imagen img { width: 220px; height: 250px; object-fit: cover; border-radius: 4px; border: 1px solid #eaeaea; }
-        .modal-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #111; margin: 0 0 5px 0; }
-        .modal-info .codigo { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
-        .modal-info .precio { font-size: 1.25rem; font-weight: 600; color: #111; margin-bottom: 15px; }
-        .modal-info label { font-size: 0.8rem; font-weight: 600; color: #333; display: block; margin-bottom: 5px; }
-        .modal-info select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Montserrat', sans-serif; margin-bottom: 20px; background-color: #fff; }
-        .modal-botones-wa { display: flex; gap: 10px; }
-        .btn-modal-domicilio, .btn-modal-tienda {
-            flex: 1; padding: 12px 10px; border: 1px solid #111; border-radius: 4px;
-            font-size: 0.72rem; font-weight: 600; letter-spacing: 1px; cursor: pointer; text-transform: uppercase;
-            display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; transition: all 0.3s ease;
-        }
-        .btn-modal-domicilio { background-color: #ffffff; color: #111111; }
-        .btn-modal-domicilio:hover { background-color: #f0f0f0; }
-        .btn-modal-tienda { background-color: #111111; color: #ffffff; }
-        .btn-modal-tienda:hover { background-color: #333333; }
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); display: none; justify-content: center; align-items: center;
+            z-index: 1000; backdrop-filter: blur(3px);
+        }
+        .modal-overlay.activo { display: flex; }
+        .modal-contenido {
+            background: #ffffff; width: 90%; max-width: 650px; padding: 30px;
+            border-radius: 8px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            display: flex; gap: 30px; align-items: center; font-family: 'Montserrat', sans-serif; box-sizing: border-box;
+        }
+        .modal-cerrar { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #333; }
+        .modal-imagen img { width: 220px; height: 250px; object-fit: cover; border-radius: 4px; border: 1px solid #eaeaea; }
+        .modal-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #111; margin: 0 0 5px 0; }
+        .modal-info .codigo { font-size: 0.75rem; color: #777; margin-bottom: 10px; }
+        .modal-info .precio { font-size: 1.25rem; font-weight: 600; color: #111; margin-bottom: 15px; }
+        .modal-info label { font-size: 0.8rem; font-weight: 600; color: #333; display: block; margin-bottom: 5px; }
+        .modal-info select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Montserrat', sans-serif; margin-bottom: 20px; background-color: #fff; }
+        .modal-botones-wa { display: flex; gap: 10px; }
+        .btn-modal-domicilio, .btn-modal-tienda {
+            flex: 1; padding: 12px 10px; border: 1px solid #111; border-radius: 4px;
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 1px; cursor: pointer; text-transform: uppercase;
+            display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; transition: all 0.3s ease;
+        }
+        .btn-modal-domicilio { background-color: #ffffff; color: #111111; }
+        .btn-modal-domicilio:hover { background-color: #f0f0f0; }
+        .btn-modal-tienda { background-color: #111111; color: #ffffff; }
+        .btn-modal-tienda:hover { background-color: #333333; }
 
-        .cart-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; }
-        .cart-drawer { position: fixed; top: 0; right: -400px; width: 360px; height: 100%; background: var(--blanco); z-index: 201; transition: right 0.3s; display: flex; flex-direction: column; }
-        .cart-drawer.active { right: 0; }
-        .cart-overlay.active { display: block; }
-        .cart-header { padding: 20px; background: var(--negro); color: var(--blanco); display: flex; justify-content: space-between; align-items: center; }
-        .cart-header h3 { margin: 0; font-size: 0.8rem; letter-spacing: 2px; }
-        .close-cart { background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
-        .cart-items { flex: 1; padding: 20px; overflow-y: auto; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gris-borde); padding: 12px 0; font-size: 0.82rem; }
-        .cart-footer { padding: 20px; background: var(--gris-fondo); border-top: 1px solid var(--gris-borde); }
-        .total-box { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 15px; }
-        .btn-checkout-wa { width: 100%; background: #25d366; color: white; border: none; padding: 12px; font-weight: 600; font-size: 0.75rem; letter-spacing: 1px; cursor: pointer; }
+        .cart-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; }
+        .cart-drawer { position: fixed; top: 0; right: -400px; width: 360px; height: 100%; background: var(--blanco); z-index: 201; transition: right 0.3s; display: flex; flex-direction: column; }
+        .cart-drawer.active { right: 0; }
+        .cart-overlay.active { display: block; }
+        .cart-header { padding: 20px; background: var(--negro); color: var(--blanco); display: flex; justify-content: space-between; align-items: center; }
+        .cart-header h3 { margin: 0; font-size: 0.8rem; letter-spacing: 2px; }
+        .close-cart { background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
+        .cart-items { flex: 1; padding: 20px; overflow-y: auto; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gris-borde); padding: 12px 0; font-size: 0.82rem; }
+        .cart-footer { padding: 20px; background: var(--gris-fondo); border-top: 1px solid var(--gris-borde); }
+        .total-box { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 15px; }
+        .btn-checkout-wa { width: 100%; background: #25d366; color: white; border: none; padding: 12px; font-weight: 600; font-size: 0.75rem; letter-spacing: 1px; cursor: pointer; }
 
-        .footer-principal { background: var(--negro); color: #ccc; padding: 60px 20px 20px 20px; font-size: 0.82rem; }
-        .footer-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
-        .footer-col h3, .footer-col h4 { color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 0 0 20px 0; font-weight: 400; }
-        .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul a { color: #aaa; text-decoration: none; }
-        .footer-col ul a:hover { color: var(--blanco); }
-        .social-icons { display: flex; gap: 12px; margin-top: 15px; }
-        .social-icons a { width: 32px; height: 32px; background: #222; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; }
-        .social-icons a:hover { background: var(--rojo-dyule); }
-        .footer-bottom { text-align: center; border-top: 1px solid #222; margin-top: 40px; padding-top: 20px; font-size: 0.72rem; color: #666; }
+        .footer-principal { background: var(--negro); color: #ccc; padding: 60px 20px 20px 20px; font-size: 0.82rem; }
+        .footer-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
+        .footer-col h3, .footer-col h4 { color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 0 0 20px 0; font-weight: 400; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a { color: #aaa; text-decoration: none; }
+        .footer-col ul a:hover { color: var(--blanco); }
+        .social-icons { display: flex; gap: 12px; margin-top: 15px; }
+        .social-icons a { width: 32px; height: 32px; background: #222; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .social-icons a:hover { background: var(--rojo-dyule); }
+        .footer-bottom { text-align: center; border-top: 1px solid #222; margin-top: 40px; padding-top: 20px; font-size: 0.72rem; color: #666; }
 
-        .link-contacto-wa, .link-contacto-email { color: #ccc; text-decoration: none; transition: color 0.3s; }
-        .link-contacto-wa:hover, .link-contacto-email:hover { color: #25d366; }
+        .link-contacto-wa, .link-contacto-email { color: #ccc; text-decoration: none; transition: color 0.3s; }
+        .link-contacto-wa:hover, .link-contacto-email:hover { color: #25d366; }
 
-        .btn-flotante-asesoria-izquierda {
-            position: fixed !important; bottom: 25px !important; left: 25px !important;
-            background-color: #25d366 !important; color: #ffffff !important;
-            text-decoration: none !important; font-size: 0.72rem !important; font-weight: 600 !important;
-            letter-spacing: 1.5px !important; padding: 12px 20px !important; border-radius: 30px !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important; display: flex !important;
-            align-items: center !important; gap: 8px !important; z-index: 9999 !important;
-            transition: transform 0.3s ease, background-color 0.3s ease !important;
-            font-family: 'Montserrat', sans-serif !important;
-        }
-        .btn-flotante-asesoria-izquierda i { font-size: 1.1rem !important; }
-        .btn-flotante-asesoria-izquierda:hover { background-color: #1eb954 !important; transform: translateY(-3px) scale(1.03) !important; }
+        .btn-flotante-asesoria-izquierda {
+            position: fixed !important; bottom: 25px !important; left: 25px !important;
+            background-color: #25d366 !important; color: #ffffff !important;
+            text-decoration: none !important; font-size: 0.72rem !important; font-weight: 600 !important;
+            letter-spacing: 1.5px !important; padding: 12px 20px !important; border-radius: 30px !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important; display: flex !important;
+            align-items: center !important; gap: 8px !important; z-index: 9999 !important;
+            transition: transform 0.3s ease, background-color 0.3s ease !important;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+        .btn-flotante-asesoria-izquierda i { font-size: 1.1rem !important; }
+        .btn-flotante-asesoria-izquierda:hover { background-color: #1eb954 !important; transform: translateY(-3px) scale(1.03) !important; }
 
-        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: #111; cursor: pointer; }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: #111; cursor: pointer; }
 
-        @media (max-width: 768px) {
-            .mobile-menu-btn { display: block !important; }
-            .nav-menu {
-                position: fixed; top: 60px; left: -100%; width: 100%; height: calc(100vh - 60px);
-                background-color: #ffffff; transition: left 0.3s ease; z-index: 998; padding-top: 30px; display: block !important;
-            }
-            .nav-menu.active { left: 0 !important; }
-            .nav-menu ul { flex-direction: column; align-items: center; gap: 25px; }
-            .nav-menu ul li a { font-size: 1.1rem; font-weight: 500; color: #111; }
-            
-            .main-layout.activo {
-                display: flex !important; flex-direction: column !important; gap: 20px !important; padding: 10px !important;
-            }
-            .sidebar-filtros { width: 100% !important; box-sizing: border-box !important; margin-bottom: 15px !important; }
-            .catalogo-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; width: 100% !important; }
-            .tarjeta-producto { width: 100% !important; box-sizing: border-box !important; margin: 0 !important; }
-            .tarjeta-producto img { width: 100% !important; height: 160px !important; object-fit: cover !important; }
-            .modal-contenido { flex-direction: column; padding: 20px; max-height: 90vh; overflow-y: auto; }
-            .modal-imagen img { width: 100%; height: 180px; }
-            .modal-botones-wa { flex-direction: column; }
-        }
-    </style>
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block !important; }
+            .nav-menu {
+                position: fixed; top: 60px; left: -100%; width: 100%; height: calc(100vh - 60px);
+                background-color: #ffffff; transition: left 0.3s ease; z-index: 998; padding-top: 30px; display: block !important;
+            }
+            .nav-menu.active { left: 0 !important; }
+            .nav-menu ul { flex-direction: column; align-items: center; gap: 25px; }
+            .nav-menu ul li a { font-size: 1.1rem; font-weight: 500; color: #111; }
+            
+            .main-layout.activo {
+                display: flex !important; flex-direction: column !important; gap: 20px !important; padding: 10px !important;
+            }
+            .sidebar-filtros { width: 100% !important; box-sizing: border-box !important; margin-bottom: 15px !important; }
+            .catalogo-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; width: 100% !important; }
+            .tarjeta-producto { width: 100% !important; box-sizing: border-box !important; margin: 0 !important; }
+            .tarjeta-producto img { width: 100% !important; height: 160px !important; object-fit: cover !important; }
+            .modal-contenido { flex-direction: column; padding: 20px; max-height: 90vh; overflow-y: auto; }
+            .modal-imagen img { width: 100%; height: 180px; }
+            .modal-botones-wa { flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <span>COLECCIONES CÁPSULA LIMITADAS | ENVÍOS PREMIUM A TODO EL PAÍS</span>
-    </div>
-
-    <header class="header-principal">
-        <div class="header-container">
-            <div class="logo-box">
-                <a href="#" class="brand-link">
-                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=150&auto=format&fit=crop&q=80" alt="D'Yule Logo" class="logo">
-                    <span class="brand-name">D´Yule Store Ec</span>
-                </a>
-            </div>
-
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="#" onclick="filtrarTodo(); toggleMenu();">INICIO</a></li>
-                    <li><a href="#sobre-nosotros" onclick="toggleMenu();">NOSOTROS</a></li>
-                    <li><a href="#politicas" onclick="toggleMenu();">COMPROMISO VIP</a></li>
-                    <li><a href="#area-catalogo" class="nav-highlight" onclick="toggleMenu();">EXPLORAR COLECCIÓN</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <button class="cart-btn" onclick="toggleCart()">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-count" id="cart-count">0</span>
-                </button>
-
-                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero-cover">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-tag">EDICIÓN EXCLUSIVA</span>
-            <h1 class="hero-title">EL MANIFIESTO DE LA ELEGANCIA</h1>
-            <p class="hero-subtitle">Redefinimos el calce perfecto fusionando la sofisticación internacional con los pilares de la ergonomía brasileña Premium.</p>
-            <a href="#sobre-nosotros" class="btn-hero-editorial">DESCUBRIR NUESTRO MUNDO</a>
-        </div>
-    </section>
-
-    <div style="background-color: #0c0c0c !important; color: #ffffff !important; padding: 45px 20px !important; text-align: center !important; border-top: 1px solid #222222 !important; border-bottom: 2px solid #8b0000 !important; width: 100% !important; box-sizing: border-box !important;">
-        <div style="max-width: 850px !important; margin: 0 auto !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important;">
-            <span style="background-color: #8b0000 !important; color: #ffffff !important; font-size: 0.65rem !important; font-weight: 600 !important; letter-spacing: 3px !important; text-transform: uppercase !important; padding: 6px 16px !important; display: inline-block !important; margin-bottom: 15px !important;">Llegadas Exclusivas</span>
-            <h2 style="font-family: 'Playfair Display', Georgia, serif !important; font-size: 2rem !important; font-weight: 400 !important; letter-spacing: 4px !important; color: #ffffff !important; margin: 0 0 12px 0 !important; text-transform: uppercase !important;">NEW COLLECTION 2026</h2>
-            <p style="font-family: 'Montserrat', sans-serif !important; font-size: 0.88rem !important; font-weight: 300 !important; color: #d1d1d1 !important; margin: 0 0 25px 0 !important; letter-spacing: 1px !important; line-height: 1.6 !important;">Descubre las últimas tendencias en calzado y carteras Premium recién llegadas a boutique.</p>
-            <a href="#area-catalogo" style="display: inline-block !important; border: 1px solid #ffffff !important; background-color: transparent !important; color: #ffffff !important; text-decoration: none !important; font-family: 'Montserrat', sans-serif !important; font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 2.5px !important; padding: 12px 30px !important; text-transform: uppercase !important;">EXPLORAR NOVEDADES</a>
-        </div>
-    </div>
-
-    <section class="seccion-editorial-premium" id="sobre-nosotros">
-        <div class="container-editorial">
-            <span class="subtitulo-editorial">MÁS DE 10 AÑOS EN EL CENTRO COMERCIAL EL BOSQUE</span>
-            <h2 class="titulo-editorial">TU PAR PERFECTO EXISTE. ¡Y ESTÁ AQUÍ!</h2>
-            <div class="divisor-elegante"></div>
-            <p class="texto-destacado">
-                En D’Yule no vendemos solo calzado y accesorios; te otorgamos la libertad de caminar con absoluta distinción, elegancia y comodidad.
-            </p>
-            <p class="texto-cuerpo">
-                Reunimos las mejores marcas de calzado y carteras Premium para acercarte piezas exclusivas elaboradas con materiales de máxima calidad. Contamos con estilos, texturas y gamas cromáticas pensadas para la mujer contemporánea de Ecuador.
-            </p>
-        </div>
-    </section>
-
-    <section class="seccion-politicas-editorial" id="politicas">
-        <div class="container-editorial">
-            <span class="subtitulo-editorial">ESTÁNDARES DE LA BOUTIQUE</span>
-            <h2 class="titulo-editorial">COMPROMISO, CALIDAD Y RESPALDO</h2>
-            <div class="divisor-elegante"></div>
-            
-            <div class="grid-editorial-politicas">
-                <div class="bloque-politica">
-                    <span class="num-politica">01</span>
-                    <h3>PLAZO EXCLUSIVO</h3>
-                    <p>Cualquier solicitud de cambio por defecto estructural es válida hasta 7 días posteriores a tu compra.</p>
-                </div>
-                <div class="bloque-politica">
-                    <span class="num-politica">02</span>
-                    <h3>ESTADO IMPECABLE</h3>
-                    <p>Para procesar una garantía, la pieza debe mantenerse sin uso, intacta y en condiciones originales.</p>
-                </div>
-                <div class="bloque-politica">
-                    <span class="num-politica">03</span>
-                    <h3>EMPAQUE PREMIUM</h3>
-                    <p>Deberá entregarse en su empaque original de la firma, fundas protectoras y complementos tal como fue recibido.</p>
-                </div>
-                <div class="bloque-politica">
-                    <span class="num-politica">04</span>
-                    <h3>CONTROL RIGUROSO</h3>
-                    <p>Cada artículo pasa por un estricto control de calidad previo al envío, asegurando una experiencia óptima.</p>
-                </div>
-            </div>
-            
-            <p class="nota-politica-premium">* Nota indispensable: Es mandatorio presentar la factura original de compra para validar tus coberturas.</p>
-        </div>
-    </section>
-
-    <div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
-        <span>EXPLORAR NUESTRO PORTAFOLIO</span>
-        <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
-    </div>
-
-    <div class="main-layout" id="panel-catalogo">
-        
-        <aside class="sidebar-filtros">
-            <h3>Filtrar Catálogo</h3>
-
-            <div class="grupo-filtro">
-                <h4>Promociones</h4>
-                <select id="filtro-oferta" onchange="filtrarProductos()">
-                    <option value="todos">Todos los productos</option>
-                    <option value="si">🔥 Solo Ofertas ($30)</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Tipo</h4>
-                <select id="filtro-tipo" onchange="filtrarProductos()">
-                    <option value="todos">Todos los productos</option>
-                    <option value="calzado">Solo Calzado</option>
-                    <option value="accesorios">Solo Accesorios</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Marca</h4>
-                <select id="filtro-marca" onchange="filtrarProductos()">
-                    <option value="todas">Todas las Marcas</option>
-                    <option value="vizzano">Vizzano</option>
-                    <option value="divalentini">Di Valentini</option>
-                    <option value="usaflex">Usaflex</option>
-                    <option value="piccadilly">Piccadilly</option>
-                    <option value="modare">Modare</option>
-                    <option value="invoice">Invoice</option>
-                    <option value="capelli-rossi">Capelli Rossi</option>
-                    <option value="cristofoli">Cristófoli</option>
-                    <option value="pegada">Pegada</option>
-                    <option value="verbenas">Verbenas</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Estilo / Categoría</h4>
-                <select id="filtro-categoria" onchange="filtrarProductos()">
-                    <option value="todas">Todas las Categorías</option>
-                    <option value="ejecutivo">Ejecutivo / Trabajo</option>
-                    <option value="fiesta">Fiesta</option>
-                    <option value="casual">Casual</option>
-                    <option value="deportivo">Deportivo / Urbano</option>
-                    <option value="senorero">Señorero</option>
-                    <option value="botas">Botas</option>
-                    <option value="botines">Botines</option>
-                    <option value="mocasines">Mocasines</option>
-                    <option value="flats">Flats</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Material</h4>
-                <select id="filtro-material" onchange="filtrarProductos()">
-                    <option value="todos">Todos los Materiales</option>
-                    <option value="cuero">100% Cuero</option>
-                    <option value="sintetico">Sintético</option>
-                    <option value="charol">Charol</option>
-                    <option value="gamuza">Gamuza</option>
-                    <option value="satin">Tela Satín</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Altura de Tacón</h4>
-                <select id="filtro-tacon" onchange="filtrarProductos()">
-                    <option value="todos">Todas las Alturas</option>
-                    <option value="flats">Flats / Plano (0-2 cm)</option>
-                    <option value="medio">Tacón Medio (5 cm)</option>
-                    <option value="alto">Tacón Alto (7 cm)</option>
-                    <option value="plataforma">Plataforma / Extremo (9->10 cm)</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Tipo de Tacón</h4>
-                <select id="filtro-tipo-tacon" onchange="filtrarProductos()">
-                    <option value="todos">Todos los Tipos</option>
-                    <option value="ancho">Tacón Ancho / Robusto</option>
-                    <option value="fino">Tacón Fino / Stiletto</option>
-                </select>
-            </div>
-
-            <div class="grupo-filtro">
-                <h4>Color (Calzado)</h4>
-                <select id="filtro-color" onchange="filtrarProductos()">
-                    <option value="todos">Todos los Colores</option>
-                    <option value="negro">Negro</option>
-                    <option value="beige">Beige</option>
-                    <option value="azul">Azul</option>
-                    <option value="cafe">Café</option>
-                    <option value="blanco">Blanco</option>
-                    <option value="rojo">Rojo</option>
-                </select>
-
-                <div class="paleta-colores-container" id="paleta-colores">
-                    <span class="circulo-color color-todos activo" title="Todos" onclick="seleccionarColor('todos', this)"></span>
-                    <span class="circulo-color color-negro" title="Negro" onclick="seleccionarColor('negro', this)"></span>
-                    <span class="circulo-color color-beige" title="Beige" onclick="seleccionarColor('beige', this)"></span>
-                    <span class="circulo-color color-azul" title="Azul" onclick="seleccionarColor('azul', this)"></span>
-                    <span class="circulo-color color-cafe" title="Café" onclick="seleccionarColor('cafe', this)"></span>
-                    <span class="circulo-color color-blanco" title="Blanco" onclick="seleccionarColor('blanco', this)"></span>
-                    <span class="circulo-color color-rojo" title="Rojo" onclick="seleccionarColor('rojo', this)"></span>
-                </div>
-            </div>
-
-            <button class="btn-reset" onclick="resetFiltros()">Limpiar Filtros</button>
-        </aside>
-
-        <main class="catalogo-grid" id="catalogo">
-
-            <!-- ================= CALZADO (TUS ZAPATOS COMPLETOS) ================= -->
-            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
-                <div class="badge-marca">Vizzano</div>
-                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80" alt="Stiletto Charol Vizzano">
-                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Negro 9cm)', 95.00, 'DY-V101', 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Stiletto Charol Vizzano</h3>
-                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Negro 9cm)', 95.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <!-- ================= SECCIÓN DE CARTERAS Y ACCESORIOS CON FOTOS CORREGIDAS ================= -->
-            <div style="grid-column: 1 / -1; margin: 40px 0 20px 0; border-top: 1px solid var(--gris-borde); padding-top: 30px;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400; letter-spacing: 2px; color: var(--negro); text-align: center; margin-bottom: 25px;">COLECCIÓN DE CARTERAS Y BOLSOS</h2>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80" alt="Cartera Casual Beige MiuMiu">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Casual Beige MiuMiu', 75.00, 'DY-C01', 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Casual Beige MiuMiu</h3>
-                    <p class="detalles-p">Casual | Bolso de Hombro</p>
-                    <p class="precio">$75.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Casual Beige MiuMiu', 75.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&auto=format&fit=crop&q=80" alt="Cartera Casual Blanca MiuMiu">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Casual Blanca MiuMiu', 75.00, 'DY-C02', 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Casual Blanca MiuMiu</h3>
-                    <p class="detalles-p">Casual | Bolso de Hombro</p>
-                    <p class="precio">$75.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Casual Blanca MiuMiu', 75.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&auto=format&fit=crop&q=80" alt="Cartera Café MK con Cadena">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Café MK con Cadena', 80.00, 'DY-C03', 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Café MK con Cadena</h3>
-                    <p class="detalles-p">Casual | Herraje Metálico</p>
-                    <p class="precio">$80.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Café MK con Cadena', 80.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500&auto=format&fit=crop&q=80" alt="Cartera Cuadros Vino">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Cuadros Vino', 70.00, 'DY-C04', 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Cuadros Vino</h3>
-                    <p class="detalles-p">Casual | Estampado Texturizado</p>
-                    <p class="precio">$70.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Cuadros Vino', 70.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500&auto=format&fit=crop&q=80" alt="Cartera Hombro Café Claro">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Hombro Café Claro', 75.00, 'DY-C05', 'https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Hombro Café Claro</h3>
-                    <p class="detalles-p">Casual | Diseño Ergonómico</p>
-                    <p class="precio">$75.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Hombro Café Claro', 75.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="gamuza" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=80" alt="Cartera Hombro Gamuza Café">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Hombro Gamuza Café', 85.00, 'DY-C06', 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Hombro Gamuza Café</h3>
-                    <p class="detalles-p">Casual | Acabado Gamuza</p>
-                    <p class="precio">$85.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Hombro Gamuza Café', 85.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500&auto=format&fit=crop&q=80" alt="Cartera Hombro Negro Fashionbag">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Hombro Negro Fashionbag', 75.00, 'DY-C07', 'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Hombro Negro Fashionbag</h3>
-                    <p class="detalles-p">Casual | Uso Diario</p>
-                    <p class="precio">$75.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Hombro Negro Fashionbag', 75.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=500&auto=format&fit=crop&q=80" alt="Cartera Elegante Beige Minibolso">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Elegante Beige Minibolso', 65.00, 'DY-C08', 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Elegante Beige Minibolso</h3>
-                    <p class="detalles-p">Elegante | Minibolso de Mano</p>
-                    <p class="precio">$65.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Elegante Beige Minibolso', 65.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
-                <div class="badge-marca">D'Yule</div>
-                <img src="https://images.unsplash.com/photo-1563178406-4cdc2923acbc?w=500&auto=format&fit=crop&q=80" alt="Cartera Elegante Café Minibolso">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Elegante Café Minibolso', 65.00, 'DY-C09', 'https://images.unsplash.com/photo-1563178406-4cdc2923acbc?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Elegante Café Minibolso</h3>
-                    <p class="detalles-p">Elegante | Minibolso de Mano</p>
-                    <p class="precio">$65.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Elegante Café Minibolso', 65.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="gamuza" data-oferta="no">
-                <div class="badge-marca">Coach Style</div>
-                <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80" alt="Cartera Estructurada Gamuza Café Coach">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Estructurada Gamuza Café Coach', 95.00, 'DY-C10', 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Gamuza Café Coach</h3>
-                    <p class="detalles-p">Estructurada | Estilo Ejecutivo</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Estructurada Gamuza Café Coach', 95.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="cuero" data-oferta="no">
-                <div class="badge-marca">Guess</div>
-                <img src="https://images.unsplash.com/photo-1591348278961-4c4f945b4972?w=500&auto=format&fit=crop&q=80" alt="Cartera Guess Original">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Guess Original', 110.00, 'DY-C13', 'https://images.unsplash.com/photo-1591348278961-4c4f945b4972?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Guess Original</h3>
-                    <p class="detalles-p">Colección Exclusiva | Importada</p>
-                    <p class="precio">$110.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Guess Original', 110.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="cuero" data-oferta="no">
-                <div class="badge-marca">Louis Vuitton</div>
-                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&auto=format&fit=crop&q=80" alt="Cartera Louis Vuitton Original">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Louis Vuitton Original', 140.00, 'DY-C14', 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Louis Vuitton Original</h3>
-                    <p class="detalles-p">Alta Gama | Lujo y Diseño</p>
-                    <p class="precio">$140.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Louis Vuitton Original', 140.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
-                <div class="badge-marca">Fiesta</div>
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=80" alt="Cartera Fiesta Dorada con Cadena Plata">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Fiesta Dorada con Cadena Plata', 65.00, 'DY-F01', 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Fiesta Dorada (Cadena Plata)</h3>
-                    <p class="detalles-p">Fiesta | Clutch de Noche</p>
-                    <p class="precio">$65.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Dorada con Cadena Plata', 65.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-            <div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
-                <div class="badge-marca">Fiesta</div>
-                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&auto=format&fit=crop&q=80" alt="Cartera Fiesta Negro">
-                <button class="btn-vista-previa" onclick="abrirVistaRapidaCartera('Cartera Fiesta Negro', 60.00, 'DY-F06', 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&auto=format&fit=crop&q=80')">Vista Previa</button>
-                <div class="producto-info">
-                    <h3>Cartera Fiesta Negro</h3>
-                    <p class="detalles-p">Fiesta | Clutch Clásico</p>
-                    <p class="precio">$60.00</p>
-                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Negro', 60.00)">AGREGAR A LA BOLSA</button>
-                </div>
-            </div>
-
-        </main>
-    </div>
-
-    <div class="modal-overlay" id="modal-rapido" onclick="cerrarModalFuera(event)">
-        <div class="modal-contenido">
-            <button class="modal-cerrar" onclick="cerrarModal()">&times;</button>
-            <div class="modal-imagen">
-                <img id="modal-img" src="" alt="Producto D'Yule">
-            </div>
-            <div class="modal-info">
-                <h3 id="modal-titulo">Nombre del Producto</h3>
-                <p class="codigo">Ref: <span id="modal-ref">DY-001</span></p>
-                <p class="precio" id="modal-precio">$95.00</p>
-                
-                <label for="modal-talla">Talla:</label>
-                <select id="modal-talla">
-                    <option value="">Selecciona una talla</option>
-                    <option value="34">34</option>
-                    <option value="35">35</option>
-                    <option value="36">36</option>
-                    <option value="37">37</option>
-                    <option value="38">38</option>
-                    <option value="39">39</option>
-                </select>
-
-                <div class="modal-botones-wa">
-                    <a href="#" id="link-domicilio" class="btn-modal-domicilio" target="_blank" onclick="return validarTallaYEnviar('domicilio')">
-                        <i class="fa-solid fa-truck"></i> Envío a Domicilio
-                    </a>
-                    <a href="#" id="link-tienda" class="btn-modal-tienda" target="_blank" onclick="return validarTallaYEnviar('tienda')">
-                        <i class="fa-solid fa-store"></i> Retiro en Tienda
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>TU BOLSA DE COMPRAS</h3>
-            <button class="close-cart" onclick="toggleCart()">&times;</button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <p class="empty-msg">Tu bolsa está vacía.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="total-box">
-                <span>TOTAL:</span>
-                <span id="cart-total">$0.00</span>
-            </div>
-            <button class="btn-checkout-wa" onclick="enviarPedidoWhatsApp()">
-                <i class="fa-brands fa-whatsapp"></i> COORDINAR PEDIDO
-            </button>
-        </div>
-    </div>
-
-    <footer class="footer-principal" id="contacto">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h3>D'Yule Store Ec</h3>
-                <p>Distribuidores directos de calzado y carteras en Ecuador.</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1BxknxrNnH/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/dyule_store/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@dyule_store?_r=1&_t=ZS-98HoC54dGcu" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h4>UBICACIÓN Y CONTACTO</h4>
-                <p><i class="fa-solid fa-location-dot"></i> C.C. El Bosque, Local 27-107, Piso 1, Quito - Ecuador</p>
-                
-                <p>
-                    <a href="https://wa.me/593996715122?text=Hola%20D'Yule,%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="link-contacto-wa">
-                        <i class="fa-brands fa-whatsapp"></i> +593 99 671 5122
-                    </a>
-                </p>
-                
-                <p>
-                    <a href="mailto:veroyura@gmail.com" class="link-contacto-email">
-                        <i class="fa-solid fa-envelope"></i> veroyura@gmail.com
-                    </a>
-                </p>
-            </div>
-
-            <div class="footer-col">
-                <h4>ENLACES VIP</h4>
-                <ul>
-                    <li><a href="#sobre-nosotros">Nuestra Historia</a></li>
-                    <li><a href="#politicas">Garantía y Respaldos</a></li>
-                    <li><a href="#area-catalogo">Catálogo Completo</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 D'Yule Store Ec. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/593996715122?text=Hola%20D'Yule,%20deseo%20asesor%C3%ADa%20personalizada." class="btn-flotante-asesoria-izquierda" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
-    </a>
-
-    <script>
-        function toggleMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            if (navMenu) navMenu.classList.toggle('active');
-        }
-
-        function toggleCatalogo() {
-            const panel = document.getElementById('panel-catalogo');
-            const franja = document.getElementById('area-catalogo');
-            if (!panel) return;
-            if (panel.classList.contains('activo')) {
-                panel.classList.remove('activo');
-                if (franja) franja.classList.remove('girada');
-            } else {
-                panel.classList.add('activo');
-                if (franja) franja.classList.add('girada');
-                panel.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        let carrito = [];
-
-        function agregarAlCarrito(nombre, precio) {
-            carrito.push({ nombre, precio });
-            actualizarCarrito();
-            toggleCart();
-        }
-
-        function actualizarCarrito() {
-            const cartCount = document.getElementById('cart-count');
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-
-            if (cartCount) cartCount.innerText = carrito.length;
-
-            if (cartItems) {
-                if (carrito.length === 0) {
-                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
-                } else {
-                    cartItems.innerHTML = '';
-                    carrito.forEach((prod, index) => {
-                        cartItems.innerHTML += `
-                            <div class="cart-item">
-                                <div>
-                                    <h4>${prod.nombre}</h4>
-                                    <p>$${prod.precio.toFixed(2)}</p>
-                                </div>
-                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-                        `;
-                    });
-                }
-            }
-
-            if (cartTotal) {
-                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
-                cartTotal.innerText = `$${total.toFixed(2)}`;
-            }
-        }
-
-        function eliminarDelCarrito(index) {
-            carrito.splice(index, 1);
-            actualizarCarrito();
-        }
-
-        function toggleCart() {
-            const drawer = document.getElementById('cart-drawer');
-            const overlay = document.getElementById('cart-overlay');
-            if (drawer) drawer.classList.toggle('active');
-            if (overlay) overlay.classList.toggle('active');
-        }
-
-        function enviarPedidoWhatsApp() {
-            if (carrito.length === 0) {
-                alert("Tu bolsa está vacía.");
-                return;
-            }
-            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
-            let total = 0;
-            carrito.forEach(item => {
-                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
-                total += item.precio;
-            });
-            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
-            
-            const numeroWhatsApp = "593996715122";
-            window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, '_blank');
-        }
-
-        function filtrarProductos() {
-            const filtroOferta = document.getElementById('filtro-oferta').value;
-            const filtroTipo = document.getElementById('filtro-tipo').value;
-            const filtroMarca = document.getElementById('filtro-marca').value;
-            const filtroCategoria = document.getElementById('filtro-categoria').value;
-            const filtroMaterial = document.getElementById('filtro-material').value;
-            const filtroTacon = document.getElementById('filtro-tacon').value;
-            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
-            const filtroColor = document.getElementById('filtro-color').value;
-
-            document.querySelectorAll('.tarjeta-producto').forEach(tarjeta => {
-                let coincide = true;
-                if (filtroOferta !== 'todos' && tarjeta.getAttribute('data-oferta') !== filtroOferta) coincide = false;
-                if (filtroTipo !== 'todos' && tarjeta.getAttribute('data-tipo') !== filtroTipo) coincide = false;
-                if (filtroMarca !== 'todas' && tarjeta.getAttribute('data-marca') !== filtroMarca) coincide = false;
-                if (filtroCategoria !== 'todas' && tarjeta.getAttribute('data-categoria') !== filtroCategoria) coincide = false;
-                if (filtroMaterial !== 'todos' && tarjeta.getAttribute('data-material') !== filtroMaterial) coincide = false;
-                if (filtroTacon !== 'todos' && tarjeta.getAttribute('data-tacon') !== filtroTacon) coincide = false;
-                if (filtroTipoTacon !== 'todos' && tarjeta.getAttribute('data-tipo-tacon') !== filtroTipoTacon) coincide = false;
-                if (filtroColor !== 'todos' && tarjeta.getAttribute('data-color') !== filtroColor) coincide = false;
-
-                tarjeta.style.display = coincide ? 'flex' : 'none';
-            });
-        }
-
-        function filtrarTodo() {
-            document.querySelectorAll('.sidebar-filtros select').forEach(s => s.value = 'todos');
-            filtrarProductos();
-        }
-
-        function resetFiltros() {
-            document.getElementById('filtro-oferta').value = 'todos';
-            document.getElementById('filtro-tipo').value = 'todos';
-            document.getElementById('filtro-marca').value = 'todas';
-            document.getElementById('filtro-categoria').value = 'todas';
-            document.getElementById('filtro-material').value = 'todos';
-            document.getElementById('filtro-tacon').value = 'todos';
-            document.getElementById('filtro-tipo-tacon').value = 'todos';
-            document.getElementById('filtro-color').value = 'todos';
-            filtrarProductos();
-        }
-
-        function seleccionarColor(valorColor, elementoVisual) {
-            document.getElementById('filtro-color').value = valorColor;
-            filtrarProductos();
-            document.querySelectorAll('.circulo-color').forEach(c => c.classList.remove('activo'));
-            if (elementoVisual) elementoVisual.classList.add('activo');
-        }
-
-        let productoActual = { nombre: '', precio: 0, ref: '', tipo: 'calzado' };
-
-        function abrirVistaRapida(nombre, precio, referencia, imagenSrc) {
-            productoActual = { nombre, precio, ref: referencia, tipo: 'calzado' };
-            document.getElementById('modal-titulo').innerText = nombre;
-            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
-            document.getElementById('modal-ref').innerText = referencia;
-            document.getElementById('modal-img').src = imagenSrc;
-            document.getElementById('modal-talla').value = "";
-            document.querySelector("label[for='modal-talla']").style.display = 'block';
-            document.getElementById('modal-talla').style.display = 'block';
-            document.getElementById('modal-rapido').classList.add('activo');
-        }
-
-        function abrirVistaRapidaCartera(nombre, precio, referencia, imagenSrc) {
-            productoActual = { nombre, precio, ref: referencia, tipo: 'cartera' };
-            document.getElementById('modal-titulo').innerText = nombre;
-            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
-            document.getElementById('modal-ref').innerText = referencia;
-            document.getElementById('modal-img').src = imagenSrc;
-            document.querySelector("label[for='modal-talla']").style.display = 'none';
-            document.getElementById('modal-talla').style.display = 'none';
-            document.getElementById('modal-rapido').classList.add('activo');
-        }
-
-        function cerrarModal() {
-            document.getElementById('modal-rapido').classList.remove('activo');
-        }
-
-        function cerrarModalFuera(event) {
-            if (event.target.id === 'modal-rapido') cerrarModal();
-        }
-
-        function validarTallaYEnviar(tipo) {
-            const numeroWhatsApp = "593996715122";
-            let mensaje = "";
-
-            if (productoActual.tipo === 'cartera') {
-                mensaje = tipo === 'domicilio' 
-                    ? `Hola D'Yule, deseo solicitar un *Envío a Domicilio* para:\n\n- *Modelo:* ${productoActual.nombre}\n- *Ref:* ${productoActual.ref}\n- *Precio:* $${productoActual.precio.toFixed(2)}`
-                    : `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque) para:\n\n- *Modelo:* ${productoActual.nombre}\n- *Ref:* ${productoActual.ref}\n- *Precio:* $${productoActual.precio.toFixed(2)}`;
-            } else {
-                const tallaSelect = document.getElementById('modal-talla').value;
-                if (!tallaSelect) {
-                    alert("Por favor, selecciona una talla antes de continuar.");
-                    return false;
-                }
-                mensaje = tipo === 'domicilio'
-                    ? `Hola D'Yule, deseo solicitar un *Envío a Domicilio*:\n\n- *Modelo:* ${productoActual.nombre}\n- *Ref:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}`
-                    : `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque):\n\n- *Modelo:* ${productoActual.nombre}\n- *Ref:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}`;
-            }
-
-            window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, '_blank');
-            cerrarModal();
-            return false;
-        }
-    </script>
+    <div class="top-bar">
+        <span>COLECCIONES CÁPSULA LIMITADAS | ENVÍOS PREMIUM A TODO EL PAÍS</span>
+    </div>
+
+    <header class="header-principal">
+        <div class="header-container">
+            <div class="logo-box">
+                <a href="#" class="brand-link">
+                    <img src="logo.png" alt="D'Yule Logo" class="logo">
+                    <span class="brand-name">D´Yule Store Ec</span>
+                </a>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" onclick="filtrarTodo(); toggleMenu();">INICIO</a></li>
+                    <li><a href="#sobre-nosotros" onclick="toggleMenu();">NOSOTROS</a></li>
+                    <li><a href="#politicas" onclick="toggleMenu();">COMPROMISO VIP</a></li>
+                    <li><a href="#area-catalogo" class="nav-highlight" onclick="toggleMenu();">EXPLORAR COLECCIÓN</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-cover">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">EDICIÓN EXCLUSIVA</span>
+            <h1 class="hero-title">EL MANIFIESTO DE LA ELEGANCIA</h1>
+            <p class="hero-subtitle">Redefinimos el calce perfecto fusionando la sofisticación internacional con los pilares de la ergonomía brasileña Premium.</p>
+            <a href="#sobre-nosotros" class="btn-hero-editorial">DESCUBRIR NUESTRO MUNDO</a>
+        </div>
+    </section>
+
+    <div style="background-color: #0c0c0c !important; color: #ffffff !important; padding: 45px 20px !important; text-align: center !important; border-top: 1px solid #222222 !important; border-bottom: 2px solid #8b0000 !important; width: 100% !important; box-sizing: border-box !important;">
+        <div style="max-width: 850px !important; margin: 0 auto !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important;">
+            <span style="background-color: #8b0000 !important; color: #ffffff !important; font-size: 0.65rem !important; font-weight: 600 !important; letter-spacing: 3px !important; text-transform: uppercase !important; padding: 6px 16px !important; display: inline-block !important; margin-bottom: 15px !important;">Llegadas Exclusivas</span>
+            <h2 style="font-family: 'Playfair Display', Georgia, serif !important; font-size: 2rem !important; font-weight: 400 !important; letter-spacing: 4px !important; color: #ffffff !important; margin: 0 0 12px 0 !important; text-transform: uppercase !important;">NEW COLLECTION 2026</h2>
+            <p style="font-family: 'Montserrat', sans-serif !important; font-size: 0.88rem !important; font-weight: 300 !important; color: #d1d1d1 !important; margin: 0 0 25px 0 !important; letter-spacing: 1px !important; line-height: 1.6 !important;">Descubre las últimas tendencias en calzado brasileño Premium recién llegadas a boutique.</p>
+            <a href="#area-catalogo" style="display: inline-block !important; border: 1px solid #ffffff !important; background-color: transparent !important; color: #ffffff !important; text-decoration: none !important; font-family: 'Montserrat', sans-serif !important; font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 2.5px !important; padding: 12px 30px !important; text-transform: uppercase !important;">EXPLORAR NOVEDADES</a>
+        </div>
+    </div>
+
+    <section class="seccion-editorial-premium" id="sobre-nosotros">
+        <div class="container-editorial">
+            <span class="subtitulo-editorial">MÁS DE 10 AÑOS EN EL CENTRO COMERCIAL EL BOSQUE</span>
+            <h2 class="titulo-editorial">TU PAR PERFECTO EXISTE. ¡Y ESTÁ AQUÍ!</h2>
+            <div class="divisor-elegante"></div>
+            <p class="texto-destacado">
+                En D’Yule no vendemos solo zapatos; te otorgamos la libertad de caminar con absoluta distinción, elegancia y comodidad.
+            </p>
+            <p class="texto-cuerpo">
+                Reunimos las mejores marcas brasileñas de calzado Premium para acercarte piezas exclusivas elaboradas en los mejores materiales, diseñadas con tecnologías ergonómicas avanzadas que cuidan con delicadeza la salud de tus pies sin comprometer jamás las tendencias de la moda. Contamos con miles de estilos, texturas y gamas cromáticas pensadas para la mujer contemporánea de Ecuador.
+            </p>
+        </div>
+    </section>
+
+    <section class="seccion-politicas-editorial" id="politicas">
+        <div class="container-editorial">
+            <span class="subtitulo-editorial">ESTÁNDARES DE LA BOUTIQUE</span>
+            <h2 class="titulo-editorial">COMPROMISO, CALIDAD Y RESPALDO</h2>
+            <div class="divisor-elegante"></div>
+            
+            <div class="grid-editorial-politicas">
+                <div class="bloque-politica">
+                    <span class="num-politica">01</span>
+                    <h3>PLAZO EXCLUSIVO</h3>
+                    <p>Cualquier solicitud de cambio por defecto estructural es válida hasta 7 días posteriores a tu compra.</p>
+                </div>
+                <div class="bloque-politica">
+                    <span class="num-politica">02</span>
+                    <h3>ESTADO IMPECABLE</h3>
+                    <p>Para procesar una garantía, la pieza de calzado debe mantenerse sin uso, intacta y en condiciones originales.</p>
+                </div>
+                <div class="bloque-politica">
+                    <span class="num-politica">03</span>
+                    <h3>EMPAQUE PREMIUM</h3>
+                    <p>Deberá entregarse en su caja original de la firma, fundas protectoras y complementos tal como fue recibido.</p>
+                </div>
+                <div class="bloque-politica">
+                    <span class="num-politica">04</span>
+                    <h3>CONTROL RIGUROSO</h3>
+                    <p>Cada par pasa por un estricto control de calidad previo al envío, asegurando una experiencia óptima.</p>
+                </div>
+            </div>
+            
+            <p class="nota-politica-premium">* Nota indispensable: Es mandatorio presentar la factura original de compra para validar tus coberturas.</p>
+        </div>
+    </section>
+
+    <div class="transicion-catalogo" id="area-catalogo" onclick="toggleCatalogo()">
+        <span>EXPLORAR NUESTRO PORTAFOLIO</span>
+        <i class="fa-solid fa-chevron-down" id="icono-flecha"></i>
+    </div>
+
+    <div class="main-layout" id="panel-catalogo">
+        
+        <aside class="sidebar-filtros">
+            <h3>Filtrar Catálogo</h3>
+
+            <div class="grupo-filtro">
+                <h4>Promociones</h4>
+                <select id="filtro-oferta" onchange="filtrarProductos()">
+                    <option value="todos">Todos los productos</option>
+                    <option value="si">🔥 Solo Ofertas ($30)</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Tipo</h4>
+                <select id="filtro-tipo" onchange="filtrarProductos()">
+                    <option value="todos">Todos los productos</option>
+                    <option value="calzado">Solo Calzado</option>
+                    <option value="accesorios">Solo Accesorios</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Marca</h4>
+                <select id="filtro-marca" onchange="filtrarProductos()">
+                    <option value="todas">Todas las Marcas</option>
+                    <option value="vizzano">Vizzano</option>
+                    <option value="divalentini">Di Valentini</option>
+                    <option value="usaflex">Usaflex</option>
+                    <option value="piccadilly">Piccadilly</option>
+                    <option value="modare">Modare</option>
+                    <option value="invoice">Invoice</option>
+                    <option value="capelli-rossi">Capelli Rossi</option>
+                    <option value="cristofoli">Cristófoli</option>
+                    <option value="pegada">Pegada</option>
+                    <option value="verbenas">Verbenas</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Estilo Calzado</h4>
+                <select id="filtro-categoria" onchange="filtrarProductos()">
+                    <option value="todas">Todas las Categorías</option>
+                    <option value="ejecutivo">Ejecutivo / Trabajo</option>
+                    <option value="fiesta">Fiesta</option>
+                    <option value="casual">Casual</option>
+                    <option value="deportivo">Deportivo / Urbano</option>
+                    <option value="senorero">Señorero</option>
+                    <option value="botas">Botas</option>
+                    <option value="botines">Botines</option>
+                    <option value="mocasines">Mocasines</option>
+                    <option value="flats">Flats</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Material</h4>
+                <select id="filtro-material" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Materiales</option>
+                    <option value="cuero">100% Cuero</option>
+                    <option value="sintetico">Sintético</option>
+                    <option value="charol">Charol</option>
+                    <option value="gamuza">Gamuza</option>
+                    <option value="satin">Tela Satín</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Altura de Tacón</h4>
+                <select id="filtro-tacon" onchange="filtrarProductos()">
+                    <option value="todos">Todas las Alturas</option>
+                    <option value="flats">Flats / Plano (0-2 cm)</option>
+                    <option value="medio">Tacón Medio (5 cm)</option>
+                    <option value="alto">Tacón Alto (7 cm)</option>
+                    <option value="plataforma">Plataforma / Extremo (9->10 cm)</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Tipo de Tacón</h4>
+                <select id="filtro-tipo-tacon" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Tipos</option>
+                    <option value="ancho">Tacón Ancho / Robusto</option>
+                    <option value="fino">Tacón Fino / Stiletto</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Color (Calzado)</h4>
+                <select id="filtro-color" onchange="filtrarProductos()">
+                    <option value="todos">Todos los Colores</option>
+                    <option value="negro">Negro</option>
+                    <option value="beige">Beige</option>
+                    <option value="azul">Azul</option>
+                    <option value="cafe">Café</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="rojo">Rojo</option>
+                </select>
+
+                <div class="paleta-colores-container" id="paleta-colores">
+                    <span class="circulo-color color-todos activo" title="Todos" onclick="seleccionarColor('todos', this)"></span>
+                    <span class="circulo-color color-negro" title="Negro" onclick="seleccionarColor('negro', this)"></span>
+                    <span class="circulo-color color-beige" title="Beige" onclick="seleccionarColor('beige', this)"></span>
+                    <span class="circulo-color color-azul" title="Azul" onclick="seleccionarColor('azul', this)"></span>
+                    <span class="circulo-color color-cafe" title="Café" onclick="seleccionarColor('cafe', this)"></span>
+                    <span class="circulo-color color-blanco" title="Blanco" onclick="seleccionarColor('blanco', this)"></span>
+                    <span class="circulo-color color-rojo" title="Rojo" onclick="seleccionarColor('rojo', this)"></span>
+                </div>
+            </div>
+
+            <button class="btn-reset" onclick="resetFiltros()">Limpiar Filtros</button>
+        </aside>
+
+        <main class="catalogo-grid" id="catalogo">
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-charol-9cm-fino.jpg" alt="Stiletto Negro Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Negro 9cm)', 95.00, 'DY-V101', 'vizzano-negro-charol-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Negro 9cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-charol-5cm-fino.jpg" alt="Stiletto Negro Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Negro 5cm)', 95.00, 'DY-V102', 'vizzano-negro-charol-5cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Negro 5cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-charol-9cm-fino.jpg" alt="Stiletto Beige Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Beige 9cm)', 95.00, 'DY-V103', 'vizzano-beige-charol-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Beige 9cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-charol-7cm-fino.jpg" alt="Stiletto Beige Charol 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Beige 7cm)', 95.00, 'DY-V104', 'vizzano-beige-charol-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Beige 7cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-charol-5cm-fino.jpg" alt="Stiletto Beige Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Beige 5cm)', 95.00, 'DY-V105', 'vizzano-beige-charol-5cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Beige 5cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-charol-7cm-fino.jpg" alt="Stiletto Azul Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Azul 7cm)', 95.00, 'DY-V106', 'vizzano-azul-charol-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Azul 7cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="cafe" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-cafe-charol-9cm-fino.jpg" alt="Stiletto Café Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Café 9cm)', 95.00, 'DY-V107', 'vizzano-cafe-charol-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Café 9cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="plataforma" data-tipo-tacon="fino" data-color="blanco" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-blanco-charol-9cm-fino.jpg" alt="Stiletto Blanco Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Blanco 9cm)', 95.00, 'DY-V108', 'vizzano-blanco-charol-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Blanco 9cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="alto" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-charol-7cm-fino.jpg" alt="Stiletto Rojo Charol Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Rojo 7cm)', 95.00, 'DY-V109', 'vizzano-rojo-charol-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Rojo 7cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="charol" data-tacon="medio" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-charol-5cm-fino.jpg" alt="Stiletto Rojo Charol 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Charol Vizzano (Rojo 5cm)', 95.00, 'DY-V110', 'vizzano-rojo-charol-5cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Charol Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Charol</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Charol Vizzano (Rojo 5cm)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+    <!-- ================= STILLETOES MATE ================= -->
+            <!-- 1. Negro Mate Ancho 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="ancho" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-mate-9cm-ancho.jpg" alt="Stiletto Negro Mate Ancho Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Negro 9cm Ancho)', 95.00, 'DY-M101', 'vizzano-negro-mate-9cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Negro 9cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 2. Negro Mate Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-mate-9cm-fino.jpg" alt="Stiletto Negro Mate Fino 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Negro 9cm Fino)', 95.00, 'DY-M102', 'vizzano-negro-mate-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Negro 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 3. Negro Mate Ancho 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="ancho" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-mate-7cm-ancho.jpg" alt="Stiletto Negro Mate Ancho 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Negro 7cm Ancho)', 95.00, 'DY-M103', 'vizzano-negro-mate-7cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Negro 7cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 4. Negro Mate Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-mate-7cm-fino.jpg" alt="Stiletto Negro Mate Fino 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Negro 7cm Fino)', 95.00, 'DY-M104', 'vizzano-negro-mate-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Negro 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 5. Negro Mate Fino 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-mate-5cm-fino.jpg" alt="Stiletto Negro Mate Fino 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Negro 5cm Fino)', 95.00, 'DY-M105', 'vizzano-negro-mate-5cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Negro 5cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 6. Negro Mate Ancho 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="ancho" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-mate-5cm-ancho.jpg" alt="Stiletto Negro Mate Ancho 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Negro 5cm Ancho)', 95.00, 'DY-M106', 'vizzano-negro-mate-5cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 5cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Negro 5cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 7. Beige Mate Ancho 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="ancho" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-mate-9cm-ancho.jpg" alt="Stiletto Beige Mate Ancho 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Beige 9cm Ancho)', 95.00, 'DY-M107', 'vizzano-beige-mate-9cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Beige 9cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 8. Beige Mate Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-mate-9cm-fino.jpg" alt="Stiletto Beige Mate Fino 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Beige 9cm Fino)', 95.00, 'DY-M108', 'vizzano-beige-mate-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Beige 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 9. Beige Mate Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-mate-7cm-fino.jpg" alt="Stiletto Beige Mate Fino 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Beige 7cm Fino)', 95.00, 'DY-M109', 'vizzano-beige-mate-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Beige 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 10. Beige Mate Fino 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="fino" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-mate-5cm-fino.jpg" alt="Stiletto Beige Mate Fino 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Beige 5cm Fino)', 95.00, 'DY-M110', 'vizzano-beige-mate-5cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Beige 5cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 11. Beige Mate Ancho 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="ancho" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-mate-5cm-ancho.jpg" alt="Stiletto Beige Mate Ancho 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Beige 5cm Ancho)', 95.00, 'DY-M111', 'vizzano-beige-mate-5cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 5cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Beige 5cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 12. Azul Mate Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-mate-9cm-fino.jpg" alt="Stiletto Azul Mate Fino 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Azul 9cm Fino)', 95.00, 'DY-M112', 'vizzano-azul-mate-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Azul 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 13. Azul Mate Ancho 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="ancho" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-mate-9cm-ancho.jpg" alt="Stiletto Azul Mate Ancho 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Azul 9cm Ancho)', 95.00, 'DY-M113', 'vizzano-azul-mate-9cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Azul 9cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 14. Azul Mate Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-mate-7cm-fino.jpg" alt="Stiletto Azul Mate Fino 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Azul 7cm Fino)', 95.00, 'DY-M114', 'vizzano-azul-mate-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Azul 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 15. Capuchino Mate Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="cafe" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-capuchino-mate-9cm-fino.jpg" alt="Stiletto Capuchino Mate Fino 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Capuchino 9cm Fino)', 95.00, 'DY-M115', 'vizzano-capuchino-mate-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Capuchino 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 16. Capuchino Mate Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="cafe" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-capuchino-mate-7cm-fino.jpg" alt="Stiletto Capuchino Mate Fino 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Capuchino 7cm Fino)', 95.00, 'DY-M116', 'vizzano-capuchino-mate-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Capuchino 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 17. Capuchino Mate Ancho 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="ancho" data-color="cafe" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-capuchino-mate-7cm-ancho.jpg" alt="Stiletto Capuchino Mate Ancho 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Capuchino 7cm Ancho)', 95.00, 'DY-M117', 'vizzano-capuchino-mate-7cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Capuchino 7cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 18. Blanco Mate Ancho 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="ancho" data-color="blanco" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-blanco-mate-9cm-ancho.jpg" alt="Stiletto Blanco Mate Ancho 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Blanco 9cm Ancho)', 95.00, 'DY-M118', 'vizzano-blanco-mate-9cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Blanco 9cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 19. Blanco Mate Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="blanco" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-blanco-mate-9cm-fino.jpg" alt="Stiletto Blanco Mate Fino 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Blanco 9cm Fino)', 95.00, 'DY-M119', 'vizzano-blanco-mate-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Blanco 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 20. Blanco Mate Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="blanco" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-blanco-mate-7cm-fino.jpg" alt="Stiletto Blanco Mate Fino 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Blanco 7cm Fino)', 95.00, 'DY-M120', 'vizzano-blanco-mate-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Blanco 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 21. Rojo Mate Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-mate-9cm-fino.jpg" alt="Stiletto Rojo Mate Fino 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Rojo 9cm Fino)', 95.00, 'DY-M121', 'vizzano-rojo-mate-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Rojo 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 22. Rojo Mate Ancho 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="ancho" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-mate-9cm-ancho.jpg" alt="Stiletto Rojo Mate Ancho 9cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Rojo 9cm Ancho)', 95.00, 'DY-M122', 'vizzano-rojo-mate-9cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 9cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Rojo 9cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 23. Rojo Mate Ancho 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="ancho" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-mate-7cm-ancho.jpg" alt="Stiletto Rojo Mate Ancho 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Rojo 7cm Ancho)', 95.00, 'DY-M123', 'vizzano-rojo-mate-7cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Rojo 7cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 24. Rojo Mate Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-mate-7cm-fino.jpg" alt="Stiletto Rojo Mate Fino 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Rojo 7cm Fino)', 95.00, 'DY-M124', 'vizzano-rojo-mate-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Rojo 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 25. Rojo Mate Fino 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="fino" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-mate-5cm-fino.jpg" alt="Stiletto Rojo Mate Fino 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Rojo 5cm Fino)', 95.00, 'DY-M125', 'vizzano-rojo-mate-5cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 5cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Rojo 5cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 26. Rojo Mate Ancho 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="ancho" data-color="rojo" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-rojo-mate-5cm-ancho.jpg" alt="Stiletto Rojo Mate Ancho 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Mate Vizzano (Rojo 5cm Ancho)', 95.00, 'DY-M126', 'vizzano-rojo-mate-5cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Mate Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 5cm | Mate</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Mate Vizzano (Rojo 5cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- ================= FLATS MATE ================= -->
+            <!-- 27. Negro Flat Mate -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="flats" data-material="sintetico" data-tacon="flats" data-tipo-tacon="ancho" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-flat-mate.jpg" alt="Flat Negro Mate Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Flat Mate Vizzano (Negro)', 85.00, 'DY-F201', 'vizzano-negro-flat-mate.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Flat Mate Vizzano</h3>
+                    <p class="detalles-p">Flats | Plano 0-2cm | Mate</p>
+                    <p class="precio">$85.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Flat Mate Vizzano (Negro)', 85.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 28. Beige Flat Mate -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="flats" data-material="sintetico" data-tacon="flats" data-tipo-tacon="ancho" data-color="beige" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-beige-flat-mate.jpg" alt="Flat Beige Mate Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Flat Mate Vizzano (Beige)', 85.00, 'DY-F202', 'vizzano-beige-flat-mate.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Flat Mate Vizzano</h3>
+                    <p class="detalles-p">Flats | Plano 0-2cm | Mate</p>
+                    <p class="precio">$85.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Flat Mate Vizzano (Beige)', 85.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 29. Azul Flat Mate -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="flats" data-material="sintetico" data-tacon="flats" data-tipo-tacon="ancho" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-flat-mate.jpg" alt="Flat Azul Mate Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Flat Mate Vizzano (Azul)', 85.00, 'DY-F203', 'vizzano-azul-flat-mate.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Flat Mate Vizzano</h3>
+                    <p class="detalles-p">Flats | Plano 0-2cm | Mate</p>
+                    <p class="precio">$85.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Flat Mate Vizzano (Azul)', 85.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- ================= MODELOS GARDA ================= -->
+            <!-- 30. Negro Garda Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-garda-9cm-fino.jpg" alt="Stiletto Negro Garda Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Garda Vizzano (Negro 9cm Fino)', 95.00, 'DY-G301', 'vizzano-negro-garda-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Garda Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Garda</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Garda Vizzano (Negro 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 31. Negro Garda Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="negro" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-negro-garda-7cm-fino.jpg" alt="Stiletto Negro Garda 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Garda Vizzano (Negro 7cm Fino)', 95.00, 'DY-G302', 'vizzano-negro-garda-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Garda Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Garda</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Garda Vizzano (Negro 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 32. Azul Garda Fino 9cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="plataforma" data-tipo-tacon="fino" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-garda-9cm-fino.jpg" alt="Stiletto Azul Garda Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Garda Vizzano (Azul 9cm Fino)', 95.00, 'DY-G303', 'vizzano-azul-garda-9cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Garda Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 9cm | Garda</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Garda Vizzano (Azul 9cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 33. Azul Garda Fino 7cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="alto" data-tipo-tacon="fino" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-garda-7cm-fino.jpg" alt="Stiletto Azul Garda 7cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Garda Vizzano (Azul 7cm Fino)', 95.00, 'DY-G304', 'vizzano-azul-garda-7cm-fino.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Garda Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Fino 7cm | Garda</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Garda Vizzano (Azul 7cm Fino)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+            <!-- 34. Azul Garda Ancho 5cm -->
+            <div class="tarjeta-producto" data-tipo="calzado" data-marca="vizzano" data-categoria="ejecutivo" data-material="sintetico" data-tacon="medio" data-tipo-tacon="ancho" data-color="azul" data-oferta="no">
+                <div class="badge-marca">Vizzano</div>
+                <img src="vizzano-azul-garda-5cm-ancho.jpg" alt="Stiletto Azul Garda 5cm Vizzano" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80'">
+                <button class="btn-vista-previa" onclick="abrirVistaRapida('Stiletto Garda Vizzano (Azul 5cm Ancho)', 95.00, 'DY-G305', 'vizzano-azul-garda-5cm-ancho.jpg')">Vista Previa</button>
+                <div class="producto-info">
+                    <h3>Stiletto Garda Vizzano</h3>
+                    <p class="detalles-p">Ejecutivo | Tacón Ancho 5cm | Garda</p>
+                    <p class="precio">$95.00</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Stiletto Garda Vizzano (Azul 5cm Ancho)', 95.00)">AGREGAR A LA BOLSA</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modal-rapido" onclick="cerrarModalFuera(event)">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" onclick="cerrarModal()">&times;</button>
+            <div class="modal-imagen">
+                <img id="modal-img" src="" alt="Zapato D'Yule">
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-titulo">Nombre del Producto</h3>
+                <p class="codigo">Ref: <span id="modal-ref">DY-001</span></p>
+                <p class="precio" id="modal-precio">$95.00</p>
+                
+                <label for="modal-talla">Talla:</label>
+                <select id="modal-talla">
+                    <option value="">Selecciona una talla</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                </select>
+
+                <div class="modal-botones-wa">
+                    <a href="#" id="link-domicilio" class="btn-modal-domicilio" target="_blank" onclick="return validarTallaYEnviar('domicilio')">
+                        <i class="fa-solid fa-truck"></i> Envío a Domicilio
+                    </a>
+                    <a href="#" id="link-tienda" class="btn-modal-tienda" target="_blank" onclick="return validarTallaYEnviar('tienda')">
+                        <i class="fa-solid fa-store"></i> Retiro en Tienda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>TU BOLSA DE COMPRAS</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Tu bolsa está vacía.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-box">
+                <span>TOTAL:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn-checkout-wa" onclick="enviarPedidoWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> COORDINAR PEDIDO
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer-principal" id="contacto">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>D'Yule Store Ec</h3>
+                <p>Distribuidores directos de las mejores marcas brasileñas premium en Ecuador.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1BxknxrNnH/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dyule_store/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@dyule_store?_r=1&_t=ZS-98HoC54dGcu" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>UBICACIÓN Y CONTACTO</h4>
+                <p><i class="fa-solid fa-location-dot"></i> C.C. El Bosque, Local 27-107, Piso 1, Quito - Ecuador</p>
+                
+                <p>
+                    <a href="https://wa.me/593996715122?text=Hola%20D'Yule,%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="link-contacto-wa">
+                        <i class="fa-brands fa-whatsapp"></i> +593 99 671 5122
+                    </a>
+                </p>
+                
+                <p>
+                    <a href="mailto:veroyura@gmail.com" class="link-contacto-email">
+                        <i class="fa-solid fa-envelope"></i> veroyura@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>ENLACES VIP</h4>
+                <ul>
+                    <li><a href="#sobre-nosotros">Nuestra Historia</a></li>
+                    <li><a href="#politicas">Garantía y Respaldos</a></li>
+                    <li><a href="#area-catalogo">Catálogo Completo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 D'Yule Store Ec. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/593996715122?text=Hola%20D'Yule,%20deseo%20asesor%C3%ADa%20personalizada%20para%20elegir%20mi%20calzado." class="btn-flotante-asesoria-izquierda" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> ASESORÍA PERSONALIZADA
+    </a>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
+        }
+
+        function toggleCatalogo() {
+            const panel = document.getElementById('panel-catalogo');
+            const franja = document.getElementById('area-catalogo');
+            
+            if (!panel) return;
+
+            if (panel.classList.contains('activo')) {
+                panel.classList.remove('activo');
+                if (franja) franja.classList.remove('girada');
+            } else {
+                panel.classList.add('activo');
+                if (franja) franja.classList.add('girada');
+                panel.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+            toggleCart();
+        }
+
+        function actualizarCarrito() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            if (cartCount) cartCount.innerText = carrito.length;
+
+            if (cartItems) {
+                if (carrito.length === 0) {
+                    cartItems.innerHTML = '<p class="empty-msg">Tu bolsa está vacía.</p>';
+                } else {
+                    cartItems.innerHTML = '';
+                    carrito.forEach((prod, index) => {
+                        cartItems.innerHTML += `
+                            <div class="cart-item">
+                                <div>
+                                    <h4>${prod.nombre}</h4>
+                                    <p>$${prod.precio.toFixed(2)}</p>
+                                </div>
+                                <button onclick="eliminarDelCarrito(${index})" style="background:none; border:none; color:#8b0000; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        `;
+                    });
+                }
+            }
+
+            if (cartTotal) {
+                const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+                cartTotal.innerText = `$${total.toFixed(2)}`;
+            }
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            if (drawer) drawer.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+        }
+
+        function enviarPedidoWhatsApp() {
+            if (carrito.length === 0) {
+                alert("Tu bolsa está vacía.");
+                return;
+            }
+            let mensaje = "Hola D'Yule, deseo coordinar el pedido de los siguientes artículos:\n\n";
+            let total = 0;
+            carrito.forEach(item => {
+                mensaje += `- ${item.nombre} ($${item.precio.toFixed(2)})\n`;
+                total += item.precio;
+            });
+            mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
+            
+            const numeroWhatsApp = "593996715122";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        function filtrarProductos() {
+            const filtroOferta = document.getElementById('filtro-oferta').value;
+            const filtroTipo = document.getElementById('filtro-tipo').value;
+            const filtroMarca = document.getElementById('filtro-marca').value;
+            const filtroCategoria = document.getElementById('filtro-categoria').value;
+            const filtroMaterial = document.getElementById('filtro-material').value;
+            const filtroTacon = document.getElementById('filtro-tacon').value;
+            const filtroTipoTacon = document.getElementById('filtro-tipo-tacon').value;
+            const filtroColor = document.getElementById('filtro-color').value;
+
+            const tarjetas = document.querySelectorAll('.tarjeta-producto');
+
+            tarjetas.forEach(tarjeta => {
+                const oferta = tarjeta.getAttribute('data-oferta');
+                const tipo = tarjeta.getAttribute('data-tipo');
+                const marca = tarjeta.getAttribute('data-marca');
+                const categoria = tarjeta.getAttribute('data-categoria');
+                const material = tarjeta.getAttribute('data-material');
+                const tacon = tarjeta.getAttribute('data-tacon');
+                const tipoTacon = tarjeta.getAttribute('data-tipo-tacon');
+                const color = tarjeta.getAttribute('data-color');
+
+                let coincide = true;
+
+                if (filtroOferta !== 'todos' && oferta !== filtroOferta) coincide = false;
+                if (filtroTipo !== 'todos' && tipo !== filtroTipo) coincide = false;
+                if (filtroMarca !== 'todas' && marca !== filtroMarca) coincide = false;
+                if (filtroCategoria !== 'todas' && categoria !== filtroCategoria) coincide = false;
+                if (filtroMaterial !== 'todos' && material !== filtroMaterial) coincide = false;
+                if (filtroTacon !== 'todos' && tacon !== filtroTacon) coincide = false;
+                if (filtroTipoTacon !== 'todos' && tipoTacon !== filtroTipoTacon) coincide = false;
+                if (filtroColor !== 'todos' && color !== filtroColor) coincide = false;
+
+                if (coincide) {
+                    tarjeta.style.display = 'flex';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
+        }
+
+        function filtrarTodo() {
+            document.querySelectorAll('.sidebar-filtros select').forEach(select => {
+                select.value = 'todos';
+            });
+            filtrarProductos();
+        }
+
+        function resetFiltros() {
+            document.getElementById('filtro-oferta').value = 'todos';
+            document.getElementById('filtro-tipo').value = 'todos';
+            document.getElementById('filtro-marca').value = 'todas';
+            document.getElementById('filtro-categoria').value = 'todas';
+            document.getElementById('filtro-material').value = 'todos';
+            document.getElementById('filtro-tacon').value = 'todos';
+            document.getElementById('filtro-tipo-tacon').value = 'todos';
+            document.getElementById('filtro-color').value = 'todos';
+            filtrarProductos();
+        }
+
+        function seleccionarColor(valorColor, elementoVisual) {
+            const selectOculto = document.getElementById('filtro-color');
+            if (selectOculto) {
+                selectOculto.value = valorColor;
+                if (typeof filtrarProductos === 'function') {
+                    filtrarProductos();
+                }
+            }
+
+            const circulos = document.querySelectorAll('.circulo-color');
+            circulos.forEach(c => c.classList.remove('activo'));
+            if (elementoVisual) {
+                elementoVisual.classList.add('activo');
+            }
+        }
+
+        let productoActual = { nombre: '', precio: 0, ref: '' };
+
+        function abrirVistaRapida(nombre, precio, referencia, imagenSrc) {
+            productoActual = { nombre, precio, ref: referencia };
+            
+            document.getElementById('modal-titulo').innerText = nombre;
+            document.getElementById('modal-precio').innerText = '$' + precio.toFixed(2);
+            document.getElementById('modal-ref').innerText = referencia;
+            document.getElementById('modal-img').src = imagenSrc;
+            document.getElementById('modal-talla').value = "";
+
+            document.getElementById('modal-rapido').classList.add('activo');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal-rapido').classList.remove('activo');
+        }
+
+        function cerrarModalFuera(event) {
+            if (event.target.id === 'modal-rapido') {
+                cerrarModal();
+            }
+        }
+
+        function validarTallaYEnviar(tipo) {
+            const tallaSelect = document.getElementById('modal-talla').value;
+            if (!tallaSelect) {
+                alert("Por favor, selecciona una talla antes de continuar.");
+                return false;
+            }
+
+            const numeroWhatsApp = "593996715122";
+            let mensaje = "";
+
+            if (tipo === 'domicilio') {
+                mensaje = `Hola D'Yule, deseo solicitar un *Envío a Domicilio*:\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, indíquenme los pasos para el pago y envío.`;
+            } else {
+                mensaje = `Hola D'Yule, deseo coordinar el *Retiro en Tienda* (C.C. El Bosque):\n\n- *Modelo:* ${productoActual.nombre}\n- *Referencia:* ${productoActual.ref}\n- *Talla:* ${tallaSelect}\n- *Precio:* $${productoActual.precio.toFixed(2)}\n\nPor favor, avísenme cuándo puedo pasar retirando.`;
+            }
+
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+            cerrarModal();
+            return false;
+        }
+    </script>
 </body>
 </html>
+<!-- ================= SECCIÓN DE CARTERAS Y ACCESORIOS ================= -->
+<div style="grid-column: 1 / -1; margin: 40px 0 20px 0; border-top: 1px solid var(--gris-borde); padding-top: 30px;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400; letter-spacing: 2px; color: var(--negro); text-align: center; margin-bottom: 25px;">COLECCIÓN DE CARTERAS Y BOLSOS</h2>
+</div>
+
+<!-- CASUALES Y DE HOMBRO -->
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-casual-beige-miumiu.jpg" alt="Cartera Casual Beige MiuMiu" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Casual Beige MiuMiu', 75.00, 'DY-C01', '4.CARTERAS/cartera-casual-beige-miumiu.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Casual Beige MiuMiu</h3>
+        <p class="detalles-p">Casual | Bolso de Hombro</p>
+        <p class="precio">$75.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Casual Beige MiuMiu', 75.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-casual-blanca-miumiu.jpg" alt="Cartera Casual Blanca MiuMiu" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Casual Blanca MiuMiu', 75.00, 'DY-C02', '4.CARTERAS/cartera-casual-blanca-miumiu.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Casual Blanca MiuMiu</h3>
+        <p class="detalles-p">Casual | Bolso de Hombro</p>
+        <p class="precio">$75.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Casual Blanca MiuMiu', 75.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-casual-cafe-MK-cadena.jpg" alt="Cartera Café MK con Cadena" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Café MK con Cadena', 80.00, 'DY-C03', '4.CARTERAS/cartera-casual-cafe-MK-cadena.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Café MK con Cadena</h3>
+        <p class="detalles-p">Casual | Herraje Metálico</p>
+        <p class="precio">$80.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Café MK con Cadena', 80.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-casual-cuadros-vino.jpg" alt="Cartera Cuadros Vino" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Cuadros Vino', 70.00, 'DY-C04', '4.CARTERAS/cartera-casual-cuadros-vino.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Cuadros Vino</h3>
+        <p class="detalles-p">Casual | Estampado Texturizado</p>
+        <p class="precio">$70.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Cuadros Vino', 70.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-hombro-cafeclaro.jpg" alt="Cartera Hombro Café Claro" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Hombro Café Claro', 75.00, 'DY-C05', '4.CARTERAS/cartera-hombro-cafeclaro.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Hombro Café Claro</h3>
+        <p class="detalles-p>Casual | Diseño Ergonómico</p>
+        <p class="precio">$75.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Hombro Café Claro', 75.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="gamuza" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-hombro-gamuza-cafe.jpg" alt="Cartera Hombro Gamuza Café" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Hombro Gamuza Café', 85.00, 'DY-C06', '4.CARTERAS/cartera-hombro-gamuza-cafe.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Hombro Gamuza Café</h3>
+        <p class="detalles-p">Casual | Acabado Gamuza</p>
+        <p class="precio">$85.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Hombro Gamuza Café', 85.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-hombro-negro-fashionbag.jpg" alt="Cartera Hombro Negro Fashionbag" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Hombro Negro Fashionbag', 75.00, 'DY-C07', '4.CARTERAS/cartera-hombro-negro-fashionbag.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Hombro Negro Fashionbag</h3>
+        <p class="detalles-p">Casual | Uso Diario</p>
+        <p class="precio">$75.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Hombro Negro Fashionbag', 75.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<!-- MINIBOLSOS Y ELEGANTE -->
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-elegante-beige-minibolso.jpg" alt="Cartera Elegante Beige Minibolso" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Elegante Beige Minibolso', 65.00, 'DY-C08', '4.CARTERAS/cartera-elegante-beige-minibolso.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Elegante Beige Minibolso</h3>
+        <p class="detalles-p">Elegante | Minibolso de Mano</p>
+        <p class="precio">$65.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Elegante Beige Minibolso', 65.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-elegante-cafe-minibolso.jpg" alt="Cartera Elegante Café Minibolso" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Elegante Café Minibolso', 65.00, 'DY-C09', '4.CARTERAS/cartera-elegante-cafe-minibolso.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Elegante Café Minibolso</h3>
+        <p class="detalles-p">Elegante | Minibolso de Mano</p>
+        <p class="precio">$65.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Elegante Café Minibolso', 65.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<!-- CARTERAS ESTRUCTURADAS -->
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="gamuza" data-oferta="no">
+    <div class="badge-marca">Coach Style</div>
+    <img src="4.CARTERAS/cartera-estructurada-gamuza-cafe-Coach.jpg" alt="Cartera Estructurada Gamuza Café Coach" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Estructurada Gamuza Café Coach', 95.00, 'DY-C10', '4.CARTERAS/cartera-estructurada-gamuza-cafe-Coach.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Gamuza Café Coach</h3>
+        <p class="detalles-p">Estructurada | Estilo Ejecutivo</p>
+        <p class="precio">$95.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Estructurada Gamuza Café Coach', 95.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="gamuza" data-oferta="no">
+    <div class="badge-marca">Coach Style</div>
+    <img src="4.CARTERAS/cartera-estructurada-gamuza-gris-Coach.jpg" alt="Cartera Estructurada Gamuza Gris Coach" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Estructurada Gamuza Gris Coach', 95.00, 'DY-C11', '4.CARTERAS/cartera-estructurada-gamuza-gris-Coach.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Gamuza Gris Coach</h3>
+        <p class="detalles-p">Estructurada | Estilo Ejecutivo</p>
+        <p class="precio">$95.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Estructurada Gamuza Gris Coach', 95.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="gamuza" data-oferta="no">
+    <div class="badge-marca">Coach Style</div>
+    <img src="4.CARTERAS/cartera-estructurada-gamuza-negra-Coach.jpg" alt="Cartera Estructurada Gamuza Negra Coach" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Estructurada Gamuza Negra Coach', 95.00, 'DY-C12', '4.CARTERAS/cartera-estructurada-gamuza-negra-Coach.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Gamuza Negra Coach</h3>
+        <p class="detalles-p">Estructurada | Estilo Ejecutivo</p>
+        <p class="precio">$95.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Estructurada Gamuza Negra Coach', 95.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="cuero" data-oferta="no">
+    <div class="badge-marca">Guess</div>
+    <img src="4.CARTERAS/cartera-GUESS-original.jpg" alt="Cartera Guess Original" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Guess Original', 110.00, 'DY-C13', '4.CARTERAS/cartera-GUESS-original.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Guess Original</h3>
+        <p class="detalles-p">Colección Exclusiva | Importada</p>
+        <p class="precio">$110.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Guess Original', 110.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="ejecutivo" data-material="cuero" data-oferta="no">
+    <div class="badge-marca">Louis Vuitton</div>
+    <img src="4.CARTERAS/cartera-LouisVuitton-original.jpg" alt="Cartera Louis Vuitton Original" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Louis Vuitton Original', 140.00, 'DY-C14', '4.CARTERAS/cartera-LouisVuitton-original.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Louis Vuitton Original</h3>
+        <p class="detalles-p">Alta Gama | Lujo y Diseño</p>
+        <p class="precio">$140.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Louis Vuitton Original', 140.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<!-- MODELOS TOTE Y MINIBAGS -->
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-tote-casual-cafeclaro.jpg" alt="Cartera Tote Casual Café Claro" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Tote Casual Café Claro', 80.00, 'DY-C15', '4.CARTERAS/cartera-tote-casual-cafeclaro.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Tote Casual Café Claro</h3>
+        <p class="detalles-p">Tote Bag | Gran Capacidad</p>
+        <p class="precio">$80.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Tote Casual Café Claro', 80.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-tote-casual-negro.jpg" alt="Cartera Tote Casual Negro" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Tote Casual Negro', 80.00, 'DY-C16', '4.CARTERAS/cartera-tote-casual-negro.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Tote Casual Negro</h3>
+        <p class="detalles-p">Tote Bag | Gran Capacidad</p>
+        <p class="precio">$80.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Tote Casual Negro', 80.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-tote-minibag-casual-azul.jpg" alt="Cartera Tote Minibag Casual Azul" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Tote Minibag Casual Azul', 70.00, 'DY-C17', '4.CARTERAS/cartera-tote-minibag-casual-azul.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Tote Minibag Casual Azul</h3>
+        <p class="detalles-p">Minibag | Estilo Urbano</p>
+        <p class="precio">$70.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Tote Minibag Casual Azul', 70.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="casual" data-material="sintetico" data-oferta="no">
+    <div class="badge-marca">D'Yule</div>
+    <img src="4.CARTERAS/cartera-tote-negro.jpg" alt="Cartera Tote Negro" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Tote Negro', 80.00, 'DY-C18', '4.CARTERAS/cartera-tote-negro.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Tote Negro</h3>
+        <p class="detalles-p">Tote Bag | Clásico Esencial</p>
+        <p class="precio">$80.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Tote Negro', 80.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<!-- LÍNEA DE FIESTA -->
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-dorada-cadenaplata.jpg" alt="Cartera Fiesta Dorada con Cadena Plata" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Dorada con Cadena Plata', 65.00, 'DY-F01', 'DE FIESTA/cartera-fiesta-dorada-cadenaplata.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Fiesta Dorada (Cadena Plata)</h3>
+        <p class="detalles-p">Fiesta | Clutch de Noche</p>
+        <p class="precio">$65.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Dorada con Cadena Plata', 65.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-dorada.jpg" alt="Cartera Fiesta Dorada" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Dorada', 60.00, 'DY-F02', 'DE FIESTA/cartera-fiesta-dorada.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Fiesta Dorada</h3>
+        <p class="detalles-p">Fiesta | Clutch de Noche</p>
+        <p class="precio">$60.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Dorada', 60.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-estructurada-dorada+glitter.jpg" alt="Cartera Fiesta Estructurada Dorada con Glitter" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Estructurada Dorada + Glitter', 70.00, 'DY-F03', 'DE FIESTA/cartera-fiesta-estructurada-dorada+glitter.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Estructurada Dorada + Glitter</h3>
+        <p class="detalles-p">Fiesta | Acabado Brillante</p>
+        <p class="precio">$70.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Estructurada Dorada + Glitter', 70.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-estructurada-dorada.jpg" alt="Cartera Fiesta Estructurada Dorada" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Estructurada Dorada', 65.00, 'DY-F04', 'DE FIESTA/cartera-fiesta-estructurada-dorada.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Estructurada Dorada</h3>
+        <p class="detalles-p">Fiesta | Rígida Elegante</p>
+        <p class="precio">$65.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Estructurada Dorada', 65.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-estructurada-plata.jpg" alt="Cartera Fiesta Estructurada Plata" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Estructurada Plata', 65.00, 'DY-F05', 'DE FIESTA/cartera-fiesta-estructurada-plata.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Estructurada Plata</h3>
+        <p class="detalles-p">Fiesta | Rígida Elegante</p>
+        <p class="precio">$65.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Estructurada Plata', 65.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-negro.jpg" alt="Cartera Fiesta Negro" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Negro', 60.00, 'DY-F06', 'DE FIESTA/cartera-fiesta-negro.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Fiesta Negro</h3>
+        <p class="detalles-p">Fiesta | Clutch Clásico</p>
+        <p class="precio">$60.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Negro', 60.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-plata.jpg" alt="Cartera Fiesta Plata" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Plata', 60.00, 'DY-F07', 'DE FIESTA/cartera-fiesta-plata.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Fiesta Plata</h3>
+        <p class="detalles-p">Fiesta | Clutch de Noche</p>
+        <p class="precio">$60.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Plata', 60.00)">AGREGAR ALA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-rectangular-dorada.jpg" alt="Cartera Fiesta Rectangular Dorada" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Rectangular Dorada', 65.00, 'DY-F08', 'DE FIESTA/cartera-fiesta-rectangular-dorada.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Fiesta Rectangular Dorada</h3>
+        <p class="detalles-p">Fiesta | Diseño Geométrico</p>
+        <p class="precio">$65.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Rectangular Dorada', 65.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
+
+<div class="tarjeta-producto" data-tipo="accesorios" data-marca="invoice" data-categoria="fiesta" data-material="satin" data-oferta="no">
+    <div class="badge-marca">Fiesta</div>
+    <img src="DE FIESTA/cartera-fiesta-roja.jpg" alt="Cartera Fiesta Roja" onerror="this.src='https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop&q=80'">
+    <button class="btn-vista-previa" onclick="abrirVistaRapida('Cartera Fiesta Roja', 60.00, 'DY-F09', 'DE FIESTA/cartera-fiesta-roja.jpg')">Vista Previa</button>
+    <div class="producto-info">
+        <h3>Cartera Fiesta Roja</h3>
+        <p class="detalles-p">Fiesta | Clutch de Noche</p>
+        <p class="precio">$60.00</p>
+        <button class="btn-add-cart" onclick="agregarAlCarrito('Cartera Fiesta Roja', 60.00)">AGREGAR A LA BOLSA</button>
+    </div>
+</div>
